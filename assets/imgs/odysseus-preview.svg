@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-ody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="60%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#27272a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg-ody)"/>
+  <circle cx="140" cy="140" r="36" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="145" fill="#a5b4fc" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">AI CORE</text>
+  
+  <line x1="176" y1="140" x2="280" y2="100" stroke="#4f46e5" stroke-width="2" stroke-dasharray="3"/>
+  <circle cx="310" cy="95" r="26" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="310" y="99" fill="#38bdf8" font-family="monospace" font-size="10" text-anchor="middle">WORKSPACE</text>
+
+  <line x1="176" y1="140" x2="280" y2="180" stroke="#4f46e5" stroke-width="2" stroke-dasharray="3"/>
+  <circle cx="310" cy="185" r="26" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="310" y="189" fill="#34d399" font-family="monospace" font-size="10" text-anchor="middle">TOOLS</text>
+
+  <line x1="336" y1="95" x2="440" y2="135" stroke="#6366f1" stroke-width="2" stroke-dasharray="3"/>
+  <line x1="336" y1="185" x2="440" y2="145" stroke="#6366f1" stroke-width="2" stroke-dasharray="3"/>
+  <circle cx="470" cy="140" r="32" fill="#312e81" stroke="#a855f7" stroke-width="2"/>
+  <text x="470" y="144" fill="#e9d5ff" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">LOCAL API</text>
+
+  <text x="300" y="255" fill="#f4f4f5" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Odysseus — Self-Hosted AI Workspace Architecture</text>
+</svg>

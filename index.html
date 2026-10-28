@@ -38,18 +38,14 @@
             scroll-behavior: smooth;
         }
 
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
         /* Banner Container */
         .research-banner-box {
-            background: linear-gradient(135deg, rgba(105, 90, 166, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
-            border: 1px solid rgba(105, 90, 166, 0.2);
+            background: linear-gradient(135deg, rgba(105, 90, 166, 0.06) 0%, rgba(245, 158, 11, 0.06) 100%);
+            border: 1px solid rgba(105, 90, 166, 0.18);
             border-radius: 12px;
-            padding: 15px;
+            padding: 14px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(105, 90, 166, 0.06);
+            box-shadow: 0 4px 18px rgba(105, 90, 166, 0.05);
         }
 
         .research-banner-box img {
@@ -93,11 +89,6 @@
             border-color: var(--primary);
         }
 
-        .research-card-highlight {
-            border-left: 4px solid var(--accent-solar);
-            background: #ffffff;
-        }
-
         .badge-pill-custom {
             font-size: 12px;
             font-weight: 600;
@@ -125,11 +116,50 @@
             border: 1px solid #a7f3d0;
         }
 
-        .card-img-top {
+        /* Improved Project Image Frame */
+        .project-img-frame {
             height: 220px;
+            background: linear-gradient(135deg, #f6f4fa 0%, #ebe7f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid #eaedf1;
+        }
+
+        .project-img-frame img.mobile-shot {
+            max-height: 200px;
+            width: auto;
+            max-width: 85%;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .project-img-frame img.mobile-shot {
+            transform: scale(1.05);
+        }
+
+        .project-img-frame.banner-shot {
+            padding: 0;
+            background: #0f172a;
+        }
+
+        .project-img-frame.banner-shot img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: 8px 8px 0 0;
-            background-color: #f8f9fa;
+            box-shadow: none;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .project-img-frame.banner-shot img {
+            transform: scale(1.03);
         }
 
         .project-tag {
@@ -222,14 +252,14 @@
             letter-spacing: 0.5px;
         }
 
-        /* Publication Card */
+        /* Research Card */
         .paper-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-left: 4px solid #695aa6;
             border-radius: 8px;
-            padding: 22px;
-            margin-bottom: 20px;
+            padding: 24px;
+            margin-bottom: 22px;
             text-align: left;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             transition: all 0.25s ease;
@@ -241,7 +271,7 @@
         }
 
         .paper-title {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 700;
             color: #1e293b;
             margin-bottom: 8px;
@@ -258,30 +288,12 @@
             font-size: 13px;
             color: #475569;
             background: #f8fafc;
-            padding: 8px 14px;
+            padding: 10px 14px;
             border-radius: 6px;
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 14px;
             align-items: center;
-        }
-
-        /* Toast notification */
-        #toast-notice {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #695aa6;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-            font-size: 14px;
-            font-weight: 600;
-            z-index: 10000;
-            display: none;
-            align-items: center;
-            gap: 8px;
         }
     </style>
 </head>
@@ -294,7 +306,7 @@
             <ul class="nav">
                 <li class="item"><a class="link" href="#home">Home</a></li>
                 <li class="item"><a class="link" href="#about">About</a></li>
-                <li class="item"><a class="link" href="#research">Research & Papers</a></li>
+                <li class="item"><a class="link" href="#research">Research</a></li>
                 <li class="item"><a class="link" href="#education">Education</a></li>
                 <li class="item"><a class="link" href="#experience">Experience</a></li>
                 <li class="item"><a class="link" href="#portfolio">Projects</a></li>
@@ -309,7 +321,7 @@
         </div>          
     </nav><!-- End of Page Navbar -->
 
-    <!-- Page Header (Classic Meyawo Hero with Academic Banner) -->
+    <!-- Page Header (Classic Meyawo Hero) -->
     <header id="home" class="header">
         <div class="overlay"></div>
         <div class="header-content container text-center">
@@ -355,8 +367,8 @@
         <div class="row">
             <div class="col-6 col-md-3 mb-3">
                 <div class="stat-box">
-                    <div class="stat-num">2</div>
-                    <div class="stat-lbl">Manuscripts (2026)</div>
+                    <div class="stat-num">4+</div>
+                    <div class="stat-lbl">Research Studies</div>
                 </div>
             </div>
             <div class="col-6 col-md-3 mb-3">
@@ -391,11 +403,11 @@
                     <p class="section-subtitle">Who Am I?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        I am an M.Sc. student in Computer Science at <strong>Nanjing University of Information Science and Technology (NUIST)</strong>, China, and a graduate with a State Engineering Degree in <strong>Information Systems Engineering</strong> from SUPMTI (Morocco).
+                        I am an M.Sc. student in Computer Science at <strong>Nanjing University of Information Science and Technology (NUIST)</strong>, China, and an engineer with a State Engineering Degree in <strong>Information Systems Engineering</strong> from SUPMTI (Morocco).
                         <br><br>
-                        My core research investigates a critical operational question: <em>Which learned solar power forecasts actually outperform baseline references, across which lead-time horizons, and when does higher forecast accuracy translate into real economic decision-making value?</em>
+                        My current research focuses on practical forecasting questions: <em>Which learned solar power forecasts actually outperform smart reference benchmarks across lead times, and when does higher forecast accuracy translate into real operational decisions and economic savings?</em>
                         <br><br>
-                        With a foundation as a software engineer (C#/.NET, Java, Flutter, Django, and Distributed Systems), I bring rigorous software principles—including pre-registered evaluation protocols, byte-identical reproducibility, checksum manifests, and pytest verification suites—to scientific forecasting and machine learning.
+                        With a strong background as a software engineer (C#/.NET, Java, Flutter, Django, and Distributed Systems), I apply engineering best practices—such as pre-registered evaluation protocols, byte-identical reproducibility, checksum manifests, and pytest verification suites—to scientific machine learning. I am currently working on research publications in solar forecasting and battery optimization.
                     </p>
     
                     <div class="row text-left mt-3 mb-3">
@@ -430,20 +442,20 @@
         </div>
     </section><!-- End of About Section -->
 
-    <!-- Recent 2026 Research & Manuscripts Section -->
+    <!-- Recent 2026 Research Section -->
     <section class="section" id="research" style="background-color: #f8f9fa;">
         <div class="container text-center">
-            <p class="section-subtitle">Academic Contributions (2026)</p>
-            <h6 class="section-title mb-5">Solar Forecasting Research & Publications</h6>
+            <p class="section-subtitle">Academic Inquiries (2026)</p>
+            <h6 class="section-title mb-5">Solar Forecasting Research (Working on Papers)</h6>
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     
-                    <!-- Paper 1 -->
+                    <!-- Research Study 1 -->
                     <div class="paper-card">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge-pill-custom badge-solar">Manuscript Prepared for Submission (2026)</span>
-                            <span class="badge-pill-custom badge-academic">Journal of Renewable and Sustainable Energy</span>
+                            <span class="badge-pill-custom badge-solar">Working on Paper</span>
+                            <span class="badge-pill-custom badge-academic">2026 Ongoing Study</span>
                         </div>
                         <h4 class="paper-title">
                             Reference specification, model updating and calibration population in hourly photovoltaic power forecasting
@@ -452,7 +464,7 @@
                             <strong>El Houcine Oussi</strong> and Ling Tan — <em>Nanjing University of Information Science and Technology (NUIST)</em>
                         </div>
                         <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
-                            Investigates how the performance advantage of learned models (LightGBM, GRU neural networks, and compact Transformers) shifts across lead times of 2, 4, 6, and 12 hours under reference specification choices, retraining schedules, and prediction interval calibration. Evaluated on three testbeds: DKASC Alice Springs (23.4 kW tracker), 31 HKUST rooftop systems, and NREL PVDAQ 9068 (4.7 MW single-axis tracker in Colorado) under a pre-registered protocol.
+                            Investigates how the performance advantage of learned models (LightGBM, GRU neural networks, and compact Transformers) shifts across lead times of 2, 4, 6, and 12 hours under reference specification choices, retraining schedules, and prediction interval calibration. Evaluated on three testbeds: Alice Springs (DKASC), Hong Kong (HKUST), and Colorado (NREL PVDAQ 9068) under a pre-registered protocol. Currently working on the publication.
                         </p>
                         <div class="paper-meta">
                             <span><i class="fas fa-code-branch text-primary"></i> Models: LightGBM, GRU, Transformers</span>
@@ -466,20 +478,20 @@
                         </div>
                     </div>
 
-                    <!-- Paper 2 -->
+                    <!-- Research Study 2 -->
                     <div class="paper-card">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge-pill-custom badge-solar">Manuscript Complete (2026)</span>
+                            <span class="badge-pill-custom badge-solar">Working on Paper</span>
                             <span class="badge-pill-custom badge-academic">Operational Battery Scheduling</span>
                         </div>
                         <h4 class="paper-title">
-                            When do probabilistic solar forecasts earn their keep? Forecast quality, distributional validity and operational value in behind-the-meter battery scheduling
+                            Operational Value of Probabilistic Solar Forecasts in Behind-the-Meter Battery Scheduling
                         </h4>
                         <div class="paper-authors">
                             <strong>El Houcine Oussi</strong> and Collaborators — <em>Nanjing University of Information Science and Technology</em>
                         </div>
                         <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
-                            Examines when probabilistic day-ahead solar forecasts provide measurable economic value in behind-the-meter home-battery scheduling. Benchmarked against 91,290 simulated scenarios across 40 real Ausgrid residential households. Demonstrated that scheduling systems leveraging full forecast distributions consistently reduce electricity costs across all 40 households.
+                            Examines when probabilistic day-ahead solar forecasts provide measurable economic value in behind-the-meter home-battery scheduling. Benchmarked against 91,290 simulated scenarios across 40 real Ausgrid residential households. Demonstrated that scheduling systems leveraging full forecast distributions consistently reduce electricity costs across all 40 households. Currently working on the publication.
                         </p>
                         <div class="paper-meta">
                             <span><i class="fas fa-bolt text-warning"></i> Horizon: Day-Ahead</span>
@@ -491,7 +503,7 @@
                     <!-- Research Studies Matrix Table -->
                     <div class="feature-card mt-4 mb-4">
                         <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 15px;">
-                            <i class="fas fa-table mr-2 text-primary"></i> Overview of Research Studies & Data Horizons
+                            <i class="fas fa-table mr-2 text-primary"></i> Active Research Studies & Lead Time Horizons
                         </h5>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover mb-0" style="font-size: 14px;">
@@ -500,33 +512,33 @@
                                         <th>Study Focus</th>
                                         <th>Lead Time</th>
                                         <th>Key Data Sources</th>
-                                        <th>Experimental Status</th>
+                                        <th>Current Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><strong>Sky-Image Nowcasting:</strong> Do ground sky cameras add value over PV history?</td>
+                                        <td><strong>Sky-Image Nowcasting:</strong> Ground sky camera value over PV history</td>
                                         <td>5–30 min</td>
                                         <td>Stanford SKIPP'D Dataset</td>
                                         <td><span class="badge-pill-custom badge-academic">Experiments Complete</span></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Solar Farms up to 6 h ahead:</strong> Satellite imagery + numerical weather predictions</td>
+                                        <td><strong>Solar Farms up to 6 h ahead:</strong> Satellite imagery + weather forecasts</td>
                                         <td>0.5–6 h</td>
                                         <td>50 Australian Solar Farms (AEMO) · 94 UK Farms</td>
                                         <td><span class="badge-pill-custom badge-solar">Final Held-Out Test</span></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Reference Specification & Updates:</strong> Retraining impact on reported skill</td>
+                                        <td><strong>Reference Specification & Updates:</strong> Retraining impact on measured skill</td>
                                         <td>2–12 h</td>
                                         <td>DKASC Alice Springs · 31 HKUST Rooftops · NREL</td>
-                                        <td><span class="badge-pill-custom badge-industry">Manuscript Ready</span></td>
+                                        <td><span class="badge-pill-custom badge-industry">Working on Paper</span></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Forecast Quality to Value:</strong> Probabilistic battery optimization</td>
                                         <td>Day-ahead</td>
                                         <td>91,290 Scenarios · 40 Ausgrid Households</td>
-                                        <td><span class="badge-pill-custom badge-industry">Manuscript Complete</span></td>
+                                        <td><span class="badge-pill-custom badge-industry">Working on Paper</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -694,7 +706,7 @@
         </div>
     </section><!-- End of Experience Section -->
 
-    <!-- Projects Section (Categorized Grid) -->
+    <!-- Projects Section (Categorized Grid with Dedicated Visual Frames) -->
     <section class="section" id="portfolio">
         <div class="container text-center">
             <p class="section-subtitle">What I've Built & Published</p>
@@ -712,13 +724,15 @@
             <!-- Project Cards Grid -->
             <div class="row">
 
-                <!-- Project 1: PV Forecast Evaluation (NEW 2026) -->
+                <!-- Project 1: PV Forecast Evaluation (Custom SVG Preview) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/architect.png" class="card-img-top" alt="PV Forecast Evaluation">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/pv-forecast-preview.svg" alt="PV Forecast Benchmark">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="badge-pill-custom badge-solar">Oct 2026 Release</span>
+                                <span class="badge-pill-custom badge-solar">Oct 2026</span>
                                 <span class="badge-pill-custom badge-academic">Zenodo DOI</span>
                             </div>
                             <h5 class="card-title" style="font-size: 19px; font-weight: 700;">PV Forecast Benchmark</h5>
@@ -748,11 +762,13 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Strix AI Penetration Testing (NEW Sep 2026) -->
+                <!-- Project 2: Strix AI Penetration Testing (Custom SVG Preview) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research systems">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/architect.png" class="card-img-top" alt="Strix AI Pen Testing">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/strix-preview.svg" alt="Strix AI Pen Testing">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-industry">Sep 2026</span>
                                 <span class="badge-pill-custom badge-academic">AI Security</span>
@@ -780,11 +796,13 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Odysseus AI Workspace (NEW Jun 2026) -->
+                <!-- Project 3: Odysseus AI Workspace (Custom SVG Preview) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web systems">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/Todo.png" class="card-img-top" alt="Odysseus AI Workspace">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/odysseus-preview.svg" alt="Odysseus AI Workspace">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-industry">Jun 2026</span>
                                 <span class="badge-pill-custom badge-academic">Self-Hosted</span>
@@ -812,11 +830,13 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Love Check App -->
+                <!-- Project 4: Love Check App (Refined Mobile Frame) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/lovecheck.png" class="card-img-top" alt="Love Check App">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/lovecheck.png" class="mobile-shot" alt="Love Check App">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-industry">Production App</span>
                                 <span class="badge-pill-custom badge-academic">Firebase</span>
@@ -845,11 +865,13 @@
                     </div>
                 </div>
 
-                <!-- Project 5: MystoGuess -->
+                <!-- Project 5: MystoGuess (Refined Mobile Frame) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/mystroguess.png" class="card-img-top" alt="MystoGuess">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/mystroguess.png" class="mobile-shot" alt="MystoGuess">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-industry">Google Play</span>
                                 <span class="badge-pill-custom badge-academic">Mobile</span>
@@ -880,9 +902,11 @@
 
                 <!-- Project 6: EcoBeach Mobile & Backend -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web research">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/Ecobeach.png" class="card-img-top" alt="EcoBeach Mobile Project">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/Ecobeach.png" class="mobile-shot" alt="EcoBeach Mobile Project">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-solar">IoT & Systems</span>
                                 <span class="badge-pill-custom badge-industry">.NET Core</span>
@@ -910,11 +934,13 @@
                     </div>
                 </div>
 
-                <!-- Project 7: Math Expression Compiler -->
+                <!-- Project 7: Math Expression Compiler (Custom SVG Preview) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="systems">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/gym.png" class="card-img-top" alt="Math Expression Compiler">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/compiler-preview.svg" alt="Math Expression Compiler">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-academic">Compilers & AST</span>
                                 <span class="badge-pill-custom badge-industry">C#</span>
@@ -942,11 +968,13 @@
                     </div>
                 </div>
 
-                <!-- Project 8: TaskWithAuthDotNet -->
+                <!-- Project 8: TaskWithAuthDotNet (Custom SVG Preview) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/Todo.png" class="card-img-top" alt="TaskWithAuthDotNet Project">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/taskdotnet-preview.svg" alt="TaskWithAuthDotNet Project">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-industry">Clean Architecture</span>
                                 <span class="badge-pill-custom badge-academic">ASP.NET Core</span>
@@ -974,11 +1002,13 @@
                     </div>
                 </div>
 
-                <!-- Project 9: MapWithAuth -->
+                <!-- Project 9: MapWithAuth (Refined Mobile Frame) -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/mapapp.png" class="card-img-top" alt="MapWithAuth Project">
-                        <div class="card-body d-flex flex-column text-left">
+                    <div class="card shadow-sm h-100">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/mapapp.png" class="mobile-shot" alt="MapWithAuth Project">
+                        </div>
+                        <div class="card-body d-flex flex-column text-left p-3">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="badge-pill-custom badge-industry">Hybrid Mobile</span>
                                 <span class="badge-pill-custom badge-academic">Ionic</span>
@@ -1015,7 +1045,7 @@
         <div class="container text-center text-sm-left">
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Seeking PhD Collaboration or Senior Engineering Roles?</h6>
+                    <h6 class="title text-light">Seeking PhD Collaboration or Engineering Opportunities?</h6>
                     <p class="m-0 text-light">Open for fully funded PhD positions starting 2027 and high-impact engineering roles.</p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
