@@ -1,1371 +1,987 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El-Houcine Oussi | Software Engineer & Distributed Systems Specialist</title>
-  
-  <!-- SEO & Social Meta -->
-  <meta name="description" content="Portfolio of El-Houcine Oussi, Software Engineer & Information Systems graduate from SUPMTI. Specializing in Distributed Systems, Flutter, .NET, Clean Architecture, and Cloud Systems for industry roles and graduate studies.">
-  <meta name="author" content="El-Houcine Oussi">
-  <meta name="keywords" content="El-Houcine Oussi, Software Engineer, Portfolio, Distributed Systems, Flutter, .NET, Clean Architecture, SUPMTI, Morocco, Mobile Developer, Full Stack">
-  
-  <meta property="og:title" content="El-Houcine Oussi | Software Engineer & Distributed Systems">
-  <meta property="og:description" content="Software Engineer & Information Systems Graduate. Explore production mobile/cloud applications, research in distributed systems & compilers, and credentials.">
-  <meta property="og:image" content="assets/imgs/my-image.png">
-  <meta property="og:type" content="website">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of El-Houcine Oussi, Software Engineer & Information Systems graduate from SUPMTI. Specializing in Distributed Systems, Flutter, .NET, Clean Architecture, and Cloud Systems.">
+    <meta name="author" content="El-Houcine Oussi">
+    <title>El-Houcine OUSSI | Software Engineer & Distributed Systems</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  <!-- FontAwesome 6 Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Bootstrap + Meyawo Main Styles -->
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+
+    <style>
+        /* Custom enhancements matching Meyawo aesthetic */
+        html { scroll-behavior: smooth; }
+        .badge-pill-custom {
+            font-size: 13px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 3px;
+            font-weight: 600;
+        }
+        .badge-academic {
+            background-color: #f3e8ff;
+            color: #695aa6;
+            border: 1px solid #d8b4fe;
+        }
+        .badge-industry {
+            background-color: #e6f4ea;
+            color: #137333;
+            border: 1px solid #ceead6;
+        }
+        .edu-card, .exp-card, .research-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 28px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid #eaedf1;
+            margin-bottom: 24px;
+            text-align: left;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .edu-card:hover, .exp-card:hover, .research-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(105, 90, 166, 0.12);
+            border-color: #695aa6;
+        }
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .project-tag {
+            font-size: 12px;
+            padding: 3px 8px;
+            background-color: #f1f3f5;
+            color: #495057;
+            border-radius: 4px;
+            margin: 2px;
+            display: inline-block;
+            font-weight: 500;
+        }
+        .project-bullet {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 18px;
+            list-style: none;
+        }
+        .project-bullet::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #695aa6;
+            font-weight: bold;
+        }
+        .copy-pill {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-pill:hover {
+            background-color: #695aa6 !important;
+            color: #fff !important;
+        }
+        #toast-alert {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #695aa6;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            z-index: 9999;
+            display: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .filter-btn-group {
+            margin-bottom: 35px;
+        }
+        .filter-btn-group .btn {
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-  <!-- Ambient Light Orbs -->
-  <div class="bg-ambient-orb orb-1"></div>
-  <div class="bg-ambient-orb orb-2"></div>
-  <div class="bg-ambient-orb orb-3"></div>
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">SystemX</a>         
+            <ul class="nav">
+                <li class="item"><a class="link" href="#home">Home</a></li>
+                <li class="item"><a class="link" href="#about">About</a></li>
+                <li class="item"><a class="link" href="#education">Education</a></li>
+                <li class="item"><a class="link" href="#experience">Experience</a></li>
+                <li class="item"><a class="link" href="#portfolio">Portfolio</a></li>
+                <li class="item"><a class="link" href="#research">Research</a></li>
+                <li class="item"><a class="link" href="#skills">Skills</a></li>
+                <li class="item"><a class="link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
 
-  <!-- Navigation Bar -->
-  <header class="site-navbar" id="site-navbar">
-    <div class="site-container">
-      <div class="nav-wrap">
-        <a href="#home" class="nav-brand">
-          <span class="brand-badge">EO</span>
-          <span>El-Houcine <span class="text-gradient">Oussi</span></span>
-        </a>
-
-        <!-- Desktop Navigation Links -->
-        <ul class="nav-links">
-          <li class="nav-item"><a href="#about" class="active">About</a></li>
-          <li class="nav-item"><a href="#education">Education & Academics</a></li>
-          <li class="nav-item"><a href="#experience">Experience</a></li>
-          <li class="nav-item"><a href="#projects">Projects</a></li>
-          <li class="nav-item"><a href="#research">Research & Theory</a></li>
-          <li class="nav-item"><a href="#skills">Skills</a></li>
-          <li class="nav-item"><a href="#contact">Contact</a></li>
-        </ul>
-
-        <!-- Action Buttons -->
-        <div class="nav-actions">
-          <!-- Theme Switcher Button -->
-          <button class="btn-icon" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
-            <i class="fas fa-moon" id="theme-icon"></i>
-          </button>
-
-          <!-- Direct CV Download Dropdown / Button -->
-          <a href="assets/docs/CV_English.pdf" download class="btn-primary-gradient" title="Download Curriculum Vitae">
-            <i class="fas fa-arrow-down"></i>
-            <span>Download CV</span>
-          </a>
-
-          <!-- Mobile Hamburger Toggle -->
-          <button class="mobile-nav-toggle btn-icon" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
-  <aside class="mobile-drawer" id="mobile-drawer">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
-      <div class="nav-brand">
-        <span class="brand-badge">EO</span>
-        <span style="font-weight:700;">Menu</span>
-      </div>
-      <button class="btn-icon" id="mobile-drawer-close" aria-label="Close Menu">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-
-    <ul class="mobile-drawer-links">
-      <li><a href="#about"><i class="fas fa-user-circle"></i> About</a></li>
-      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education & Academics</a></li>
-      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
-      <li><a href="#research"><i class="fas fa-atom"></i> Research & Theory</a></li>
-      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-
-    <div style="margin-top:auto; display:flex; flex-direction:column; gap:0.75rem;">
-      <a href="assets/docs/CV_English.pdf" download class="btn-primary-gradient" style="justify-content:center;">
-        <i class="fas fa-file-pdf"></i> Download CV (English)
-      </a>
-      <a href="assets/docs/CV_French.pdf" download class="btn-secondary" style="justify-content:center;">
-        <i class="fas fa-file-pdf"></i> Télécharger CV (Français)
-      </a>
-    </div>
-  </aside>
-
-  <main>
-    <!-- ==========================================================================
-         Hero Section
-         ========================================================================== -->
-    <section class="hero-section" id="home">
-      <div class="site-container">
-        <div class="hero-grid">
-          
-          <!-- Hero Text Details -->
-          <div class="hero-content">
-            <div class="hero-badge-status">
-              <span class="status-dot"></span>
-              <span>Available for Software Engineering Roles & Graduate Programs</span>
-            </div>
-
-            <h1 class="hero-title">
-              Hi, I'm <span class="text-gradient">El-Houcine Oussi</span>
+    <!-- Page Header (Classic Meyawo Style) -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am OUSSI El-Houcine</span>
             </h1>
-
-            <p class="hero-subtitle">
-              Software Engineer • Distributed Systems Enthusiast • Mobile & Cloud Architect
-            </p>
-
-            <p class="hero-description">
-              Graduate in <strong>Information Systems Engineering</strong> from SUPMTI. I combine clean software craftsmanship—proven across production Flutter and .NET applications—with a rigorous academic foundation in distributed systems, compiler structures, and scalable architectures. Whether for production engineering or graduate study, I build software designed to scale.
-            </p>
-
-            <!-- Hero Primary CTAs -->
-            <div class="hero-ctas">
-              <a href="#projects" class="btn-primary-gradient">
-                <i class="fas fa-rocket"></i>
-                <span>Explore Featured Work</span>
-              </a>
-              <a href="#education" class="btn-secondary">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Academic Credentials</span>
-              </a>
-              <a href="#contact" class="btn-secondary">
-                <i class="fas fa-paper-plane"></i>
-                <span>Get in Touch</span>
-              </a>
+            <p class="header-subtitle">Software Engineer • Distributed Systems Specialist</p>            
+            <div class="mt-4">
+                <a href="#portfolio" class="btn btn-primary btn-rounded me-2" style="padding: 10px 24px; font-size: 15px;">Explore Projects</a>
+                <a href="#about" class="btn btn-outline-primary btn-rounded" style="padding: 10px 24px; font-size: 15px;">About Me</a>
             </div>
+        </div>              
+    </header><!-- End of Page Header -->
 
-            <!-- Social Links & Verification -->
-            <div class="hero-socials">
-              <span style="font-size:0.875rem; color:var(--text-muted); font-weight:600; margin-right:0.25rem;">Connect:</span>
-              <a href="https://github.com/Oussi108" target="_blank" class="social-pill" title="GitHub Profile">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/el-houcine-oussi" target="_blank" class="social-pill" title="LinkedIn Profile">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="mailto:oussi.elhoucine0@gmail.com" class="social-pill" title="Send Email">
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="tel:+212642587839" class="social-pill" title="Phone Call">
-                <i class="fas fa-phone"></i>
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.systemx.mystoguess" target="_blank" class="social-pill" title="Google Play Store">
-                <i class="fab fa-google-play"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Hero Image & Interactive Floating Badges -->
-          <div class="hero-photo-wrapper">
-            <div class="photo-glow-backdrop"></div>
-            
-            <div class="photo-card">
-              <img src="assets/imgs/my-image.png" alt="El-Houcine Oussi - Software Engineer" loading="eager">
-            </div>
-
-            <!-- Floating Badges -->
-            <div class="floating-badge floating-badge-1">
-              <i class="fas fa-check-circle" style="color:var(--industry-color); font-size:1.25rem;"></i>
-              <div>
-                <div style="font-weight:700;">2 Published Apps</div>
-                <div style="font-size:0.75rem; color:var(--text-secondary);">Google Play & Firebase</div>
-              </div>
-            </div>
-
-            <div class="floating-badge floating-badge-2">
-              <i class="fas fa-university" style="color:var(--academic-color); font-size:1.25rem;"></i>
-              <div>
-                <div style="font-weight:700;">State Eng. Degree</div>
-                <div style="font-size:0.75rem; color:var(--text-secondary);">Information Systems (SUPMTI)</div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Dual-Perspective Interactive Filter (Industry vs Academic)
-         ========================================================================== -->
-    <section class="perspective-bar-section">
-      <div class="site-container">
-        <div class="perspective-box">
-          <div class="perspective-info">
-            <h4>
-              <i class="fas fa-sliders-h text-gradient"></i>
-              <span>Customize Profile Perspective:</span>
-              <span class="section-tag" id="active-focus-pill" style="margin-bottom:0;">All-Round View</span>
-            </h4>
-            <p id="active-focus-desc">
-              Viewing full comprehensive profile: engineering accomplishments & academic research foundations.
-            </p>
-          </div>
-
-          <div class="perspective-toggle-group">
-            <button class="perspective-btn active" data-mode="all">
-              <i class="fas fa-globe"></i> All-Round
-            </button>
-            <button class="perspective-btn" data-mode="industry">
-              <i class="fas fa-briefcase"></i> Work & Industry
-            </button>
-            <button class="perspective-btn" data-mode="academic">
-              <i class="fas fa-graduation-cap"></i> Academic & Study
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Key Metrics & Engineering Stats
-         ========================================================================== -->
-    <section class="stats-section">
-      <div class="site-container">
-        <div class="stats-grid">
-          
-          <div class="stat-card">
-            <div class="stat-number text-gradient">28+</div>
-            <div class="stat-label">GitHub Repositories</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number text-gradient">2</div>
-            <div class="stat-label">Published Consumer Apps</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number text-gradient">2</div>
-            <div class="stat-label">Engineering & Tech Degrees</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number text-gradient">4</div>
-            <div class="stat-label">Languages (EN / FR / AR / BER)</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         About Me Section
-         ========================================================================== -->
-    <section class="section" id="about" style="padding: 4.5rem 0;">
-      <div class="site-container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-          <span class="section-tag"><i class="fas fa-user"></i> Background</span>
-          <h2 class="section-title">About <span class="text-gradient">El-Houcine</span></h2>
-          <p class="section-subtitle">
-            An engineer driven by computational elegance, clean system architectures, and practical impact.
-          </p>
-        </div>
-
-        <div style="display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center;">
-          <div class="timeline-card" style="padding: 2.25rem;">
-            <p style="font-size:1.05rem; line-height:1.8; color:var(--text-main); margin-bottom:1.25rem;">
-              I am a software engineer with dual passions: delivering production-grade systems in the industry and exploring deep computer science fundamentals in academia. With a State Engineering Degree in <strong>Information Systems Engineering</strong> from SUPMTI and a technical specialization in <strong>Software Development</strong> from ISTA Lazaret, my work spans cross-platform mobile apps (Flutter, Riverpod), high-throughput backend APIs (.NET Core, Django, Spring Boot), and distributed database architectures.
-            </p>
-
-            <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary); margin-bottom:1.5rem;">
-              In industry settings, I have spearheaded mobile and backend development for municipal initiatives such as <strong>Majal Berkane Smart City</strong>, built automated administrative tools for government ministries, and launched consumer apps such as <strong>MystoGuess</strong> (published on Google Play) and <strong>Love Check App</strong> (live real-time Firebase web app). In academic and research inquiries, I actively experiment with compiler construction, AST evaluation, time-series solar irradiance modeling, and distributed protocols.
-            </p>
-
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-top:2rem;">
-              <div style="background:var(--bg-surface); padding:1rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
-                <div style="color:var(--brand-primary); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Primary Residence</div>
-                <div style="font-weight:600; margin-top:0.25rem;">Oujda, Morocco</div>
-                <div style="font-size:0.8rem; color:var(--text-muted);">Open to Relocation & Remote</div>
-              </div>
-
-              <div style="background:var(--bg-surface); padding:1rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
-                <div style="color:var(--brand-primary); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Core Competencies</div>
-                <div style="font-weight:600; margin-top:0.25rem;">.NET Core • Flutter • Distributed Systems</div>
-                <div style="font-size:0.8rem; color:var(--text-muted);">Clean Architecture & Cloud</div>
-              </div>
-
-              <div style="background:var(--bg-surface); padding:1rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
-                <div style="color:var(--brand-primary); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Academic Credentials</div>
-                <div style="font-weight:600; margin-top:0.25rem;">Ingénieur d'État (SUPMTI)</div>
-                <div style="font-size:0.8rem; color:var(--text-muted);">Information Systems (2024)</div>
-              </div>
-            </div>
-
-            <!-- CV Download Actions -->
-            <div style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
-              <span style="font-weight:600; font-size:0.9rem; color:var(--text-secondary);">Curriculum Vitae:</span>
-              <a href="assets/docs/CV_English.pdf" download class="btn-primary-gradient">
-                <i class="fas fa-file-pdf"></i> Download CV (English)
-              </a>
-              <a href="assets/docs/CV_French.pdf" download class="btn-secondary">
-                <i class="fas fa-file-pdf"></i> Télécharger CV (Français)
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Education & Academic Foundations (Targeted for Continuing Study)
-         ========================================================================== -->
-    <section class="academic-section" id="education" data-perspective="academic">
-      <div class="site-container">
-        <div style="text-align: center;">
-          <span class="section-tag" style="background:var(--academic-bg); color:var(--academic-color); border-color:rgba(168, 85, 247, 0.3);">
-            <i class="fas fa-graduation-cap"></i> Academic Foundations
-          </span>
-          <h2 class="section-title">Education & <span class="text-gradient">Qualifications</span></h2>
-          <p class="section-subtitle">
-            Formal engineering education combining rigorous theory in distributed systems and software engineering.
-          </p>
-        </div>
-
-        <div class="timeline">
-          
-          <!-- Degree 1: SUPMTI -->
-          <div class="timeline-item" data-perspective="both">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">Engineering Degree in Information Systems (Diplôme d'Ingénieur)</h3>
-                  <div class="timeline-institution">
-                    <i class="fas fa-university"></i>
-                    <span>SUPMTI (École Supérieure Privée de Gestion, Télécommunications et Informatique)</span>
-                  </div>
+    <!-- About Section -->
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/my-image.png" class="about-img" alt="Software Engineer Profile Image">
                 </div>
-                <span class="timeline-badge">2021 — 2024 • Oujda, Morocco</span>
-              </div>
-
-              <div class="timeline-body">
-                <p>
-                  Comprehensive 3-year graduate engineering program focusing on modern software engineering paradigms, distributed architectures, database theory, and enterprise system integration.
-                </p>
-                <ul>
-                  <li><strong>Core Disciplines:</strong> Distributed Systems, Software Architecture (Clean Architecture, DDD), Enterprise Web & Mobile Systems, Relational & NoSQL Database Optimization.</li>
-                  <li><strong>Systems & DevOps:</strong> Virtualization, Docker container orchestration, CI/CD pipeline automation, Azure DevOps, and secure API gateways.</li>
-                  <li><strong>Analytical Foundations:</strong> Advanced algorithms, data structures, formal verification, and network security protocols.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Degree 2: ISTA Lazaret -->
-          <div class="timeline-item" data-perspective="both">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">Specialized Technician Diploma in Software Development (TS)</h3>
-                  <div class="timeline-institution">
-                    <i class="fas fa-laptop-code"></i>
-                    <span>ISTA Lazaret (Institut Spécialisé de Technologie Appliquée)</span>
-                  </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I'm a software engineer with a strong background in both mobile and web development, holding a <strong>State Engineering Degree in Information Systems</strong> from SUPMTI and a <strong>Specialized Technician Diploma in Software Development</strong> from ISTA Lazaret.
+                        <br><br>
+                        During my studies and professional internships, I gained hands-on experience across full-stack development, including <strong>.NET Core, Flutter, Firebase, Angular, Django, and SQL/NoSQL distributed systems</strong>. I have delivered production software—such as municipal systems for <em>Majal Berkane Smart City</em>, published mobile games on the <em>Google Play Store</em>, and live real-time platforms on <em>Firebase</em>.
+                        <br><br>
+                        In addition to industry engineering, I actively pursue research in <strong>distributed systems, compiler construction (AST parsing), and machine learning solar irradiance forecasting</strong>. I am enthusiastic about contributing to challenging engineering positions or continuing advanced academic research (Master's / PhD).
+                    </p>
+    
+                    <!-- CV Buttons -->
+                    <div class="mt-4">
+                        <a href="assets/docs/CV_English.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
+                            <i class="ti-download"></i> Download CV (English)
+                        </a>
+                        <a href="assets/docs/CV_French.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
+                            <i class="ti-download"></i> Télécharger CV (Français)
+                        </a>
+                        <a href="assets/docs/ecobeach.pdf" target="_blank" class="btn-rounded btn btn-outline-primary mb-2">
+                            <i class="ti-file"></i> EcoBeach Report (PDF)
+                        </a>
+                    </div>
                 </div>
-                <span class="timeline-badge">2019 — 2021 • Oujda, Morocco</span>
-              </div>
-
-              <div class="timeline-body">
-                <p>
-                  Intensive technical program centered on core programming paradigms, relational database normalization, and structured software lifecycle methodologies.
-                </p>
-                <ul>
-                  <li><strong>Foundations:</strong> Object-Oriented Programming (Java, C# .NET, C++), Data Structures, and Software Modeling (UML, MERISE).</li>
-                  <li><strong>Database Systems:</strong> Relational design, ACID transactions, complex SQL queries, and normalization across SQL Server & MySQL.</li>
-                  <li><strong>Applications:</strong> Multi-tier desktop architectures and early client-server web applications.</li>
-                </ul>
-              </div>
             </div>
-          </div>
-
         </div>
+    </section><!-- End of About Section -->
 
-        <!-- Academic & Graduate Study Objectives Banner -->
-        <div style="margin-top:3.5rem; background:var(--bg-card); border:1px solid rgba(168, 85, 247, 0.3); border-radius:var(--radius-lg); padding:2rem; backdrop-filter:blur(12px);" data-perspective="academic">
-          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
-            <i class="fas fa-compass" style="font-size:1.5rem; color:var(--academic-color);"></i>
-            <h3 style="font-size:1.35rem; font-weight:800;">Academic Interests & Continuing Study Aspirations</h3>
-          </div>
-          <p style="color:var(--text-secondary); line-height:1.75; font-size:0.95rem; margin-bottom:1.25rem;">
-            I am actively pursuing opportunities for continuing advanced academic studies (Master's / PhD programs) in computer science. My primary research inclinations reside at the intersection of:
-          </p>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
-            <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); padding:1rem; border-radius:var(--radius-md);">
-              <h5 style="color:var(--academic-color); font-weight:700; margin-bottom:0.25rem;"><i class="fas fa-network-wired"></i> Distributed Systems & Cloud</h5>
-              <p style="font-size:0.85rem; color:var(--text-secondary);">Fault-tolerant architectures, distributed state consensus, and scalable microservice networks.</p>
-            </div>
-            <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); padding:1rem; border-radius:var(--radius-md);">
-              <h5 style="color:var(--academic-color); font-weight:700; margin-bottom:0.25rem;"><i class="fas fa-code-branch"></i> Compiler Theory & Languages</h5>
-              <p style="font-size:0.85rem; color:var(--text-secondary);">Grammar parsing, AST construction, intermediate representation, and static analysis tooling.</p>
-            </div>
-            <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); padding:1rem; border-radius:var(--radius-md);">
-              <h5 style="color:var(--academic-color); font-weight:700; margin-bottom:0.25rem;"><i class="fas fa-chart-line"></i> Applied AI & Energy Modeling</h5>
-              <p style="font-size:0.85rem; color:var(--text-secondary);">Time-series analysis and deep learning applied to solar forecasting and renewable energy systems.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Professional Work Experience
-         ========================================================================== -->
-    <section class="section" id="experience" style="padding: 5rem 0;" data-perspective="industry">
-      <div class="site-container">
-        <div style="text-align: center;">
-          <span class="section-tag" style="background:var(--industry-bg); color:var(--industry-color); border-color:rgba(16, 185, 129, 0.3);">
-            <i class="fas fa-briefcase"></i> Work History
-          </span>
-          <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
-          <p class="section-subtitle">
-            Hands-on engineering roles translating business requirements into scalable, resilient software.
-          </p>
-        </div>
-
-        <div class="timeline">
-          
-          <!-- Experience 1: Majal Berkane -->
-          <div class="timeline-item industry-node" data-perspective="both">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">Backend & Mobile Engineering Intern</h3>
-                  <div class="timeline-institution">
-                    <i class="fas fa-city"></i>
-                    <span>Majal Berkane — Smart City Initiative</span>
-                  </div>
+    <!-- Services / What I Do Section -->
+    <section class="section" id="service" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do?</p>
+            <h6 class="section-title mb-6">Services & Core Domains</h6>
+            <div class="row">
+                <!-- Web Development -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card" style="background:#fff;">
+                        <div class="body">
+                            <img src="assets/imgs/responsive.svg" alt="Web Development" class="icon">
+                            <h6 class="title">Web Development</h6>
+                            <p class="subtitle">
+                                Building responsive, scalable web applications using ASP.NET Core, Django, Angular, and modern cloud platforms.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <span class="timeline-badge" style="background:var(--industry-bg); color:var(--industry-color); border-color:rgba(16, 185, 129, 0.3);">
-                  2024 • Berkane, Morocco
-                </span>
-              </div>
-
-              <div class="timeline-body">
-                <p>
-                  Contributed to municipal smart city digital transformation, engineering mobile client workflows and connecting them with enterprise backends.
-                </p>
-                <ul>
-                  <li><strong>Mobile Architecture:</strong> Architected responsive, high-performance Flutter mobile interfaces implementing Riverpod for robust MVVM reactive state management.</li>
-                  <li><strong>Backend Integration:</strong> Integrated with high-performance ASP.NET Core RESTful APIs developed under Clean Architecture paradigms.</li>
-                  <li><strong>Performance & Reliability:</strong> Optimized payload serialization and client-side caching to guarantee fluid responsiveness even under constrained network conditions.</li>
-                  <li><strong>Tech Stack:</strong> Flutter, Dart, Riverpod, ASP.NET Core, C#, Clean Architecture, REST APIs.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experience 2: Direction Provinciale de l'Équipement -->
-          <div class="timeline-item industry-node" data-perspective="both">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">Web Development & Systems Engineering Intern</h3>
-                  <div class="timeline-institution">
-                    <i class="fas fa-building"></i>
-                    <span>Direction Provinciale de l'Équipement, du Transport, de la Logistique et de l'Eau</span>
-                  </div>
+                <!-- Mobile App Development -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card" style="background:#fff;">
+                        <div class="body">
+                            <img src="assets/imgs/toolbox.svg" alt="Mobile Development" class="icon">
+                            <h6 class="title">Mobile Development</h6>
+                            <p class="subtitle">
+                                Cross-platform mobile apps with Flutter & Riverpod, including multi-language support, Firebase, and offline SQLite sync.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <span class="timeline-badge" style="background:var(--industry-bg); color:var(--industry-color); border-color:rgba(16, 185, 129, 0.3);">
-                  2023 • Oujda, Morocco
-                </span>
-              </div>
-
-              <div class="timeline-body">
-                <p>
-                  Engineered an internal enterprise portal to streamline departmental employee workflows, logistics tracking, and internal record auditing.
-                </p>
-                <ul>
-                  <li><strong>Full-Stack Development:</strong> Developed a secure web platform using Python and Django with role-based access control (RBAC).</li>
-                  <li><strong>Data Automation:</strong> Implemented automated processing routines utilizing Pandas and NumPy for tracking departmental statistics and reporting.</li>
-                  <li><strong>Infrastructure Deployment:</strong> Configured and deployed the application on production Windows Server running Internet Information Services (IIS).</li>
-                  <li><strong>Tech Stack:</strong> Python, Django, Pandas, NumPy, Windows Server, IIS, SQL.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experience 3: SystemX Indie Apps -->
-          <div class="timeline-item industry-node" data-perspective="both">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">Lead Developer & Creator</h3>
-                  <div class="timeline-institution">
-                    <i class="fas fa-cube"></i>
-                    <span>SystemX Software Initiatives</span>
-                  </div>
+                <!-- Backend & APIs -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card" style="background:#fff;">
+                        <div class="body">
+                            <img src="assets/imgs/analytics.svg" alt="Backend Development" class="icon">
+                            <h6 class="title">Backend & APIs</h6>
+                            <p class="subtitle">
+                                Developing secure REST APIs, Clean Architecture, relational databases (SQL Server, MySQL), and Docker workflows.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <span class="timeline-badge" style="background:var(--industry-bg); color:var(--industry-color); border-color:rgba(16, 185, 129, 0.3);">
-                  2022 — Present • Independent
-                </span>
-              </div>
-
-              <div class="timeline-body">
-                <p>
-                  Founded SystemX as an independent product lab to design, publish, and maintain production applications for Google Play and Web.
-                </p>
-                <ul>
-                  <li>Shipped <strong>MystoGuess</strong> to the Google Play Store with offline-first SQLite database architecture.</li>
-                  <li>Designed and deployed <strong>Love Check App</strong> to Firebase Hosting with real-time multi-user synchronization.</li>
-                  <li>Executed complete product lifecycles: UI/UX design, database schema, state management, store listing compliance, and ongoing updates.</li>
-                </ul>
-              </div>
+                <!-- UI/UX & Architecture -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card" style="background:#fff;">
+                        <div class="body">
+                            <img src="assets/imgs/pencil-case.svg" alt="UI/UX & Architecture" class="icon">
+                            <h6 class="title">Systems & Architecture</h6>
+                            <p class="subtitle">
+                                Designing with Clean Architecture (MVVM, DDD), distributed consistency models, and formal compiler construction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+    </section><!-- End of Service Section -->
 
-    <!-- ==========================================================================
-         Featured Projects Gallery
-         ========================================================================== -->
-    <section class="projects-section" id="projects">
-      <div class="site-container">
-        <div style="text-align: center;">
-          <span class="section-tag"><i class="fas fa-code"></i> Portfolio</span>
-          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-          <p class="section-subtitle">
-            Explore a curated selection of mobile applications, enterprise backends, and research experiments.
-          </p>
+    <!-- Education Section (Academic Credentials) -->
+    <section class="section" id="education">
+        <div class="container text-center">
+            <p class="section-subtitle">Academic Credentials</p>
+            <h6 class="section-title mb-6">Education & Degrees</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Degree 1 -->
+                    <div class="edu-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Engineering Degree in Information Systems (Diplôme d'Ingénieur)
+                            </h5>
+                            <span class="badge-pill-custom badge-academic">2021 — 2024 • Oujda, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-bookmark-alt"></i> SUPMTI (École Supérieure Privée de Gestion, Télécommunications et Informatique)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            A rigorous 3-year graduate engineering curriculum covering advanced computer science fundamentals, distributed systems, and scalable enterprise software architecture.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet"><strong>Distributed Systems & Cloud:</strong> Distributed consistency, microservices, containerization with Docker, and cloud deployments.</li>
+                            <li class="project-bullet"><strong>Software Engineering:</strong> Clean Architecture, Domain-Driven Design (DDD), and scalable system design.</li>
+                            <li class="project-bullet"><strong>Database Engineering:</strong> Complex SQL query optimization, transactions, ACID compliance, and NoSQL databases.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Degree 2 -->
+                    <div class="edu-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Specialized Technician in Computer Development (TS)
+                            </h5>
+                            <span class="badge-pill-custom badge-academic">2019 — 2021 • Oujda, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-desktop"></i> ISTA Lazaret (Institut Spécialisé de Technologie Appliquée)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Comprehensive technical foundation in algorithms, object-oriented design, relational database systems, and application lifecycle modeling.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet"><strong>Object-Oriented Programming:</strong> Deep immersion in Java, C# .NET, C++, data structures, and algorithms.</li>
+                            <li class="project-bullet"><strong>Analysis & Modeling:</strong> System modeling with UML and MERISE methodologies.</li>
+                            <li class="project-bullet"><strong>Relational Databases:</strong> Schema design, normalization, stored procedures, and triggers in SQL Server & MySQL.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section><!-- End of Education Section -->
 
-        <!-- Project Filter Buttons -->
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all"><i class="fas fa-th"></i> All Projects</button>
-          <button class="filter-btn" data-filter="mobile"><i class="fas fa-mobile-alt"></i> Mobile Apps</button>
-          <button class="filter-btn" data-filter="web"><i class="fas fa-laptop"></i> Full-Stack & Web</button>
-          <button class="filter-btn" data-filter="research"><i class="fas fa-flask"></i> Research & Compilers</button>
-          <button class="filter-btn" data-filter="desktop"><i class="fas fa-desktop"></i> Desktop & Enterprise</button>
+    <!-- Experience Section -->
+    <section class="section" id="experience" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">Work History</p>
+            <h6 class="section-title mb-6">Professional Experience</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Job 1 -->
+                    <div class="exp-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Backend & Mobile Engineering Intern
+                            </h5>
+                            <span class="badge-pill-custom badge-industry">2024 • Berkane, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-location-pin"></i> Majal Berkane — Smart City Initiative
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Contributed to municipal smart city digital transformation, building citizen-facing mobile applications and connecting them with enterprise backends.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet">Designed and built intuitive, dynamic mobile UI in Flutter with Riverpod state management.</li>
+                            <li class="project-bullet">Integrated with a high-performance .NET Core backend structured with Clean Architecture.</li>
+                            <li class="project-bullet">Optimized server data retrieval and client-side caching to ensure a responsive, resilient user experience.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="exp-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Web Engineering & Systems Intern
+                            </h5>
+                            <span class="badge-pill-custom badge-industry">2023 • Oujda, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-home"></i> Direction Provinciale de l'Équipement, du Transport, de la Logistique et de l'Eau
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Developed an automated administrative web system to streamline departmental staff and logistical task operations.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet">Built a Django web platform managing automated employee workflows and role-based permissions.</li>
+                            <li class="project-bullet">Implemented secure authentication and optimized data manipulation routines using Pandas and NumPy.</li>
+                            <li class="project-bullet">Configured and deployed the production app on Windows Server running IIS Web Server.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="exp-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Independent Developer & Creator
+                            </h5>
+                            <span class="badge-pill-custom badge-industry">2022 — Present • SystemX</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-crown"></i> SystemX Software Initiatives
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Designed, published, and maintained mobile and web applications with published releases on Google Play and Firebase.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet">Published <em>MystoGuess</em> on Google Play Store with offline-first SQLite database architecture.</li>
+                            <li class="project-bullet">Created and deployed <em>Love Check App</em> with real-time multi-user synchronization.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section><!-- End of Experience Section -->
 
-                <!-- Projects Grid -->
-        <div class="projects-grid">
-          
-          <!-- Project 1: Love Check App -->
-          <div class="project-card" data-category="mobile web" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/lovecheck.png" alt="Love Check App">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Production App</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">Live Web</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>Love Check App</span>
-              </div>
-              <p class="project-desc">
-                Interactive real-time multi-user relationship game with synchronized decision rooms and cloud messaging.
-              </p>
-              <ul class="project-features-list">
-                <li>Real-time question sync powered by Firebase Realtime DB</li>
-                <li>MVVM state management using Riverpod with localization</li>
-                <li>Offline-first SQLite fallback for network interruptions</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">Riverpod</span>
-                <span class="tech-tag">SQLite</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://lovecheckapp.web.app/" target="_blank" class="btn-card-action">
-                  <i class="fas fa-external-link-alt"></i> Visit Live
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="lovecheck">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I've Built</p>
+            <h6 class="section-title mb-4">My Projects</h6>
 
-          <!-- Project 2: MystoGuess -->
-          <div class="project-card" data-category="mobile" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/mystroguess.png" alt="MystoGuess Play Store">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Google Play</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">Mobile</span>
-              </div>
+            <!-- Interactive Project Filters -->
+            <div class="filter-btn-group">
+                <button class="btn btn-outline-primary active filter-btn" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="web">Full-Stack & Web</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="research">Research & Compilers</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="desktop">Desktop & Enterprise</button>
             </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>MystoGuess</span>
-              </div>
-              <p class="project-desc">
-                Category-based guessing game using emojis and image challenges with solo and turn-based multiplayer. Published on Google Play.
-              </p>
-              <ul class="project-features-list">
-                <li>Published on Google Play Store under SystemX publisher</li>
-                <li>Sub-second query performance using structured JSON & SQLite</li>
-                <li>Clean Architecture separating domain, data, and UI layers</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">SQLite</span>
-                <span class="tech-tag">Clean Arch</span>
-                <span class="tech-tag">Riverpod</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.systemx.mystoguess" target="_blank" class="btn-card-action">
-                  <i class="fab fa-google-play"></i> Play Store
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="mystoguess">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
 
-          <!-- Project 3: EcoBeach Mobile & Backend -->
-          <div class="project-card" data-category="mobile web research" data-perspective="both">
-            <div class="project-img-holder">
-              <img src="assets/imgs/Ecobeach.png" alt="EcoBeach Mobile">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag academic">IoT & Systems</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">Full-Stack</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>EcoBeach Platform</span>
-              </div>
-              <p class="project-desc">
-                Environmental monitoring system tracking beach cleanliness indicators, sensor telemetry, and water quality for sustainability.
-              </p>
-              <ul class="project-features-list">
-                <li>Telemetry ingestion backend developed with .NET Core & C#</li>
-                <li>Environmental sensor metrics and coastal status indicators</li>
-                <li>Mobile monitoring client designed for field operations</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">.NET Core</span>
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">IoT Data</span>
-                <span class="tech-tag">System Design</span>
-              </div>
-              <div class="project-actions">
-                <a href="assets/docs/ecobeach.pdf" target="_blank" class="btn-card-action">
-                  <i class="fas fa-file-pdf"></i> Report PDF
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="ecobeach">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+            <!-- Project Cards Grid -->
+            <div class="row">
 
-          <!-- Project 4: HomeRealm Rental Marketplace -->
-          <div class="project-card" data-category="web" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/architect.png" alt="HomeRealm Marketplace">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Full-Stack Web</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">ASP.NET MVC</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>HomeRealm Marketplace</span>
-              </div>
-              <p class="project-desc">
-                Airbnb-inspired vacation rental marketplace with property listings, date booking, and query filter mechanisms.
-              </p>
-              <ul class="project-features-list">
-                <li>Relational database schema modeling properties and bookings</li>
-                <li>Multi-criteria query search engine with location & pricing filters</li>
-                <li>Entity Framework ORM integration with secure authentication</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">ASP.NET MVC</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Bootstrap</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/Oussi108/HomeRealm" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="homerealm">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 1: Love Check -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/lovecheck.png" class="card-img-top" alt="Love Check App">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Love Check App</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                A real-time relationship interactive game where couples synchronize answers and review shared relationship metrics.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Real-time room synchronization via Firebase Realtime DB</li>
+                                <li class="project-bullet">MVVM architecture using Riverpod with multilingual i18n</li>
+                                <li class="project-bullet">Offline SQLite database caching</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Firebase</span>
+                                <span class="project-tag">Riverpod</span>
+                                <span class="project-tag">SQLite</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://lovecheckapp.web.app/" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="ti-world"></i> View Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 5: Task With Auth .NET -->
-          <div class="project-card" data-category="web" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/Todo.png" alt="Task with Auth .NET">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Backend API</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">.NET Core</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>TaskWithAuth DotNet</span>
-              </div>
-              <p class="project-desc">
-                Enterprise task management microservice built with ASP.NET Core, JWT authentication, and Clean Architecture.
-              </p>
-              <ul class="project-features-list">
-                <li>Domain-Driven Design (DDD) with decoupled domain & API layers</li>
-                <li>Stateless JWT authentication with role-based access claims</li>
-                <li>Entity Framework Core with SQL Server migrations & Swagger</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">ASP.NET Core</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">JWT</span>
-                <span class="tech-tag">SQL Server</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/Oussi108/taskwithauthdotnet" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="taskdotnet">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 2: MystoGuess -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/mystroguess.png" class="card-img-top" alt="MystoGuess">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">MystoGuess</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                A category-based guessing game built with emojis and images featuring solo adventure and turn-based multiplayer. Published on Google Play.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Published on the Google Play Store under SystemX</li>
+                                <li class="project-bullet">Offline-first architecture with SQLite + JSON dictionaries</li>
+                                <li class="project-bullet">Clean Architecture separating Domain, Data, & UI</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Dart</span>
+                                <span class="project-tag">Google Play</span>
+                                <span class="project-tag">Clean Arch</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://play.google.com/store/apps/details?id=com.systemx.mystoguess" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-google-play"></i> View on Play Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 6: Math Expression Compiler (Complier_EXP_math) -->
-          <div class="project-card" data-category="research" data-perspective="academic">
-            <div class="project-img-holder">
-              <img src="assets/imgs/gym.png" alt="Math Compiler">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag academic">Compilers & AST</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">Theoretical CS</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>Expression Compiler</span>
-              </div>
-              <p class="project-desc">
-                Custom mathematical expression compiler featuring token scanning, recursive-descent parsing, and abstract syntax tree execution.
-              </p>
-              <ul class="project-features-list">
-                <li>Lexer converting mathematical expressions into typed tokens</li>
-                <li>Recursive-descent grammar parser enforcing operator precedence</li>
-                <li>Abstract Syntax Tree (AST) construction and post-order evaluation</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Lexer/Parser</span>
-                <span class="tech-tag">AST</span>
-                <span class="tech-tag">Grammars</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/Oussi108/Complier_EXP_math" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="compiler">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 3: EcoBeach Mobile -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web research">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/Ecobeach.png" class="card-img-top" alt="EcoBeach Mobile Project">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">EcoBeach Mobile</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Environmental IoT monitoring mobile app tracking coastal cleanliness indicators, sensor telemetry, and citizen reporting.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Real-time status indicators and telemetry data views</li>
+                                <li class="project-bullet">Clean responsive mobile client built in Flutter</li>
+                                <li class="project-bullet">Integrated with environmental sensor backend</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">IoT Data</span>
+                                <span class="project-tag">Mobile</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="assets/docs/ecobeach.pdf" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="ti-file"></i> View Report (PDF)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 7: Map With Auth -->
-          <div class="project-card" data-category="mobile web" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/mapapp.png" alt="Map With Auth">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Hybrid Mobile</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">Ionic/Capacitor</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>MapWithAuth App</span>
-              </div>
-              <p class="project-desc">
-                Geolocation mapping client combining Angular, Ionic, and Capacitor for GPS pin tracking, marker clustering, and authenticated user storage.
-              </p>
-              <ul class="project-features-list">
-                <li>Cross-platform mobile & web client built with Angular and Ionic</li>
-                <li>Capacitor geolocation plugins accessing native GPS sensors</li>
-                <li>Interactive marker clustering and authenticated location bookmarks</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Ionic</span>
-                <span class="tech-tag">Angular</span>
-                <span class="tech-tag">Capacitor</span>
-                <span class="tech-tag">TypeScript</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/Oussi108/mapwithauth" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="mapauth">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 4: EcoBeach Backend -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web research">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/architect.png" class="card-img-top" alt="EcoBeach Backend Architecture">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">EcoBeach BackEnd</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                A backend system developed for the EcoBeach project, focusing on environmental telemetry data management, aggregation, and analysis.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">REST APIs developed with .NET Core & C#</li>
+                                <li class="project-bullet">Time-series and relational database modeling</li>
+                                <li class="project-bullet">Detailed system architecture specification</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">.NET Core</span>
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">System Design</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="assets/docs/ecobeach.pdf" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="ti-file"></i> Architecture PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 8: Novels Android Application -->
-          <div class="project-card" data-category="mobile" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/novel.png" alt="Novels Android App">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Native Android</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">Java</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>Novels Reader App</span>
-              </div>
-              <p class="project-desc">
-                Native Android mobile app developed with Java and SQLite for organizing, reading, and bookmarking literature offline.
-              </p>
-              <ul class="project-features-list">
-                <li>Native Android development utilizing Java & Android SDK components</li>
-                <li>Local SQLite database storing books, reading positions, and history</li>
-                <li>Customizable reading view with dynamic typography & dark mode</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">Android SDK</span>
-                <span class="tech-tag">SQLite</span>
-                <span class="tech-tag">Material UI</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/oussi108/novels" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="novels">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 5: TaskWithAuthDotNet -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/Todo.png" class="card-img-top" alt="TaskWithAuthDotNet Project">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Task With Auth DotNet</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                A task management microservice featuring secure user authentication built with ASP.NET Core and Clean Architecture.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Domain-Driven Design (DDD) with decoupled layers</li>
+                                <li class="project-bullet">Stateless JWT authentication with refresh token flow</li>
+                                <li class="project-bullet">Entity Framework Core with SQL Server migrations</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">ASP.NET Core</span>
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">JWT</span>
+                                <span class="project-tag">SQL Server</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/taskwithauthdotnet" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 9: Desktop Gym Manager -->
-          <div class="project-card" data-category="desktop" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/gym.png" alt="Desktop Gym Manager">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Desktop Enterprise</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">C# .NET</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>DesktopGymManager</span>
-              </div>
-              <p class="project-desc">
-                Comprehensive gym management desktop solution for subscriptions, attendance check-ins, automated billing, and SQL database reporting.
-              </p>
-              <ul class="project-features-list">
-                <li>Enterprise desktop software engineered in C# and .NET WinForms</li>
-                <li>Normalized Microsoft SQL Server database with ACID transactions</li>
-                <li>Member attendance logging, payment tracking, and expiry alerts</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">.NET</span>
-                <span class="tech-tag">SQL Server</span>
-                <span class="tech-tag">WinForms</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/oussi108/DesktopGymManger" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="gymmanager">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 6: MapWithAuth -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/mapapp.png" class="card-img-top" alt="MapWithAuth Project">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Map With Auth</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                An Ionic-based geolocation map application integrating Angular and Capacitor with secure user authentication and pin clustering.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Capacitor native geolocation & GPS sensor integration</li>
+                                <li class="project-bullet">Authenticated coordinate bookmarks & route pins</li>
+                                <li class="project-bullet">Cross-platform build ready for Android and Web</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Ionic</span>
+                                <span class="project-tag">Angular</span>
+                                <span class="project-tag">Capacitor</span>
+                                <span class="project-tag">TypeScript</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/mapwithauth" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 10: Hotel Management System -->
-          <div class="project-card" data-category="desktop" data-perspective="industry">
-            <div class="project-img-holder">
-              <img src="assets/imgs/hotel.png" alt="Hotel Management System">
-              <div class="project-badges-overlay">
-                <span class="perspective-tag industry">Desktop Enterprise</span>
-                <span class="tech-tag" style="background:rgba(0,0,0,0.6); color:#fff;">.NET</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">
-                <span>Hotel Management</span>
-              </div>
-              <p class="project-desc">
-                Multi-tier enterprise desktop system coordinating room reservations, guest check-ins, invoice generation, and room maintenance status.
-              </p>
-              <ul class="project-features-list">
-                <li>Multi-tier architecture cleanly separating business logic and data</li>
-                <li>Normalized relational database for room inventory and guests</li>
-                <li>Occupancy statistics reporting and invoice billing workflows</li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">.NET</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">SQL Database</span>
-                <span class="tech-tag">Architecture</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/Oussi108/HotelManagment_2year" target="_blank" class="btn-card-action">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <button class="btn-card-action open-project-modal" data-project="hotelmgmt">
-                  <i class="fas fa-layer-group"></i> Architecture
-                </button>
-              </div>
-            </div>
-          </div>
+                <!-- Project 7: Math Expression Compiler -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/gym.png" class="card-img-top" alt="Math Expression Compiler">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Math Expression Compiler</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Custom mathematical expression compiler featuring token scanning, recursive-descent parsing, and abstract syntax tree (AST) execution.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Lexical tokenizer converting mathematical text into tokens</li>
+                                <li class="project-bullet">Grammar parser enforcing operator precedence and associativity</li>
+                                <li class="project-bullet">Abstract Syntax Tree (AST) construction and evaluation</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">Compilers</span>
+                                <span class="project-tag">AST</span>
+                                <span class="project-tag">Formal Grammars</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/Complier_EXP_math" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project 8: Novels Project -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/novel.png" class="card-img-top" alt="Novels Project">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Novels Android App</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                An Android app built with native Java and SQLite, designed for managing, cataloging, and reading literature offline.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Native Android development with Java & Android SDK</li>
+                                <li class="project-bullet">Offline SQLite database storing reading positions and books</li>
+                                <li class="project-bullet">Custom reader UI with dynamic font scaling and night mode</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Android SDK</span>
+                                <span class="project-tag">SQLite</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/oussi108/novels" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: DesktopGymManager -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="desktop">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/gym.png" class="card-img-top" alt="DesktopGymManager Project">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">DesktopGymManager</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                A gym management desktop application developed with C# and SQL Server for handling member subscriptions and attendance logs.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Desktop enterprise management developed with C# .NET</li>
+                                <li class="project-bullet">Relational Microsoft SQL Server schema with ACID transactions</li>
+                                <li class="project-bullet">Automated payment tracking and membership alerts</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">.NET</span>
+                                <span class="project-tag">SQL Server</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/oussi108/DesktopGymManger" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: HotelManagement -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="desktop">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/hotel.png" class="card-img-top" alt="HotelManagement Project">
+                        <div class="card-body d-flex flex-column text-left">
+                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">HotelManagement</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                A hotel management desktop application built using .NET technologies for coordinating room reservations and billing workflows.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Multi-tier architecture separating business logic & data</li>
+                                <li class="project-bullet">Normalized relational database for room inventory and guests</li>
+                                <li class="project-bullet">Operational occupancy statistics and invoicing</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">.NET</span>
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">SQL Server</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/HotelManagment_2year" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- End of row -->
         </div>
-      </div>
-    </section>
+    </section><!-- End of Portfolio Section -->
 
-    <!-- ==========================================================================
-         Research & Continuous Learning (For Continuing Study Applications)
-         ========================================================================== -->
-    <section class="research-section" id="research" data-perspective="academic">
-      <div class="site-container">
-        <div style="text-align: center;">
-          <span class="section-tag" style="background:var(--academic-bg); color:var(--academic-color); border-color:rgba(168, 85, 247, 0.3);">
-            <i class="fas fa-atom"></i> Research & Explorations
-          </span>
-          <h2 class="section-title">Academic & <span class="text-gradient">Theoretical Pursuits</span></h2>
-          <p class="section-subtitle">
-            Beyond standard engineering, I actively investigate advanced computer science domains, datasets, and systems theory.
-          </p>
+    <!-- Research & Theory Section (For Continuing Study Applications) -->
+    <section class="section" id="research" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">Academic Inquiries</p>
+            <h6 class="section-title mb-6">Research & Explorations</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <!-- Area 1: Solar Forecasting -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card h-100">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-sun mr-2" style="font-size: 26px; color: #f59e0b;"></i>
+                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                        Solar Irradiance & ML Forecasting
+                                    </h5>
+                                </div>
+                                <p style="font-size: 14px; color: #6c757d;">
+                                    Active exploration of physical solar datasets (including the <em>Stanford Solar Forecasting Dataset</em> and <em>PV Forecast Reference Evaluations</em>) analyzing time-series models for renewable power prediction.
+                                </p>
+                                <div>
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">Time-Series</span>
+                                    <span class="project-tag">Pandas/NumPy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area 2: Compiler Design -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card h-100">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-terminal mr-2" style="font-size: 26px; color: #695aa6;"></i>
+                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                        Compilers & Formal Grammars
+                                    </h5>
+                                </div>
+                                <p style="font-size: 14px; color: #6c757d;">
+                                    Practical construction of custom mathematical expression compilers, investigating lexical analysis, recursive-descent parsing, operator precedence, and AST execution engines.
+                                </p>
+                                <div>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">Lexer/Parser</span>
+                                    <span class="project-tag">AST</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area 3: Distributed Systems -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card h-100">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-network-wired mr-2" style="font-size: 26px; color: #0284c7;"></i>
+                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                        Distributed Systems & Scalability
+                                    </h5>
+                                </div>
+                                <p style="font-size: 14px; color: #6c757d;">
+                                    In-depth coursework and study into consistency models, microservice network resilience, distributed state synchronization, and fault-tolerant service communication.
+                                </p>
+                                <div>
+                                    <span class="project-tag">Distributed Systems</span>
+                                    <span class="project-tag">Clean Architecture</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area 4: AI Security -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card h-100">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-shield-alt mr-2" style="font-size: 26px; color: #10b981;"></i>
+                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                        Automated AI Security & Testing
+                                    </h5>
+                                </div>
+                                <p style="font-size: 14px; color: #6c757d;">
+                                    Investigating open-source AI penetration testing tools (such as <em>strix</em>) to automatically detect application vulnerabilities, verify endpoint security, and enforce security policies.
+                                </p>
+                                <div>
+                                    <span class="project-tag">DevSecOps</span>
+                                    <span class="project-tag">App Security</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </section><!-- End of Research Section -->
 
-        <div class="research-grid">
-          
-          <!-- Area 1: Solar Forecasting & Renewable Energy Datasets -->
-          <div class="research-card">
-            <h3 class="research-title">
-              <i class="fas fa-sun" style="color:#f59e0b; margin-right:0.4rem;"></i>
-              Solar Irradiance Forecasting & Machine Learning
-            </h3>
-            <p class="research-desc">
-              Active exploration of physical solar datasets (including the <strong>Stanford Solar Forecasting Dataset</strong> and <strong>PV Forecast Reference Evaluations</strong>). Investigates multimodal time-series modeling using sky imagery and historical photovoltaic power metrics to assess forecasting accuracy.
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Time-Series</span>
-              <span class="tech-tag">Solar Datasets</span>
-              <span class="tech-tag">NumPy / Pandas</span>
+    <!-- Call to Action Banner (Classic Purple Meyawo Style) -->
+    <section class="section-sm bg-primary">
+        <div class="container text-center text-sm-left">
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work together or discuss graduate research?</h6>
+                    <p class="m-0 text-light">Available for Software Engineering Roles & Graduate Academic Programs</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <a href="#contact" class="btn btn-lg my-font btn-light rounded" style="color: #695aa6; font-weight: 600;">Get in Touch</a>
+                </div>
             </div>
-          </div>
-
-          <!-- Area 2: Compiler Construction & Language Grammars -->
-          <div class="research-card">
-            <h3 class="research-title">
-              <i class="fas fa-terminal" style="color:var(--brand-accent); margin-right:0.4rem;"></i>
-              Compiler Construction & Formal Grammars
-            </h3>
-            <p class="research-desc">
-              Implementation of custom domain-specific languages and mathematical expression compilers. Focuses on lexical scanning, LL(k) recursive-descent parsing, AST generation, semantic validation, and runtime execution.
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">Lexer & Parser</span>
-              <span class="tech-tag">Grammar Rules</span>
-              <span class="tech-tag">AST Execution</span>
-            </div>
-          </div>
-
-          <!-- Area 3: Distributed Systems & Scalable Microservices -->
-          <div class="research-card">
-            <h3 class="research-title">
-              <i class="fas fa-network-wired" style="color:var(--academic-color); margin-right:0.4rem;"></i>
-              Distributed Systems & Consistency Models
-            </h3>
-            <p class="research-desc">
-              Coursework and practical investigation into consensus mechanisms, eventual consistency, partitioned data synchronization, and fault-tolerant service communication across distributed nodes.
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-              <span class="tech-tag">Distributed Systems</span>
-              <span class="tech-tag">Fault Tolerance</span>
-              <span class="tech-tag">SignalR</span>
-              <span class="tech-tag">Event-Driven</span>
-            </div>
-          </div>
-
-          <!-- Area 4: AI Security & Penetration Testing Tools -->
-          <div class="research-card">
-            <h3 class="research-title">
-              <i class="fas fa-shield-alt" style="color:var(--industry-color); margin-right:0.4rem;"></i>
-              Automated AI Security & Vulnerability Auditing
-            </h3>
-            <p class="research-desc">
-              Exploration into automated penetration testing methodologies and AI-driven vulnerability assessment tools (such as <strong>strix</strong>) to proactively audit endpoints, mitigate injection vectors, and enforce least-privilege security postures.
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-              <span class="tech-tag">Cybersecurity</span>
-              <span class="tech-tag">AI Auditing</span>
-              <span class="tech-tag">App Security</span>
-              <span class="tech-tag">DevSecOps</span>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+    </section><!-- End of Call to Action Banner -->
 
-    <!-- ==========================================================================
-         Skills Matrix Section
-         ========================================================================== -->
-    <section class="skills-section" id="skills">
-      <div class="site-container">
-        <div style="text-align: center;">
-          <span class="section-tag"><i class="fas fa-tools"></i> Capabilities</span>
-          <h2 class="section-title">Technical <span class="text-gradient">Skillset</span></h2>
-          <p class="section-subtitle">
-            A versatile arsenal covering low-level languages, full-stack frameworks, cloud infrastructure, and software design patterns.
-          </p>
-        </div>
+    <!-- Skills Section (Exact Meyawo Format) -->
+    <section class="section" id="skills" style="background-color: #fff; padding: 60px 0;">
+        <div class="container text-center">
+            <p class="section-subtitle" style="font-size: 18px; color: #6c757d;">My Expertise</p>
+            <h6 class="section-title mb-6" style="font-size: 32px; font-weight: bold; color: #343a40;">Why Choose Me?</h6>
 
-        <div class="skills-grid">
-          
-          <!-- Category 1: Languages -->
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="skill-category-icon"><i class="fas fa-code"></i></div>
-              <h3 class="skill-category-title">Programming Languages</h3>
-            </div>
-            <div class="skill-items-list">
-              <span class="skill-badge"><i class="fas fa-check"></i> C# (.NET)</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Dart</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Python</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Java</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> TypeScript</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> JavaScript</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> C / C++</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> SQL</span>
-            </div>
-          </div>
-
-          <!-- Category 2: Mobile Development -->
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="skill-category-icon"><i class="fas fa-mobile-alt"></i></div>
-              <h3 class="skill-category-title">Mobile Engineering</h3>
-            </div>
-            <div class="skill-items-list">
-              <span class="skill-badge"><i class="fas fa-check"></i> Flutter</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Riverpod State Management</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Android Native (Java)</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Ionic & Capacitor</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> MVVM Architecture</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Offline-First Sync</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Google Play Deployment</span>
-            </div>
-          </div>
-
-          <!-- Category 3: Backend & Cloud -->
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="skill-category-icon"><i class="fas fa-server"></i></div>
-              <h3 class="skill-category-title">Backend & Cloud Systems</h3>
-            </div>
-            <div class="skill-items-list">
-              <span class="skill-badge"><i class="fas fa-check"></i> ASP.NET Core & MVC</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Spring Boot</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Django</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Firebase (Auth, Firestore, Hosting)</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> RESTful API Design</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Clean Architecture</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> SignalR</span>
-            </div>
-          </div>
-
-          <!-- Category 4: Databases -->
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="skill-category-icon"><i class="fas fa-database"></i></div>
-              <h3 class="skill-category-title">Databases & Storage</h3>
-            </div>
-            <div class="skill-items-list">
-              <span class="skill-badge"><i class="fas fa-check"></i> Microsoft SQL Server</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> MySQL</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> PostgreSQL</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> SQLite</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> MongoDB (NoSQL)</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Cloud Firestore</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Entity Framework Core</span>
-            </div>
-          </div>
-
-          <!-- Category 5: DevOps & Tooling -->
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="skill-category-icon"><i class="fas fa-cogs"></i></div>
-              <h3 class="skill-category-title">DevOps & Tooling</h3>
-            </div>
-            <div class="skill-items-list">
-              <span class="skill-badge"><i class="fas fa-check"></i> Docker & Docker Compose</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Git & GitHub Actions</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Azure DevOps</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Terraform</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Ansible</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Linux & Bash Scripting</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> IIS Server</span>
-            </div>
-          </div>
-
-          <!-- Category 6: Spoken Languages & Methodologies -->
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="skill-category-icon"><i class="fas fa-language"></i></div>
-              <h3 class="skill-category-title">Languages & Methodologies</h3>
-            </div>
-            <div class="skill-items-list">
-              <span class="skill-badge" style="border-color:var(--brand-primary);"><i class="fas fa-globe"></i> English (Fluent / Professional)</span>
-              <span class="skill-badge" style="border-color:var(--brand-primary);"><i class="fas fa-globe"></i> French (Good / Professional)</span>
-              <span class="skill-badge" style="border-color:var(--brand-primary);"><i class="fas fa-globe"></i> Arabic (Native)</span>
-              <span class="skill-badge" style="border-color:var(--brand-primary);"><i class="fas fa-globe"></i> Tamazight / Amaghir (Proficient)</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Agile & Scrum</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> UML & MERISE</span>
-              <span class="skill-badge"><i class="fas fa-check"></i> Domain-Driven Design (DDD)</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Curriculum Vitae Download Hub
-         ========================================================================== -->
-    <section class="section" style="padding: 4rem 0; background: var(--bg-surface);">
-      <div class="site-container">
-        <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:2.5rem; text-align:center; max-width:850px; margin:0 auto; box-shadow:var(--shadow-md);">
-          <span class="section-tag"><i class="fas fa-file-alt"></i> Official Documents</span>
-          <h2 style="font-size:2rem; font-weight:800; margin:0.75rem 0;">Curriculum Vitae & <span class="text-gradient">Technical Reports</span></h2>
-          <p style="color:var(--text-secondary); max-width:600px; margin:0 auto 2rem; font-size:0.95rem;">
-            Download verified copies of my curriculum vitae formatted for corporate recruitment and graduate admissions committees.
-          </p>
-
-          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.25rem;">
-            <a href="assets/docs/CV_English.pdf" download class="btn-primary-gradient" style="font-size:0.95rem; padding:0.75rem 1.5rem;">
-              <i class="fas fa-download"></i> Download English CV (PDF)
-            </a>
-            <a href="assets/docs/CV_French.pdf" download class="btn-secondary" style="font-size:0.95rem; padding:0.75rem 1.5rem;">
-              <i class="fas fa-download"></i> Télécharger CV Français (PDF)
-            </a>
-            <a href="assets/docs/ecobeach.pdf" target="_blank" class="btn-secondary" style="font-size:0.95rem; padding:0.75rem 1.5rem;">
-              <i class="fas fa-file-pdf text-danger"></i> EcoBeach System Report (PDF)
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Contact & Connect Section
-         ========================================================================== -->
-    <section class="contact-section" id="contact">
-      <div class="site-container">
-        <div style="text-align: center;">
-          <span class="section-tag"><i class="fas fa-envelope"></i> Let's Talk</span>
-          <h2 class="section-title">Get in <span class="text-gradient">Touch</span></h2>
-          <p class="section-subtitle">
-            Whether inquiring about engineering opportunities, academic collaboration, or graduate research openings—I welcome your message.
-          </p>
-        </div>
-
-        <div class="contact-card-main">
-          <div class="contact-layout">
-            
-            <!-- Direct Info Column -->
-            <div class="contact-info-col">
-              <h3>Direct Channels</h3>
-              <p>
-                Reach out directly via email, phone, or connected networks. I respond promptly.
-              </p>
-
-              <div class="quick-contact-box">
+            <!-- Row for Primary Skills -->
+            <div class="row">
+                <!-- Flutter -->
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
+                        <div class="skill-card-icon" style="font-size: 40px; color: #695aa6; margin-bottom: 20px;">
+                            <i class="ti-mobile"></i>
+                        </div>
+                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">Flutter Development</h5>
+                        <p style="font-size: 16px; color: #6c757d;">Building cross-platform mobile applications with clean, scalable, and efficient code.</p>
+                    </div>
+                </div>
                 
-                <!-- Email Item -->
-                <div class="contact-item-row">
-                  <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <i class="fas fa-envelope" style="color:var(--brand-primary); font-size:1.1rem;"></i>
-                    <div>
-                      <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">EMAIL</div>
-                      <a href="mailto:oussi.elhoucine0@gmail.com" style="color:var(--text-main); text-decoration:none; font-weight:600;">
-                        oussi.elhoucine0@gmail.com
-                      </a>
+                <!-- .NET -->
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
+                        <div class="skill-card-icon" style="font-size: 40px; color: #695aa6; margin-bottom: 20px;">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">.NET Development</h5>
+                        <p style="font-size: 16px; color: #6c757d;">Creating robust, scalable backend APIs and enterprise applications using ASP.NET Core, C#, and Clean Architecture.</p>
                     </div>
-                  </div>
-                  <button class="copy-btn" data-copy="oussi.elhoucine0@gmail.com" title="Copy Email">
-                    <i class="far fa-copy"></i> Copy
-                  </button>
                 </div>
 
-                <!-- Phone Item -->
-                <div class="contact-item-row">
-                  <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <i class="fas fa-phone-alt" style="color:var(--industry-color); font-size:1.1rem;"></i>
-                    <div>
-                      <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">PHONE / WHATSAPP</div>
-                      <a href="tel:+212642587839" style="color:var(--text-main); text-decoration:none; font-weight:600;">
-                        +212 642587839
-                      </a>
+                <!-- Firebase -->
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
+                        <div class="skill-card-icon" style="font-size: 40px; color: #ff8c00; margin-bottom: 20px;">
+                            <i class="ti-cloud"></i>
+                        </div>
+                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">Firebase Integration</h5>
+                        <p style="font-size: 16px; color: #6c757d;">Seamlessly integrating Firebase for authentication, real-time database synchronizations, and hosting.</p>
                     </div>
-                  </div>
-                  <button class="copy-btn" data-copy="+212642587839" title="Copy Phone Number">
-                    <i class="far fa-copy"></i> Copy
-                  </button>
                 </div>
-
-                <!-- Location Item -->
-                <div class="contact-item-row">
-                  <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <i class="fas fa-map-marker-alt" style="color:var(--brand-accent); font-size:1.1rem;"></i>
-                    <div>
-                      <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">LOCATION</div>
-                      <span style="font-weight:600;">Oujda, Morocco</span>
+                
+                <!-- Riverpod -->
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
+                        <div class="skill-card-icon" style="font-size: 40px; color: #28a745; margin-bottom: 20px;">
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">State Management (Riverpod)</h5>
+                        <p style="font-size: 16px; color: #6c757d;">Efficient, reactive state management ensuring predictable performance, testability, and scalability.</p>
                     </div>
-                  </div>
-                  <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">UTC+1</span>
                 </div>
 
-              </div>
-
-              <!-- Social Links -->
-              <div>
-                <h4 style="font-size:0.95rem; font-weight:700; margin-bottom:0.75rem;">Social & Professional Profiles</h4>
-                <div style="display:flex; gap:0.75rem;">
-                  <a href="https://github.com/Oussi108" target="_blank" class="social-pill" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/el-houcine-oussi" target="_blank" class="social-pill" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a href="https://www.facebook.com/houssin.oussi" target="_blank" class="social-pill" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="https://www.instagram.com/oussi108" target="_blank" class="social-pill" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                  </a>
+                <!-- DevOps & CI/CD -->
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
+                        <div class="skill-card-icon" style="font-size: 40px; color: #00bcd4; margin-bottom: 20px;">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">DevOps & CI/CD</h5>
+                        <p style="font-size: 16px; color: #6c757d;">Automating deployments and managing containers using Docker, Docker Compose, Git, and GitHub Actions.</p>
+                    </div>
                 </div>
-              </div>
-
+                
+                <!-- Problem Solving & Continuous Learning -->
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
+                        <div class="skill-card-icon" style="font-size: 40px; color: #ffc107; margin-bottom: 20px;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">Computer Science Rigor</h5>
+                        <p style="font-size: 16px; color: #6c757d;">Strong foundations in distributed systems, compiler parsing algorithms, and mathematical data processing.</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Interactive Draft Message Form -->
-            <div class="contact-form-col">
-              <form class="contact-form" id="portfolio-contact-form">
-                <div class="form-group">
-                  <label for="contact-name">Your Full Name</label>
-                  <input type="text" id="contact-name" class="form-control" placeholder="e.g. Dr. Alex Vance / Tech Recruiter" required>
+            <!-- Additional Skills Section -->
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h6 style="font-size: 28px; font-weight: 600; color: #343a40;">Other Skills & Technologies</h6>
+                    <p style="font-size: 16px; color: #6c757d;">A broader range of my technical toolkit across multiple domains.</p>
                 </div>
-
-                <div class="form-group">
-                  <label for="contact-email">Your Email Address</label>
-                  <input type="email" id="contact-email" class="form-control" placeholder="name@company.com" required>
+            </div>
+            
+            <div class="row">
+                <!-- Programming Languages -->
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
+                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Languages</h5>
+                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">C/C++, C#, Java, Dart, Python, JavaScript, TypeScript, SQL</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="contact-subject">Topic / Purpose</label>
-                  <select id="contact-subject" class="form-control">
-                    <option value="Software Engineering Opportunity">Software Engineering Role (Full-Time / Contract)</option>
-                    <option value="Graduate Program / Research Inquiry">Graduate Admissions / Academic Research Inquiry</option>
-                    <option value="Mobile / Backend Project Collaboration">Mobile or Backend Project Consultation</option>
-                    <option value="General Technical Question">General Connection</option>
-                  </select>
+                <!-- Backend & Frontend -->
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
+                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Frameworks</h5>
+                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">ASP.NET Core, Spring Boot, Django, Angular, React, Ionic, Bootstrap</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="contact-message">Message</label>
-                  <textarea id="contact-message" class="form-control" rows="4" placeholder="Briefly describe the role, academic opportunity, or project..." required></textarea>
+                <!-- Methodologies & Databases -->
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
+                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Databases</h5>
+                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">SQL Server, SQLite, MySQL, PostgreSQL, MongoDB, Firestore</p>
+                    </div>
                 </div>
-
-                <button type="submit" class="btn-primary-gradient" style="justify-content:center; padding:0.85rem; font-size:1rem;">
-                  <i class="fas fa-paper-plane"></i> Send Direct Email
-                </button>
-              </form>
+                <!-- Spoken Languages -->
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
+                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Spoken Languages</h5>
+                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">Arabic (Native), English (Fluent), French (Good), Tamazight (Proficient)</p>
+                    </div>
+                </div>
             </div>
 
-          </div>
+            <div class="cta mt-5">
+                <p class="cta-text" style="font-size: 18px; font-weight: 600; color: #343a40;">Ready to discuss opportunities or collaborate? Let's connect!</p>
+                <a href="#contact" class="btn btn-primary btn-rounded" style="padding: 12px 35px; font-size: 16px;">Get in Touch</a>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
+    </section><!-- End of Skills Section -->
 
-  <!-- ==========================================================================
-       Footer
-       ========================================================================== -->
-  <footer class="site-footer">
-    <div class="site-container">
-      <div class="footer-content">
-        <div>
-          <div style="display:flex; align-items:center; gap:0.5rem; font-weight:700; margin-bottom:0.25rem;">
-            <span class="brand-badge" style="width:28px; height:28px; font-size:0.8rem;">EO</span>
-            <span>El-Houcine Oussi</span>
-          </div>
-          <div class="footer-text">
-            Information Systems Engineer • Distributed Systems & Mobile Specialist
-          </div>
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card p-4 shadow-sm" style="border-radius: 12px; border: 1px solid #dee2e6;">
+                        <p style="font-size: 17px; color: #6c757d; margin-bottom: 12px;">Feel free to reach out via email:</p>
+                        <div class="mb-3">
+                            <a href="mailto:oussi.elhoucine0@gmail.com" class="btn btn-outline-primary btn-rounded" style="font-size: 16px; padding: 10px 30px;">
+                                <i class="ti-email mr-1"></i> oussi.elhoucine0@gmail.com
+                            </a>
+                        </div>
+                        <p style="font-size: 16px; margin-bottom: 0;">
+                            Direct phone / WhatsApp: 
+                            <a href="tel:+212642587839" style="font-weight: 600; color: #695aa6;">+212 642587839</a>
+                        </p>
+                        <p style="font-size: 14px; color: #888; margin-top: 6px;">Based in Oujda, Morocco (Open to Relocation & Remote)</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section><!-- End of Contact Section -->
 
-        <div style="display:flex; align-items:center; gap:1rem; font-size:0.875rem;">
-          <a href="#home" style="color:var(--text-secondary); text-decoration:none;"><i class="fas fa-arrow-up"></i> Back to Top</a>
-          <span style="color:var(--border-subtle);">|</span>
-          <span style="color:var(--text-muted);"><i class="fab fa-github"></i> Hosted on GitHub Pages</span>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer (Classic Meyawo Format) -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">
+                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">SystemX</a> • Hosted on GitHub Pages
+            </p>
+    
+            <!-- Social Links -->
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.linkedin.com/in/el-houcine-oussi" class="link" target="_blank" title="LinkedIn"><i class="ti-linkedin"></i></a>
+                <a href="https://github.com/Oussi108" class="link" target="_blank" title="GitHub"><i class="ti-github"></i></a>
+                <a href="https://www.facebook.com/houssin.oussi" class="link" target="_blank" title="Facebook"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/oussi108" class="link" target="_blank" title="Instagram"><i class="ti-instagram"></i></a>
+                <a href="tel:+212642587839" class="link" title="Phone"><i class="ti-mobile"></i></a>
+            </div>
+        </footer>
+    </div><!-- End of Page Footer -->
 
-  <!-- ==========================================================================
-       Project Deep-Dive Modal Container
-       ========================================================================== -->
-  <div class="modal-backdrop" id="project-modal-backdrop">
-    <div class="modal-dialog">
-      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
-        <i class="fas fa-times"></i>
-      </button>
-      <div id="project-modal-content">
-        <!-- Rendered dynamically by main.js -->
-      </div>
-    </div>
-  </div>
+    <!-- Core Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/js/meyawo.js"></script>
 
-  <!-- Toast Notification Container -->
-  <div class="toast-notice" id="site-toast"></div>
+    <!-- Custom Client-Side Filter Logic -->
+    <script>
+        $(document).ready(function() {
+            $('.filter-btn').on('click', function() {
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                var filter = $(this).attr('data-filter');
+                if (filter === 'all') {
+                    $('.project-item').fadeIn(250);
+                } else {
+                    $('.project-item').hide();
+                    $('.project-item[data-category*="' + filter + '"]').fadeIn(250);
+                }
+            });
+        });
+    </script>
 
-  <!-- Main JavaScript File -->
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
