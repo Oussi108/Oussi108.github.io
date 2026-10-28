@@ -3,73 +3,147 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portfolio of El-Houcine Oussi, Software Engineer & Information Systems graduate from SUPMTI. Specializing in Distributed Systems, Flutter, .NET, Clean Architecture, and Cloud Systems.">
+    <meta name="description" content="Portfolio of El-Houcine Oussi, M.Sc. in Computer Science at NUIST & Information Systems Engineer from SUPMTI. Specializing in Solar Power & Renewable Energy Forecasting, Distributed Systems, Flutter, and .NET.">
     <meta name="author" content="El-Houcine Oussi">
-    <title>El-Houcine OUSSI | Software Engineer & Distributed Systems</title>
+    <title>El-Houcine OUSSI | Solar Forecasting Researcher & Software Engineer</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Themify Icons -->
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
-    <!-- Bootstrap + Meyawo Main Styles -->
+    <!-- Meyawo Core Styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
 
     <style>
-        /* Custom enhancements matching Meyawo aesthetic */
-        html { scroll-behavior: smooth; }
+        :root {
+            --primary: #695aa6;
+            --primary-dark: #514488;
+            --primary-light: #f3f0fc;
+            --accent-solar: #f59e0b;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Banner Container */
+        .research-banner-box {
+            background: linear-gradient(135deg, rgba(105, 90, 166, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
+            border: 1px solid rgba(105, 90, 166, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(105, 90, 166, 0.06);
+        }
+
+        .research-banner-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Status Callout Pill */
+        .phd-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #fef3c7;
+            border: 1px solid #fcd34d;
+            color: #92400e;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 15px;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+        }
+
+        /* Cards & Enhancements */
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 26px;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            text-align: left;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(105, 90, 166, 0.12);
+            border-color: var(--primary);
+        }
+
+        .research-card-highlight {
+            border-left: 4px solid var(--accent-solar);
+            background: #ffffff;
+        }
+
         .badge-pill-custom {
-            font-size: 13px;
-            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
             border-radius: 50px;
             display: inline-block;
-            margin: 3px;
-            font-weight: 600;
+            margin: 2px;
         }
+
         .badge-academic {
             background-color: #f3e8ff;
             color: #695aa6;
             border: 1px solid #d8b4fe;
         }
+
+        .badge-solar {
+            background-color: #fffbeb;
+            color: #b45309;
+            border: 1px solid #fde68a;
+        }
+
         .badge-industry {
-            background-color: #e6f4ea;
-            color: #137333;
-            border: 1px solid #ceead6;
+            background-color: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
         }
-        .edu-card, .exp-card, .research-card {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 28px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            border: 1px solid #eaedf1;
-            margin-bottom: 24px;
-            text-align: left;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .edu-card:hover, .exp-card:hover, .research-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(105, 90, 166, 0.12);
-            border-color: #695aa6;
-        }
+
         .card-img-top {
             height: 220px;
             object-fit: cover;
-            border-radius: 6px;
+            border-radius: 8px 8px 0 0;
+            background-color: #f8f9fa;
         }
+
         .project-tag {
-            font-size: 12px;
+            font-size: 11px;
             padding: 3px 8px;
             background-color: #f1f3f5;
             color: #495057;
             border-radius: 4px;
             margin: 2px;
             display: inline-block;
-            font-weight: 500;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
         }
+
         .project-bullet {
             font-size: 14px;
             color: #6c757d;
@@ -77,45 +151,137 @@
             position: relative;
             padding-left: 18px;
             list-style: none;
+            line-height: 1.5;
         }
+
         .project-bullet::before {
             content: "▹";
             position: absolute;
             left: 0;
-            color: #695aa6;
+            color: var(--primary);
             font-weight: bold;
         }
-        .copy-pill {
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .copy-pill:hover {
-            background-color: #695aa6 !important;
-            color: #fff !important;
-        }
-        #toast-alert {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #695aa6;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            z-index: 9999;
-            display: none;
-            font-size: 14px;
-            font-weight: 600;
-        }
+
         .filter-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
             margin-bottom: 35px;
         }
+
         .filter-btn-group .btn {
             border-radius: 50px;
             padding: 8px 20px;
-            margin: 4px;
             font-size: 14px;
             font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn-group .btn.active {
+            background-color: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(105, 90, 166, 0.35);
+        }
+
+        .custom-navbar.affix {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(8px);
+        }
+
+        .stat-box {
+            background: #ffffff;
+            border: 1px solid #eaedf1;
+            border-radius: 12px;
+            padding: 22px 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .stat-num {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-lbl {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Publication Card */
+        .paper-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #695aa6;
+            border-radius: 8px;
+            padding: 22px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: all 0.25s ease;
+        }
+
+        .paper-card:hover {
+            border-color: #695aa6;
+            box-shadow: 0 8px 24px rgba(105, 90, 166, 0.12);
+        }
+
+        .paper-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .paper-authors {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .paper-meta {
+            font-size: 13px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 14px;
+            border-radius: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        /* Toast notification */
+        #toast-notice {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #695aa6;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 </head>
@@ -128,10 +294,10 @@
             <ul class="nav">
                 <li class="item"><a class="link" href="#home">Home</a></li>
                 <li class="item"><a class="link" href="#about">About</a></li>
+                <li class="item"><a class="link" href="#research">Research & Papers</a></li>
                 <li class="item"><a class="link" href="#education">Education</a></li>
                 <li class="item"><a class="link" href="#experience">Experience</a></li>
-                <li class="item"><a class="link" href="#portfolio">Portfolio</a></li>
-                <li class="item"><a class="link" href="#research">Research</a></li>
+                <li class="item"><a class="link" href="#portfolio">Projects</a></li>
                 <li class="item"><a class="link" href="#skills">Skills</a></li>
                 <li class="item"><a class="link" href="#contact">Contact</a></li>
             </ul>
@@ -143,40 +309,110 @@
         </div>          
     </nav><!-- End of Page Navbar -->
 
-    <!-- Page Header (Classic Meyawo Style) -->
+    <!-- Page Header (Classic Meyawo Hero with Academic Banner) -->
     <header id="home" class="header">
         <div class="overlay"></div>
-        <div class="header-content container">
+        <div class="header-content container text-center">
+            
             <h1 class="header-title">
                 <span class="up">HI!</span>
                 <span class="down">I am OUSSI El-Houcine</span>
             </h1>
-            <p class="header-subtitle">Software Engineer • Distributed Systems Specialist</p>            
+            <p class="header-subtitle">Solar Power Forecasting Researcher • Software Engineer</p>            
+            
+            <div>
+                <span class="phd-status-pill">
+                    <i class="fas fa-graduation-cap"></i> Seeking a fully funded PhD position from 2027 in solar & renewable energy forecasting
+                </span>
+            </div>
+
             <div class="mt-4">
-                <a href="#portfolio" class="btn btn-primary btn-rounded me-2" style="padding: 10px 24px; font-size: 15px;">Explore Projects</a>
-                <a href="#about" class="btn btn-outline-primary btn-rounded" style="padding: 10px 24px; font-size: 15px;">About Me</a>
+                <a href="#research" class="btn btn-primary btn-rounded me-2" style="padding: 10px 24px; font-size: 15px;">
+                    <i class="fas fa-sun mr-1"></i> View Research
+                </a>
+                <a href="#portfolio" class="btn btn-outline-primary btn-rounded me-2" style="padding: 10px 24px; font-size: 15px;">
+                    <i class="fas fa-code mr-1"></i> Software Projects
+                </a>
+                <a href="assets/docs/CV_English.pdf" download class="btn btn-outline-primary btn-rounded" style="padding: 10px 24px; font-size: 15px;">
+                    <i class="fas fa-file-pdf mr-1"></i> Download CV
+                </a>
             </div>
         </div>              
     </header><!-- End of Page Header -->
+
+    <!-- Research Banner Bar -->
+    <div class="container mt-4">
+        <div class="research-banner-box">
+            <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/imgs/banner-dark.svg">
+                <img src="assets/imgs/banner-light.svg" alt="El Houcine Oussi - machine learning for solar power forecasting">
+            </picture>
+        </div>
+    </div>
+
+    <!-- Quick Stats Metric Strip -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">2</div>
+                    <div class="stat-lbl">Manuscripts (2026)</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">50+</div>
+                    <div class="stat-lbl">Solar Farms Analyzed</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">29</div>
+                    <div class="stat-lbl">GitHub Repositories</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">5</div>
+                    <div class="stat-lbl">Spoken Languages</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section class="section pt-0" id="about">
         <div class="container text-center">
             <div class="about">
                 <div class="about-img-holder">
-                    <img src="assets/imgs/my-image.png" class="about-img" alt="Software Engineer Profile Image">
+                    <img src="assets/imgs/my-image.png" class="about-img" alt="El-Houcine Oussi Profile Photo">
                 </div>
                 <div class="about-caption">
                     <p class="section-subtitle">Who Am I?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        I'm a software engineer with a strong background in both mobile and web development, holding a <strong>State Engineering Degree in Information Systems</strong> from SUPMTI and a <strong>Specialized Technician Diploma in Software Development</strong> from ISTA Lazaret.
+                        I am an M.Sc. student in Computer Science at <strong>Nanjing University of Information Science and Technology (NUIST)</strong>, China, and a graduate with a State Engineering Degree in <strong>Information Systems Engineering</strong> from SUPMTI (Morocco).
                         <br><br>
-                        During my studies and professional internships, I gained hands-on experience across full-stack development, including <strong>.NET Core, Flutter, Firebase, Angular, Django, and SQL/NoSQL distributed systems</strong>. I have delivered production software—such as municipal systems for <em>Majal Berkane Smart City</em>, published mobile games on the <em>Google Play Store</em>, and live real-time platforms on <em>Firebase</em>.
+                        My core research investigates a critical operational question: <em>Which learned solar power forecasts actually outperform baseline references, across which lead-time horizons, and when does higher forecast accuracy translate into real economic decision-making value?</em>
                         <br><br>
-                        In addition to industry engineering, I actively pursue research in <strong>distributed systems, compiler construction (AST parsing), and machine learning solar irradiance forecasting</strong>. I am enthusiastic about contributing to challenging engineering positions or continuing advanced academic research (Master's / PhD).
+                        With a foundation as a software engineer (C#/.NET, Java, Flutter, Django, and Distributed Systems), I bring rigorous software principles—including pre-registered evaluation protocols, byte-identical reproducibility, checksum manifests, and pytest verification suites—to scientific forecasting and machine learning.
                     </p>
     
+                    <div class="row text-left mt-3 mb-3">
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Current Focus:</strong> 4–6 h satellite & weather-forecast model for 50 Australian solar farms</span>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Target:</strong> Fully funded PhD in Solar Forecasting starting 2027</span>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Languages:</strong> English, French, Arabic, Mandarin Chinese (HSK 3), Tamazight</span>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Location:</strong> Nanjing, China / Oujda, Morocco (Open to global relocation)</span>
+                        </div>
+                    </div>
+
                     <!-- CV Buttons -->
                     <div class="mt-4">
                         <a href="assets/docs/CV_English.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
@@ -185,8 +421,8 @@
                         <a href="assets/docs/CV_French.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
                             <i class="ti-download"></i> Télécharger CV (Français)
                         </a>
-                        <a href="assets/docs/ecobeach.pdf" target="_blank" class="btn-rounded btn btn-outline-primary mb-2">
-                            <i class="ti-file"></i> EcoBeach Report (PDF)
+                        <a href="https://doi.org/10.5281/zenodo.23590205" target="_blank" class="btn-rounded btn btn-outline-primary mb-2">
+                            <i class="fas fa-external-link-alt"></i> Zenodo Research Archive
                         </a>
                     </div>
                 </div>
@@ -194,74 +430,145 @@
         </div>
     </section><!-- End of About Section -->
 
-    <!-- Services / What I Do Section -->
-    <section class="section" id="service" style="background-color: #f8f9fa;">
+    <!-- Recent 2026 Research & Manuscripts Section -->
+    <section class="section" id="research" style="background-color: #f8f9fa;">
         <div class="container text-center">
-            <p class="section-subtitle">What I Do?</p>
-            <h6 class="section-title mb-6">Services & Core Domains</h6>
-            <div class="row">
-                <!-- Web Development -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card" style="background:#fff;">
-                        <div class="body">
-                            <img src="assets/imgs/responsive.svg" alt="Web Development" class="icon">
-                            <h6 class="title">Web Development</h6>
-                            <p class="subtitle">
-                                Building responsive, scalable web applications using ASP.NET Core, Django, Angular, and modern cloud platforms.
-                            </p>
+            <p class="section-subtitle">Academic Contributions (2026)</p>
+            <h6 class="section-title mb-5">Solar Forecasting Research & Publications</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Paper 1 -->
+                    <div class="paper-card">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-pill-custom badge-solar">Manuscript Prepared for Submission (2026)</span>
+                            <span class="badge-pill-custom badge-academic">Journal of Renewable and Sustainable Energy</span>
+                        </div>
+                        <h4 class="paper-title">
+                            Reference specification, model updating and calibration population in hourly photovoltaic power forecasting
+                        </h4>
+                        <div class="paper-authors">
+                            <strong>El Houcine Oussi</strong> and Ling Tan — <em>Nanjing University of Information Science and Technology (NUIST)</em>
+                        </div>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
+                            Investigates how the performance advantage of learned models (LightGBM, GRU neural networks, and compact Transformers) shifts across lead times of 2, 4, 6, and 12 hours under reference specification choices, retraining schedules, and prediction interval calibration. Evaluated on three testbeds: DKASC Alice Springs (23.4 kW tracker), 31 HKUST rooftop systems, and NREL PVDAQ 9068 (4.7 MW single-axis tracker in Colorado) under a pre-registered protocol.
+                        </p>
+                        <div class="paper-meta">
+                            <span><i class="fas fa-code-branch text-primary"></i> Models: LightGBM, GRU, Transformers</span>
+                            <span><i class="fas fa-database text-warning"></i> Datasets: DKASC, HKUST, NREL PVDAQ</span>
+                            <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation" target="_blank" style="color: #695aa6; font-weight: 700; margin-left: auto;">
+                                <i class="fab fa-github"></i> View GitHub Code & Benchmark
+                            </a>
+                            <a href="https://doi.org/10.5281/zenodo.23590205" target="_blank" style="color: #0284c7; font-weight: 700;">
+                                <i class="fas fa-link"></i> Zenodo DOI
+                            </a>
                         </div>
                     </div>
-                </div>
-                <!-- Mobile App Development -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card" style="background:#fff;">
-                        <div class="body">
-                            <img src="assets/imgs/toolbox.svg" alt="Mobile Development" class="icon">
-                            <h6 class="title">Mobile Development</h6>
-                            <p class="subtitle">
-                                Cross-platform mobile apps with Flutter & Riverpod, including multi-language support, Firebase, and offline SQLite sync.
-                            </p>
+
+                    <!-- Paper 2 -->
+                    <div class="paper-card">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-pill-custom badge-solar">Manuscript Complete (2026)</span>
+                            <span class="badge-pill-custom badge-academic">Operational Battery Scheduling</span>
+                        </div>
+                        <h4 class="paper-title">
+                            When do probabilistic solar forecasts earn their keep? Forecast quality, distributional validity and operational value in behind-the-meter battery scheduling
+                        </h4>
+                        <div class="paper-authors">
+                            <strong>El Houcine Oussi</strong> and Collaborators — <em>Nanjing University of Information Science and Technology</em>
+                        </div>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
+                            Examines when probabilistic day-ahead solar forecasts provide measurable economic value in behind-the-meter home-battery scheduling. Benchmarked against 91,290 simulated scenarios across 40 real Ausgrid residential households. Demonstrated that scheduling systems leveraging full forecast distributions consistently reduce electricity costs across all 40 households.
+                        </p>
+                        <div class="paper-meta">
+                            <span><i class="fas fa-bolt text-warning"></i> Horizon: Day-Ahead</span>
+                            <span><i class="fas fa-chart-line text-success"></i> Sample: 91,290 Scenarios (40 Households)</span>
+                            <span class="text-success font-weight-bold"><i class="fas fa-check-circle"></i> Operational Cost Reduction Confirmed</span>
                         </div>
                     </div>
-                </div>
-                <!-- Backend & APIs -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card" style="background:#fff;">
-                        <div class="body">
-                            <img src="assets/imgs/analytics.svg" alt="Backend Development" class="icon">
-                            <h6 class="title">Backend & APIs</h6>
-                            <p class="subtitle">
-                                Developing secure REST APIs, Clean Architecture, relational databases (SQL Server, MySQL), and Docker workflows.
-                            </p>
+
+                    <!-- Research Studies Matrix Table -->
+                    <div class="feature-card mt-4 mb-4">
+                        <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 15px;">
+                            <i class="fas fa-table mr-2 text-primary"></i> Overview of Research Studies & Data Horizons
+                        </h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover mb-0" style="font-size: 14px;">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Study Focus</th>
+                                        <th>Lead Time</th>
+                                        <th>Key Data Sources</th>
+                                        <th>Experimental Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Sky-Image Nowcasting:</strong> Do ground sky cameras add value over PV history?</td>
+                                        <td>5–30 min</td>
+                                        <td>Stanford SKIPP'D Dataset</td>
+                                        <td><span class="badge-pill-custom badge-academic">Experiments Complete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Solar Farms up to 6 h ahead:</strong> Satellite imagery + numerical weather predictions</td>
+                                        <td>0.5–6 h</td>
+                                        <td>50 Australian Solar Farms (AEMO) · 94 UK Farms</td>
+                                        <td><span class="badge-pill-custom badge-solar">Final Held-Out Test</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Reference Specification & Updates:</strong> Retraining impact on reported skill</td>
+                                        <td>2–12 h</td>
+                                        <td>DKASC Alice Springs · 31 HKUST Rooftops · NREL</td>
+                                        <td><span class="badge-pill-custom badge-industry">Manuscript Ready</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Forecast Quality to Value:</strong> Probabilistic battery optimization</td>
+                                        <td>Day-ahead</td>
+                                        <td>91,290 Scenarios · 40 Ausgrid Households</td>
+                                        <td><span class="badge-pill-custom badge-industry">Manuscript Complete</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
-                <!-- UI/UX & Architecture -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card" style="background:#fff;">
-                        <div class="body">
-                            <img src="assets/imgs/pencil-case.svg" alt="UI/UX & Architecture" class="icon">
-                            <h6 class="title">Systems & Architecture</h6>
-                            <p class="subtitle">
-                                Designing with Clean Architecture (MVVM, DDD), distributed consistency models, and formal compiler construction.
-                            </p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
-    </section><!-- End of Service Section -->
+    </section><!-- End of Research Section -->
 
-    <!-- Education Section (Academic Credentials) -->
+    <!-- Education Section -->
     <section class="section" id="education">
         <div class="container text-center">
-            <p class="section-subtitle">Academic Credentials</p>
+            <p class="section-subtitle">Academic Qualifications</p>
             <h6 class="section-title mb-6">Education & Degrees</h6>
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <!-- Degree 1 -->
-                    <div class="edu-card">
+                    
+                    <!-- Degree 1: NUIST -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Master of Science (M.Sc.) in Computer Science
+                            </h5>
+                            <span class="badge-pill-custom badge-solar">Current M.Sc. Student • Nanjing, China</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="fas fa-university"></i> Nanjing University of Information Science and Technology (NUIST)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Focusing on statistical machine learning, deep learning architectures (Transformers, GRU), numerical weather prediction (ERA5 GRIB), satellite telemetry (Himawari / Meteosat), and renewable energy forecasting methodologies.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet"><strong>Research Focus:</strong> Probabilistic photovoltaic power forecasting, model retraining drift, and reference verification.</li>
+                            <li class="project-bullet"><strong>Scientific Rigor:</strong> Pre-registered evaluation protocols, paired bootstrap confidence intervals, and Holm family-wise correction.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Degree 2: SUPMTI -->
+                    <div class="feature-card mb-4 text-left">
                         <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
                             <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
                                 Engineering Degree in Information Systems (Diplôme d'Ingénieur)
@@ -272,17 +579,16 @@
                             <i class="ti-bookmark-alt"></i> SUPMTI (École Supérieure Privée de Gestion, Télécommunications et Informatique)
                         </h6>
                         <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
-                            A rigorous 3-year graduate engineering curriculum covering advanced computer science fundamentals, distributed systems, and scalable enterprise software architecture.
+                            Comprehensive 3-year graduate engineering curriculum focusing on modern software engineering paradigms, distributed architectures, database theory, and enterprise system integration.
                         </p>
                         <ul style="padding-left: 0; margin-bottom: 0;">
-                            <li class="project-bullet"><strong>Distributed Systems & Cloud:</strong> Distributed consistency, microservices, containerization with Docker, and cloud deployments.</li>
-                            <li class="project-bullet"><strong>Software Engineering:</strong> Clean Architecture, Domain-Driven Design (DDD), and scalable system design.</li>
-                            <li class="project-bullet"><strong>Database Engineering:</strong> Complex SQL query optimization, transactions, ACID compliance, and NoSQL databases.</li>
+                            <li class="project-bullet"><strong>Distributed Systems:</strong> Fault tolerance, consensus protocols, scalable microservices, and containerization with Docker.</li>
+                            <li class="project-bullet"><strong>Software Architecture:</strong> Clean Architecture, Domain-Driven Design (DDD), and enterprise application design.</li>
                         </ul>
                     </div>
 
-                    <!-- Degree 2 -->
-                    <div class="edu-card">
+                    <!-- Degree 3: ISTA Lazaret -->
+                    <div class="feature-card mb-4 text-left">
                         <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
                             <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
                                 Specialized Technician in Computer Development (TS)
@@ -293,14 +599,10 @@
                             <i class="ti-desktop"></i> ISTA Lazaret (Institut Spécialisé de Technologie Appliquée)
                         </h6>
                         <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
-                            Comprehensive technical foundation in algorithms, object-oriented design, relational database systems, and application lifecycle modeling.
+                            Intensive technical program focused on Object-Oriented Programming (Java, C# .NET, C++), relational database design (SQL Server, MySQL), algorithms, and software analysis (UML, MERISE).
                         </p>
-                        <ul style="padding-left: 0; margin-bottom: 0;">
-                            <li class="project-bullet"><strong>Object-Oriented Programming:</strong> Deep immersion in Java, C# .NET, C++, data structures, and algorithms.</li>
-                            <li class="project-bullet"><strong>Analysis & Modeling:</strong> System modeling with UML and MERISE methodologies.</li>
-                            <li class="project-bullet"><strong>Relational Databases:</strong> Schema design, normalization, stored procedures, and triggers in SQL Server & MySQL.</li>
-                        </ul>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -314,8 +616,29 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
+                    
                     <!-- Job 1 -->
-                    <div class="exp-card">
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Graduate Forecasting Researcher
+                            </h5>
+                            <span class="badge-pill-custom badge-solar">2024 — Present • Nanjing, China</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="fas fa-flask"></i> Nanjing University of Information Science and Technology (NUIST)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Designed, evaluated, and published high-performance machine learning benchmarks for multi-horizon solar energy forecasting.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet">Engineered reproducible pipelines with PyTorch, LightGBM, pvlib, and NumPy.</li>
+                            <li class="project-bullet">Processed high-resolution satellite imagery (Himawari, Meteosat) and numerical weather predictions (ERA5).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="feature-card mb-4 text-left">
                         <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
                             <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
                                 Backend & Mobile Engineering Intern
@@ -329,14 +652,13 @@
                             Contributed to municipal smart city digital transformation, building citizen-facing mobile applications and connecting them with enterprise backends.
                         </p>
                         <ul style="padding-left: 0; margin-bottom: 0;">
-                            <li class="project-bullet">Designed and built intuitive, dynamic mobile UI in Flutter with Riverpod state management.</li>
-                            <li class="project-bullet">Integrated with a high-performance .NET Core backend structured with Clean Architecture.</li>
-                            <li class="project-bullet">Optimized server data retrieval and client-side caching to ensure a responsive, resilient user experience.</li>
+                            <li class="project-bullet">Architected mobile UI in Flutter with Riverpod for reactive MVVM state handling.</li>
+                            <li class="project-bullet">Integrated with high-throughput .NET Core RESTful APIs under Clean Architecture principles.</li>
                         </ul>
                     </div>
 
-                    <!-- Job 2 -->
-                    <div class="exp-card">
+                    <!-- Job 3 -->
+                    <div class="feature-card mb-4 text-left">
                         <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
                             <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
                                 Web Engineering & Systems Intern
@@ -347,20 +669,15 @@
                             <i class="ti-home"></i> Direction Provinciale de l'Équipement, du Transport, de la Logistique et de l'Eau
                         </h6>
                         <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
-                            Developed an automated administrative web system to streamline departmental staff and logistical task operations.
+                            Engineered an internal web portal with Python and Django automating departmental personnel management, logistics, and data routines using Pandas and NumPy, deployed on Windows Server & IIS.
                         </p>
-                        <ul style="padding-left: 0; margin-bottom: 0;">
-                            <li class="project-bullet">Built a Django web platform managing automated employee workflows and role-based permissions.</li>
-                            <li class="project-bullet">Implemented secure authentication and optimized data manipulation routines using Pandas and NumPy.</li>
-                            <li class="project-bullet">Configured and deployed the production app on Windows Server running IIS Web Server.</li>
-                        </ul>
                     </div>
 
-                    <!-- Job 3 -->
-                    <div class="exp-card">
+                    <!-- Job 4 -->
+                    <div class="feature-card mb-4 text-left">
                         <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
                             <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
-                                Independent Developer & Creator
+                                Lead Developer & Creator
                             </h5>
                             <span class="badge-pill-custom badge-industry">2022 — Present • SystemX</span>
                         </div>
@@ -368,48 +685,149 @@
                             <i class="ti-crown"></i> SystemX Software Initiatives
                         </h6>
                         <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
-                            Designed, published, and maintained mobile and web applications with published releases on Google Play and Firebase.
+                            Published commercial mobile game <em>MystoGuess</em> on Google Play Store and shipped full-stack real-time platform <em>Love Check App</em> on Firebase.
                         </p>
-                        <ul style="padding-left: 0; margin-bottom: 0;">
-                            <li class="project-bullet">Published <em>MystoGuess</em> on Google Play Store with offline-first SQLite database architecture.</li>
-                            <li class="project-bullet">Created and deployed <em>Love Check App</em> with real-time multi-user synchronization.</li>
-                        </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </section><!-- End of Experience Section -->
 
-    <!-- Portfolio Section -->
+    <!-- Projects Section (Categorized Grid) -->
     <section class="section" id="portfolio">
         <div class="container text-center">
-            <p class="section-subtitle">What I've Built</p>
-            <h6 class="section-title mb-4">My Projects</h6>
+            <p class="section-subtitle">What I've Built & Published</p>
+            <h6 class="section-title mb-4">Engineering & Research Projects</h6>
 
-            <!-- Interactive Project Filters -->
+            <!-- Interactive Filters -->
             <div class="filter-btn-group">
                 <button class="btn btn-outline-primary active filter-btn" data-filter="all">All</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="mobile">Mobile Apps</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="web">Full-Stack & Web</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="research">Research & Compilers</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="desktop">Desktop & Enterprise</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="research">☀️ Solar & ML (2026)</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="mobile">📱 Mobile Apps</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="web">💻 Full-Stack & Web</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="systems">🔬 Compilers & Systems</button>
             </div>
 
             <!-- Project Cards Grid -->
             <div class="row">
 
-                <!-- Project 1: Love Check -->
+                <!-- Project 1: PV Forecast Evaluation (NEW 2026) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/architect.png" class="card-img-top" alt="PV Forecast Evaluation">
+                        <div class="card-body d-flex flex-column text-left">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-solar">Oct 2026 Release</span>
+                                <span class="badge-pill-custom badge-academic">Zenodo DOI</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">PV Forecast Benchmark</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Complete reproducible evaluation codebase and data pipeline for hourly PV power forecasting with LightGBM, GRU, and Transformers.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Pre-registered evaluation protocol on NREL PVDAQ 9068</li>
+                                <li class="project-bullet">Tests across Alice Springs, Hong Kong, & Colorado</li>
+                                <li class="project-bullet">Byte-identical script verification with SHA-256 manifests</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">LightGBM</span>
+                                <span class="project-tag">pvlib</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                                <a href="https://doi.org/10.5281/zenodo.23590205" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fas fa-certificate"></i> Zenodo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Strix AI Penetration Testing (NEW Sep 2026) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research systems">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/architect.png" class="card-img-top" alt="Strix AI Pen Testing">
+                        <div class="card-body d-flex flex-column text-left">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Sep 2026</span>
+                                <span class="badge-pill-custom badge-academic">AI Security</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Strix AI Pen-Testing</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Open-source automated AI penetration testing tool engineered to proactively discover, analyze, and remediate application vulnerabilities.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Automated security scanning & attack-vector testing</li>
+                                <li class="project-bullet">AI-augmented vulnerability analysis and reporting</li>
+                                <li class="project-bullet">Integrates into DevSecOps workflows and CI/CD</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">AI Security</span>
+                                <span class="project-tag">DevSecOps</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/strix" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Odysseus AI Workspace (NEW Jun 2026) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web systems">
+                    <div class="card shadow-sm p-3 h-100">
+                        <img src="assets/imgs/Todo.png" class="card-img-top" alt="Odysseus AI Workspace">
+                        <div class="card-body d-flex flex-column text-left">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Jun 2026</span>
+                                <span class="badge-pill-custom badge-academic">Self-Hosted</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Odysseus Workspace</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Self-hosted private AI workspace architecture enabling secure local execution of AI tools, models, and workflows.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Containerized self-hosted architecture</li>
+                                <li class="project-bullet">Local inference and private document tooling</li>
+                                <li class="project-bullet">Modular JavaScript & containerized runtime</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">Docker</span>
+                                <span class="project-tag">Self-Hosted</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/odysseus" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Love Check App -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
                     <div class="card shadow-sm p-3 h-100">
                         <img src="assets/imgs/lovecheck.png" class="card-img-top" alt="Love Check App">
                         <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Love Check App</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Production App</span>
+                                <span class="badge-pill-custom badge-academic">Firebase</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Love Check App</h5>
                             <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                A real-time relationship interactive game where couples synchronize answers and review shared relationship metrics.
+                                Synchronized real-time interactive game where couples guess responses with live matchmaking and cloud messaging.
                             </p>
                             <ul style="padding-left: 0; margin-bottom: 15px;">
                                 <li class="project-bullet">Real-time room synchronization via Firebase Realtime DB</li>
-                                <li class="project-bullet">MVVM architecture using Riverpod with multilingual i18n</li>
+                                <li class="project-bullet">MVVM state management using Riverpod with i18n</li>
                                 <li class="project-bullet">Offline SQLite database caching</li>
                             </ul>
                             <div class="mb-3">
@@ -420,60 +838,68 @@
                             </div>
                             <div class="mt-auto">
                                 <a href="https://lovecheckapp.web.app/" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
-                                    <i class="ti-world"></i> View Website
+                                    <i class="ti-world"></i> View Live Web
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: MystoGuess -->
+                <!-- Project 5: MystoGuess -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile">
                     <div class="card shadow-sm p-3 h-100">
                         <img src="assets/imgs/mystroguess.png" class="card-img-top" alt="MystoGuess">
                         <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">MystoGuess</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Google Play</span>
+                                <span class="badge-pill-custom badge-academic">Mobile</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">MystoGuess</h5>
                             <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                A category-based guessing game built with emojis and images featuring solo adventure and turn-based multiplayer. Published on Google Play.
+                                Published mobile game with category challenges, emojis, solo adventures, and turn-based multiplayer.
                             </p>
                             <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Published on the Google Play Store under SystemX</li>
-                                <li class="project-bullet">Offline-first architecture with SQLite + JSON dictionaries</li>
-                                <li class="project-bullet">Clean Architecture separating Domain, Data, & UI</li>
+                                <li class="project-bullet">Live on the Google Play Store under SystemX</li>
+                                <li class="project-bullet">Sub-second query speed via SQLite & JSON dictionaries</li>
+                                <li class="project-bullet">Clean Architecture separating Domain & Presentation</li>
                             </ul>
                             <div class="mb-3">
                                 <span class="project-tag">Flutter</span>
-                                <span class="project-tag">Dart</span>
                                 <span class="project-tag">Google Play</span>
+                                <span class="project-tag">SQLite</span>
                                 <span class="project-tag">Clean Arch</span>
                             </div>
                             <div class="mt-auto">
                                 <a href="https://play.google.com/store/apps/details?id=com.systemx.mystoguess" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
-                                    <i class="fab fa-google-play"></i> View on Play Store
+                                    <i class="fab fa-google-play"></i> View Play Store
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: EcoBeach Mobile -->
+                <!-- Project 6: EcoBeach Mobile & Backend -->
                 <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web research">
                     <div class="card shadow-sm p-3 h-100">
                         <img src="assets/imgs/Ecobeach.png" class="card-img-top" alt="EcoBeach Mobile Project">
                         <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">EcoBeach Mobile</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-solar">IoT & Systems</span>
+                                <span class="badge-pill-custom badge-industry">.NET Core</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">EcoBeach Platform</h5>
                             <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                Environmental IoT monitoring mobile app tracking coastal cleanliness indicators, sensor telemetry, and citizen reporting.
+                                Environmental IoT coastal monitoring platform tracking cleanliness indicators, sensor telemetry, and water metrics.
                             </p>
                             <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Real-time status indicators and telemetry data views</li>
-                                <li class="project-bullet">Clean responsive mobile client built in Flutter</li>
-                                <li class="project-bullet">Integrated with environmental sensor backend</li>
+                                <li class="project-bullet">REST APIs developed with .NET Core & C#</li>
+                                <li class="project-bullet">Time-series and relational database modeling</li>
+                                <li class="project-bullet">Mobile monitoring client in Flutter for operators</li>
                             </ul>
                             <div class="mb-3">
+                                <span class="project-tag">.NET Core</span>
                                 <span class="project-tag">Flutter</span>
                                 <span class="project-tag">IoT Data</span>
-                                <span class="project-tag">Mobile</span>
                             </div>
                             <div class="mt-auto">
                                 <a href="assets/docs/ecobeach.pdf" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
@@ -484,111 +910,28 @@
                     </div>
                 </div>
 
-                <!-- Project 4: EcoBeach Backend -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web research">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/architect.png" class="card-img-top" alt="EcoBeach Backend Architecture">
-                        <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">EcoBeach BackEnd</h5>
-                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                A backend system developed for the EcoBeach project, focusing on environmental telemetry data management, aggregation, and analysis.
-                            </p>
-                            <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">REST APIs developed with .NET Core & C#</li>
-                                <li class="project-bullet">Time-series and relational database modeling</li>
-                                <li class="project-bullet">Detailed system architecture specification</li>
-                            </ul>
-                            <div class="mb-3">
-                                <span class="project-tag">.NET Core</span>
-                                <span class="project-tag">C#</span>
-                                <span class="project-tag">System Design</span>
-                            </div>
-                            <div class="mt-auto">
-                                <a href="assets/docs/ecobeach.pdf" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
-                                    <i class="ti-file"></i> Architecture PDF
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: TaskWithAuthDotNet -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/Todo.png" class="card-img-top" alt="TaskWithAuthDotNet Project">
-                        <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Task With Auth DotNet</h5>
-                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                A task management microservice featuring secure user authentication built with ASP.NET Core and Clean Architecture.
-                            </p>
-                            <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Domain-Driven Design (DDD) with decoupled layers</li>
-                                <li class="project-bullet">Stateless JWT authentication with refresh token flow</li>
-                                <li class="project-bullet">Entity Framework Core with SQL Server migrations</li>
-                            </ul>
-                            <div class="mb-3">
-                                <span class="project-tag">ASP.NET Core</span>
-                                <span class="project-tag">C#</span>
-                                <span class="project-tag">JWT</span>
-                                <span class="project-tag">SQL Server</span>
-                            </div>
-                            <div class="mt-auto">
-                                <a href="https://github.com/Oussi108/taskwithauthdotnet" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: MapWithAuth -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/mapapp.png" class="card-img-top" alt="MapWithAuth Project">
-                        <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Map With Auth</h5>
-                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                An Ionic-based geolocation map application integrating Angular and Capacitor with secure user authentication and pin clustering.
-                            </p>
-                            <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Capacitor native geolocation & GPS sensor integration</li>
-                                <li class="project-bullet">Authenticated coordinate bookmarks & route pins</li>
-                                <li class="project-bullet">Cross-platform build ready for Android and Web</li>
-                            </ul>
-                            <div class="mb-3">
-                                <span class="project-tag">Ionic</span>
-                                <span class="project-tag">Angular</span>
-                                <span class="project-tag">Capacitor</span>
-                                <span class="project-tag">TypeScript</span>
-                            </div>
-                            <div class="mt-auto">
-                                <a href="https://github.com/Oussi108/mapwithauth" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Project 7: Math Expression Compiler -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research">
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="systems">
                     <div class="card shadow-sm p-3 h-100">
                         <img src="assets/imgs/gym.png" class="card-img-top" alt="Math Expression Compiler">
                         <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Math Expression Compiler</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-academic">Compilers & AST</span>
+                                <span class="badge-pill-custom badge-industry">C#</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Expression Compiler</h5>
                             <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                Custom mathematical expression compiler featuring token scanning, recursive-descent parsing, and abstract syntax tree (AST) execution.
+                                Mathematical expression compiler featuring token scanning, recursive-descent parsing, and abstract syntax tree (AST) evaluation.
                             </p>
                             <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Lexical tokenizer converting mathematical text into tokens</li>
-                                <li class="project-bullet">Grammar parser enforcing operator precedence and associativity</li>
-                                <li class="project-bullet">Abstract Syntax Tree (AST) construction and evaluation</li>
+                                <li class="project-bullet">Lexical tokenizer converting math text into language tokens</li>
+                                <li class="project-bullet">Parser enforcing operator precedence & associativity</li>
+                                <li class="project-bullet">AST construction and post-order interpreter engine</li>
                             </ul>
                             <div class="mb-3">
                                 <span class="project-tag">C#</span>
                                 <span class="project-tag">Compilers</span>
                                 <span class="project-tag">AST</span>
-                                <span class="project-tag">Formal Grammars</span>
                             </div>
                             <div class="mt-auto">
                                 <a href="https://github.com/Oussi108/Complier_EXP_math" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
@@ -599,55 +942,31 @@
                     </div>
                 </div>
 
-                <!-- Project 8: Novels Project -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile">
+                <!-- Project 8: TaskWithAuthDotNet -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
                     <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/novel.png" class="card-img-top" alt="Novels Project">
+                        <img src="assets/imgs/Todo.png" class="card-img-top" alt="TaskWithAuthDotNet Project">
                         <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Novels Android App</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Clean Architecture</span>
+                                <span class="badge-pill-custom badge-academic">ASP.NET Core</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Task With Auth .NET</h5>
                             <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                An Android app built with native Java and SQLite, designed for managing, cataloging, and reading literature offline.
+                                Enterprise task management RESTful API microservice with role authorization, JWT tokens, and SQL Server migrations.
                             </p>
                             <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Native Android development with Java & Android SDK</li>
-                                <li class="project-bullet">Offline SQLite database storing reading positions and books</li>
-                                <li class="project-bullet">Custom reader UI with dynamic font scaling and night mode</li>
+                                <li class="project-bullet">Domain-Driven Design (DDD) with decoupled layers</li>
+                                <li class="project-bullet">Stateless JWT authentication with refresh token flow</li>
+                                <li class="project-bullet">Entity Framework Core with SQL Server migrations</li>
                             </ul>
                             <div class="mb-3">
-                                <span class="project-tag">Java</span>
-                                <span class="project-tag">Android SDK</span>
-                                <span class="project-tag">SQLite</span>
-                            </div>
-                            <div class="mt-auto">
-                                <a href="https://github.com/oussi108/novels" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 9: DesktopGymManager -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="desktop">
-                    <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/gym.png" class="card-img-top" alt="DesktopGymManager Project">
-                        <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">DesktopGymManager</h5>
-                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                A gym management desktop application developed with C# and SQL Server for handling member subscriptions and attendance logs.
-                            </p>
-                            <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Desktop enterprise management developed with C# .NET</li>
-                                <li class="project-bullet">Relational Microsoft SQL Server schema with ACID transactions</li>
-                                <li class="project-bullet">Automated payment tracking and membership alerts</li>
-                            </ul>
-                            <div class="mb-3">
+                                <span class="project-tag">ASP.NET Core</span>
                                 <span class="project-tag">C#</span>
-                                <span class="project-tag">.NET</span>
-                                <span class="project-tag">SQL Server</span>
+                                <span class="project-tag">JWT</span>
                             </div>
                             <div class="mt-auto">
-                                <a href="https://github.com/oussi108/DesktopGymManger" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                <a href="https://github.com/Oussi108/taskwithauthdotnet" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
                             </div>
@@ -655,27 +974,31 @@
                     </div>
                 </div>
 
-                <!-- Project 10: HotelManagement -->
-                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="desktop">
+                <!-- Project 9: MapWithAuth -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
                     <div class="card shadow-sm p-3 h-100">
-                        <img src="assets/imgs/hotel.png" class="card-img-top" alt="HotelManagement Project">
+                        <img src="assets/imgs/mapapp.png" class="card-img-top" alt="MapWithAuth Project">
                         <div class="card-body d-flex flex-column text-left">
-                            <h5 class="card-title" style="font-size: 20px; font-weight: 600;">HotelManagement</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Hybrid Mobile</span>
+                                <span class="badge-pill-custom badge-academic">Ionic</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Map With Auth</h5>
                             <p class="card-text" style="font-size: 14px; color: #6c757d;">
-                                A hotel management desktop application built using .NET technologies for coordinating room reservations and billing workflows.
+                                Cross-platform mobile and web application combining Angular, Ionic, and Capacitor for live user positioning and spatial pins.
                             </p>
                             <ul style="padding-left: 0; margin-bottom: 15px;">
-                                <li class="project-bullet">Multi-tier architecture separating business logic & data</li>
-                                <li class="project-bullet">Normalized relational database for room inventory and guests</li>
-                                <li class="project-bullet">Operational occupancy statistics and invoicing</li>
+                                <li class="project-bullet">Capacitor native geolocation & GPS sensor integration</li>
+                                <li class="project-bullet">Authenticated coordinate bookmarks & route pins</li>
+                                <li class="project-bullet">Cross-platform build ready for Android and Web</li>
                             </ul>
                             <div class="mb-3">
-                                <span class="project-tag">.NET</span>
-                                <span class="project-tag">C#</span>
-                                <span class="project-tag">SQL Server</span>
+                                <span class="project-tag">Ionic</span>
+                                <span class="project-tag">Angular</span>
+                                <span class="project-tag">Capacitor</span>
                             </div>
                             <div class="mt-auto">
-                                <a href="https://github.com/Oussi108/HotelManagment_2year" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                <a href="https://github.com/Oussi108/mapwithauth" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
                             </div>
@@ -683,235 +1006,85 @@
                     </div>
                 </div>
 
-            </div> <!-- End of row -->
+            </div> <!-- End row -->
         </div>
-    </section><!-- End of Portfolio Section -->
+    </section><!-- End of Projects Section -->
 
-    <!-- Research & Theory Section (For Continuing Study Applications) -->
-    <section class="section" id="research" style="background-color: #f8f9fa;">
-        <div class="container text-center">
-            <p class="section-subtitle">Academic Inquiries</p>
-            <h6 class="section-title mb-6">Research & Explorations</h6>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="row">
-                        <!-- Area 1: Solar Forecasting -->
-                        <div class="col-md-6 mb-4">
-                            <div class="research-card h-100">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-sun mr-2" style="font-size: 26px; color: #f59e0b;"></i>
-                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
-                                        Solar Irradiance & ML Forecasting
-                                    </h5>
-                                </div>
-                                <p style="font-size: 14px; color: #6c757d;">
-                                    Active exploration of physical solar datasets (including the <em>Stanford Solar Forecasting Dataset</em> and <em>PV Forecast Reference Evaluations</em>) analyzing time-series models for renewable power prediction.
-                                </p>
-                                <div>
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">Time-Series</span>
-                                    <span class="project-tag">Pandas/NumPy</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Area 2: Compiler Design -->
-                        <div class="col-md-6 mb-4">
-                            <div class="research-card h-100">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-terminal mr-2" style="font-size: 26px; color: #695aa6;"></i>
-                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
-                                        Compilers & Formal Grammars
-                                    </h5>
-                                </div>
-                                <p style="font-size: 14px; color: #6c757d;">
-                                    Practical construction of custom mathematical expression compilers, investigating lexical analysis, recursive-descent parsing, operator precedence, and AST execution engines.
-                                </p>
-                                <div>
-                                    <span class="project-tag">C#</span>
-                                    <span class="project-tag">Lexer/Parser</span>
-                                    <span class="project-tag">AST</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Area 3: Distributed Systems -->
-                        <div class="col-md-6 mb-4">
-                            <div class="research-card h-100">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-network-wired mr-2" style="font-size: 26px; color: #0284c7;"></i>
-                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
-                                        Distributed Systems & Scalability
-                                    </h5>
-                                </div>
-                                <p style="font-size: 14px; color: #6c757d;">
-                                    In-depth coursework and study into consistency models, microservice network resilience, distributed state synchronization, and fault-tolerant service communication.
-                                </p>
-                                <div>
-                                    <span class="project-tag">Distributed Systems</span>
-                                    <span class="project-tag">Clean Architecture</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Area 4: AI Security -->
-                        <div class="col-md-6 mb-4">
-                            <div class="research-card h-100">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-shield-alt mr-2" style="font-size: 26px; color: #10b981;"></i>
-                                    <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 0;">
-                                        Automated AI Security & Testing
-                                    </h5>
-                                </div>
-                                <p style="font-size: 14px; color: #6c757d;">
-                                    Investigating open-source AI penetration testing tools (such as <em>strix</em>) to automatically detect application vulnerabilities, verify endpoint security, and enforce security policies.
-                                </p>
-                                <div>
-                                    <span class="project-tag">DevSecOps</span>
-                                    <span class="project-tag">App Security</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End of Research Section -->
-
-    <!-- Call to Action Banner (Classic Purple Meyawo Style) -->
+    <!-- Call to Action Banner -->
     <section class="section-sm bg-primary">
         <div class="container text-center text-sm-left">
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Want to work together or discuss graduate research?</h6>
-                    <p class="m-0 text-light">Available for Software Engineering Roles & Graduate Academic Programs</p>
+                    <h6 class="title text-light">Seeking PhD Collaboration or Senior Engineering Roles?</h6>
+                    <p class="m-0 text-light">Open for fully funded PhD positions starting 2027 and high-impact engineering roles.</p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
-                    <a href="#contact" class="btn btn-lg my-font btn-light rounded" style="color: #695aa6; font-weight: 600;">Get in Touch</a>
+                    <a href="#contact" class="btn btn-lg my-font btn-light rounded" style="color: #695aa6; font-weight: 700;">Get in Touch</a>
                 </div>
             </div>
         </div>
     </section><!-- End of Call to Action Banner -->
 
-    <!-- Skills Section (Exact Meyawo Format) -->
-    <section class="section" id="skills" style="background-color: #fff; padding: 60px 0;">
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills" style="background-color: #ffffff; padding: 60px 0;">
         <div class="container text-center">
-            <p class="section-subtitle" style="font-size: 18px; color: #6c757d;">My Expertise</p>
-            <h6 class="section-title mb-6" style="font-size: 32px; font-weight: bold; color: #343a40;">Why Choose Me?</h6>
+            <p class="section-subtitle" style="font-size: 18px; color: #6c757d;">Technical Arsenal</p>
+            <h6 class="section-title mb-6" style="font-size: 32px; font-weight: bold; color: #343a40;">Skills & Tooling</h6>
 
-            <!-- Row for Primary Skills -->
             <div class="row">
-                <!-- Flutter -->
+                <!-- Machine Learning & Forecasting -->
                 <div class="col-md-4 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
-                        <div class="skill-card-icon" style="font-size: 40px; color: #695aa6; margin-bottom: 20px;">
-                            <i class="ti-mobile"></i>
-                        </div>
-                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">Flutter Development</h5>
-                        <p style="font-size: 16px; color: #6c757d;">Building cross-platform mobile applications with clean, scalable, and efficient code.</p>
-                    </div>
-                </div>
-                
-                <!-- .NET -->
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
-                        <div class="skill-card-icon" style="font-size: 40px; color: #695aa6; margin-bottom: 20px;">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">.NET Development</h5>
-                        <p style="font-size: 16px; color: #6c757d;">Creating robust, scalable backend APIs and enterprise applications using ASP.NET Core, C#, and Clean Architecture.</p>
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #f59e0b; margin-bottom: 15px;"><i class="fas fa-sun"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Solar ML & Data Science</h5>
+                        <p style="font-size: 14px; color: #6c757d;">PyTorch, LightGBM, pvlib, pandas, NumPy, Jupyter, Scikit-learn, ERA5 NWP, Satellite Imagery.</p>
                     </div>
                 </div>
 
-                <!-- Firebase -->
+                <!-- Flutter & Mobile -->
                 <div class="col-md-4 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
-                        <div class="skill-card-icon" style="font-size: 40px; color: #ff8c00; margin-bottom: 20px;">
-                            <i class="ti-cloud"></i>
-                        </div>
-                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">Firebase Integration</h5>
-                        <p style="font-size: 16px; color: #6c757d;">Seamlessly integrating Firebase for authentication, real-time database synchronizations, and hosting.</p>
-                    </div>
-                </div>
-                
-                <!-- Riverpod -->
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
-                        <div class="skill-card-icon" style="font-size: 40px; color: #28a745; margin-bottom: 20px;">
-                            <i class="fas fa-archive"></i>
-                        </div>
-                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">State Management (Riverpod)</h5>
-                        <p style="font-size: 16px; color: #6c757d;">Efficient, reactive state management ensuring predictable performance, testability, and scalability.</p>
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #695aa6; margin-bottom: 15px;"><i class="ti-mobile"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Mobile Engineering</h5>
+                        <p style="font-size: 14px; color: #6c757d;">Flutter, Dart, Riverpod MVVM, Android Native (Java), SQLite, Ionic & Capacitor, Play Store Publishing.</p>
                     </div>
                 </div>
 
-                <!-- DevOps & CI/CD -->
+                <!-- Backend & Cloud -->
                 <div class="col-md-4 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
-                        <div class="skill-card-icon" style="font-size: 40px; color: #00bcd4; margin-bottom: 20px;">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">DevOps & CI/CD</h5>
-                        <p style="font-size: 16px; color: #6c757d;">Automating deployments and managing containers using Docker, Docker Compose, Git, and GitHub Actions.</p>
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #0284c7; margin-bottom: 15px;"><i class="fas fa-server"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Backend & Cloud</h5>
+                        <p style="font-size: 14px; color: #6c757d;">ASP.NET Core, C#, Django, Spring Boot, Firebase (Auth/Firestore), RESTful APIs, Clean Architecture.</p>
                     </div>
                 </div>
-                
-                <!-- Problem Solving & Continuous Learning -->
+
+                <!-- Distributed Systems & DevOps -->
                 <div class="col-md-4 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s;">
-                        <div class="skill-card-icon" style="font-size: 40px; color: #ffc107; margin-bottom: 20px;">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h5 style="font-size: 22px; font-weight: 600; color: #343a40;">Computer Science Rigor</h5>
-                        <p style="font-size: 16px; color: #6c757d;">Strong foundations in distributed systems, compiler parsing algorithms, and mathematical data processing.</p>
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #10b981; margin-bottom: 15px;"><i class="fas fa-network-wired"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Distributed Systems & DevOps</h5>
+                        <p style="font-size: 14px; color: #6c757d;">Docker, Docker Compose, Git, GitHub Actions, Azure DevOps, Linux/Bash, Microservices, CI/CD.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Additional Skills Section -->
-            <div class="row mt-5">
-                <div class="col-md-12">
-                    <h6 style="font-size: 28px; font-weight: 600; color: #343a40;">Other Skills & Technologies</h6>
-                    <p style="font-size: 16px; color: #6c757d;">A broader range of my technical toolkit across multiple domains.</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <!-- Programming Languages -->
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
-                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Languages</h5>
-                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">C/C++, C#, Java, Dart, Python, JavaScript, TypeScript, SQL</p>
+                <!-- Databases -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #8b5cf6; margin-bottom: 15px;"><i class="fas fa-database"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Databases & Storage</h5>
+                        <p style="font-size: 14px; color: #6c757d;">SQL Server, PostgreSQL, MySQL, SQLite, MongoDB, Cloud Firestore, Entity Framework Core.</p>
                     </div>
                 </div>
-                <!-- Backend & Frontend -->
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
-                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Frameworks</h5>
-                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">ASP.NET Core, Spring Boot, Django, Angular, React, Ionic, Bootstrap</p>
-                    </div>
-                </div>
-                <!-- Methodologies & Databases -->
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
-                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Databases</h5>
-                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">SQL Server, SQLite, MySQL, PostgreSQL, MongoDB, Firestore</p>
-                    </div>
-                </div>
-                <!-- Spoken Languages -->
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card" style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
-                        <h5 style="font-size: 20px; font-weight: 600; color: #343a40;">Spoken Languages</h5>
-                        <p style="font-size: 15px; color: #6c757d; margin-bottom: 0;">Arabic (Native), English (Fluent), French (Good), Tamazight (Proficient)</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="cta mt-5">
-                <p class="cta-text" style="font-size: 18px; font-weight: 600; color: #343a40;">Ready to discuss opportunities or collaborate? Let's connect!</p>
-                <a href="#contact" class="btn btn-primary btn-rounded" style="padding: 12px 35px; font-size: 16px;">Get in Touch</a>
+                <!-- Languages & Communication -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #ec4899; margin-bottom: 15px;"><i class="fas fa-language"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Spoken Languages</h5>
+                        <p style="font-size: 14px; color: #6c757d;">English (Fluent), French (Good), Arabic (Native), Mandarin Chinese (HSK 3), Tamazight (Native).</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section><!-- End of Skills Section -->
@@ -919,40 +1092,50 @@
     <!-- Contact Section -->
     <section class="section" id="contact" style="background-color: #f8f9fa;">
         <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
+            <p class="section-subtitle">Let's Connect</p>
+            <h6 class="section-title mb-5">Contact & Channels</h6>
             
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
-                    <div class="card p-4 shadow-sm" style="border-radius: 12px; border: 1px solid #dee2e6;">
-                        <p style="font-size: 17px; color: #6c757d; margin-bottom: 12px;">Feel free to reach out via email:</p>
+                    <div class="card p-4 shadow-sm" style="border-radius: 12px; border: 1px solid #dee2e6; background: #fff;">
+                        <p style="font-size: 16px; color: #6c757d; margin-bottom: 15px;">
+                            Reach out for PhD opportunities, research inquiries, or engineering roles:
+                        </p>
+                        
                         <div class="mb-3">
-                            <a href="mailto:oussi.elhoucine0@gmail.com" class="btn btn-outline-primary btn-rounded" style="font-size: 16px; padding: 10px 30px;">
-                                <i class="ti-email mr-1"></i> oussi.elhoucine0@gmail.com
+                            <a href="mailto:oussi108@gmail.com" class="btn btn-outline-primary btn-rounded me-2 mb-2" style="font-size: 15px; padding: 10px 22px;">
+                                <i class="fas fa-envelope mr-1"></i> oussi108@gmail.com
+                            </a>
+                            <a href="mailto:oussi.elhoucine0@gmail.com" class="btn btn-outline-primary btn-rounded mb-2" style="font-size: 15px; padding: 10px 22px;">
+                                <i class="fas fa-envelope mr-1"></i> oussi.elhoucine0@gmail.com
                             </a>
                         </div>
-                        <p style="font-size: 16px; margin-bottom: 0;">
-                            Direct phone / WhatsApp: 
-                            <a href="tel:+212642587839" style="font-weight: 600; color: #695aa6;">+212 642587839</a>
+                        
+                        <p style="font-size: 16px; margin-bottom: 5px;">
+                            Phone / WhatsApp: 
+                            <a href="tel:+212642587839" style="font-weight: 700; color: #695aa6;">+212 642587839</a>
                         </p>
-                        <p style="font-size: 14px; color: #888; margin-top: 6px;">Based in Oujda, Morocco (Open to Relocation & Remote)</p>
+                        <p style="font-size: 14px; color: #888;">
+                            Based in Nanjing, China / Oujda, Morocco (Open to global relocation)
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section><!-- End of Contact Section -->
 
-    <!-- Footer (Classic Meyawo Format) -->
+    <!-- Footer -->
     <div class="container">
         <footer class="footer">
             <p class="mb-0">
-                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">SystemX</a> • Hosted on GitHub Pages
+                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">SystemX</a> • El-Houcine Oussi
             </p>
     
             <!-- Social Links -->
             <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://www.linkedin.com/in/el-houcine-oussi" class="link" target="_blank" title="LinkedIn"><i class="ti-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/el-houcine-oussi-5abb8a1b7" class="link" target="_blank" title="LinkedIn"><i class="ti-linkedin"></i></a>
                 <a href="https://github.com/Oussi108" class="link" target="_blank" title="GitHub"><i class="ti-github"></i></a>
+                <a href="https://doi.org/10.5281/zenodo.23590205" class="link" target="_blank" title="Zenodo DOI"><i class="fas fa-link"></i></a>
                 <a href="https://www.facebook.com/houssin.oussi" class="link" target="_blank" title="Facebook"><i class="ti-facebook"></i></a>
                 <a href="https://www.instagram.com/oussi108" class="link" target="_blank" title="Instagram"><i class="ti-instagram"></i></a>
                 <a href="tel:+212642587839" class="link" title="Phone"><i class="ti-mobile"></i></a>
@@ -960,13 +1143,12 @@
         </footer>
     </div><!-- End of Page Footer -->
 
-    <!-- Core Scripts -->
+    <!-- Scripts -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
     <script src="assets/js/meyawo.js"></script>
 
-    <!-- Custom Client-Side Filter Logic -->
     <script>
         $(document).ready(function() {
             $('.filter-btn').on('click', function() {
