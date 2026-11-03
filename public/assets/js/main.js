@@ -206,7 +206,7 @@ function initProjectFilters() {
    ========================================================================== */
 const projectDetails = {
   lovecheck: {
-    title: 'Love Check App - Real-Time Relationship Platform',
+    title: 'Connect Check App - Real-Time Interactive Platform',
     category: 'Mobile & Cloud Application',
     image: 'assets/imgs/lovecheck.png',
     badge: 'Production Web & Mobile',
