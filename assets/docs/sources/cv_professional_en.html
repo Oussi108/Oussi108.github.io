@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>El-Houcine Oussi - CV</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 13mm 9mm 13mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, Carlito, "Liberation Sans", Arial, sans-serif;
+    font-size: 9.8pt; line-height: 1.28; color: #1a1a1a; background: #fff;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { margin-bottom: 7px; }
+  h1 { font-size: 20pt; font-weight: 700; letter-spacing: 0.3px; color: #111; }
+  .role { font-size: 11pt; color: #1f3a5f; margin-top: 1px; }
+  .contact { font-size: 9.2pt; color: #333; margin-top: 4px; }
+  .contact span + span::before { content: "|"; color: #999; margin: 0 6px; }
+  h2 {
+    font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
+    color: #1f3a5f; border-bottom: 1px solid #1f3a5f; padding-bottom: 1px; margin: 9px 0 4px;
+  }
+  .summary { font-size: 9.8pt; }
+  .entry { margin-bottom: 5px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .what { font-weight: 700; }
+  .where { font-style: italic; }
+  .when { white-space: nowrap; font-size: 9.4pt; color: #333; }
+  ul { margin: 1px 0 0 15px; }
+  li { margin-bottom: 1px; font-size: 9.7pt; }
+  .stack { color: #444; font-size: 9.2pt; }
+  table { border-collapse: collapse; width: 100%; }
+  td { vertical-align: top; padding: 1px 0; font-size: 9.7pt; }
+  td.k { width: 118px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>El-Houcine Oussi</h1>
+  <div class="role">Software Engineer &middot; Machine Learning</div>
+  <div class="contact">
+    <span><a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a></span>
+    <span>+86 177 5100 8739 (CN) / +212 642 587 839 (MA)</span>
+    <span>Nanjing, China</span>
+  </div>
+  <div class="contact">
+    <span><a href="https://oussi108.github.io">oussi108.github.io</a></span>
+    <span><a href="https://github.com/Oussi108">github.com/Oussi108</a></span>
+    <span><a href="https://www.linkedin.com/in/el-houcine-oussi-5abb8a1b7">linkedin.com/in/el-houcine-oussi-5abb8a1b7</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">
+  Software engineer with an engineering degree in information systems and two internships building
+  Flutter, ASP.NET Core and Django applications. Now doing an M.Sc. at NUIST, where I build and evaluate
+  solar power forecasting models in Python (LightGBM, PyTorch). Looking for software engineering or
+  machine learning engineering roles.
+</p>
+
+<h2>Experience</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Graduate Researcher, Solar Power Forecasting</span>, <span class="where">NUIST</span></div>
+    <div class="when">Sep 2024 &ndash; present &middot; Nanjing</div>
+  </div>
+  <ul>
+    <li>Build data pipelines and forecasting models for photovoltaic (PV) power, from minutes to a day ahead, with pandas, NumPy, pvlib, LightGBM and PyTorch.</li>
+    <li>Compared LightGBM, a GRU and a compact Transformer at 2&ndash;12 h lead times on PV systems in Australia, Hong Kong and the US. For the US system, the evaluation plan was fixed and its file hashes recorded before any forecast was made.</li>
+    <li>Released the code and aggregate results under the MIT licence (<a href="https://github.com/Oussi108/pv-forecast-reference-evaluation">GitHub</a>, DOI <a href="https://doi.org/10.5281/zenodo.23590205">10.5281/zenodo.23590205</a>). A verification script checks every file against a SHA-256 manifest; re-running the release reproduced all published tables exactly.</li>
+    <li>Prepare Himawari / Meteosat satellite imagery and numerical weather forecasts (GRIB, ERA5) as model inputs for a study of 50 Australian solar farms.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Backend &amp; Mobile Developer Intern</span>, <span class="where">Majal Berkane (Smart City)</span></div>
+    <div class="when">Mar 2024 &ndash; Jul 2024 &middot; Berkane, Morocco</div>
+  </div>
+  <ul>
+    <li>Built a Flutter mobile app using MVVM with Riverpod for state management.</li>
+    <li>Wrote REST APIs in ASP.NET Core following Clean Architecture and the repository pattern.</li>
+    <li>Tuned database queries and added server-side caching on the endpoints serving sensor data.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Web Development Intern</span>, <span class="where">Provincial Directorate of Equipment, Transport and Logistics</span></div>
+    <div class="when">Mar 2023 &ndash; Jul 2023 &middot; Oujda, Morocco</div>
+  </div>
+  <ul>
+    <li>Built an internal Django application for staff records, equipment scheduling and administrative logistics.</li>
+    <li>Added role-based access control and report generation with pandas and NumPy.</li>
+    <li>Deployed it on Windows Server with IIS and set up scheduled SQL Server backups.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Connect Check</span> <span class="stack">&middot; Flutter, Firebase Realtime Database, Riverpod, SQLite</span></div>
+    <div class="when">2024 &ndash; 2025</div>
+  </div>
+  <ul>
+    <li>App where users join a shared room and their answers sync in real time through Firebase Realtime Database; includes localisation and an offline SQLite cache. Web version: <a href="https://lovecheckapp.web.app/">lovecheckapp.web.app</a></li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">MystoGuess</span> <span class="stack">&middot; Flutter, Dart, SQLite</span></div>
+    <div class="when">2025</div>
+  </div>
+  <ul>
+    <li>Guessing game with category challenges, solo mode and turn-based multiplayer, published on Google Play under the SystemX developer name. Word lists are stored locally in SQLite and JSON.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">EcoBeach</span> <span class="stack">&middot; Flutter, ASP.NET Core, C#</span></div>
+    <div class="when">2024</div>
+  </div>
+  <ul>
+    <li>Mobile app and backend for booking beach services: sign-up and login, a prepaid wallet, reservations, and invoices with QR codes. Design report on <a href="https://oussi108.github.io">oussi108.github.io</a>.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Task API and expression compiler</span> <span class="stack">&middot; C#, ASP.NET Core, EF Core, SQL Server</span></div>
+    <div class="when">2023 &ndash; 2024</div>
+  </div>
+  <ul>
+    <li>Task-management REST API with JWT authentication, refresh tokens and EF Core migrations (<a href="https://github.com/Oussi108/taskwithauthdotnet">taskwithauthdotnet</a>); a math expression compiler with a tokenizer, recursive-descent parser and AST evaluator (<a href="https://github.com/Oussi108/Complier_EXP_math">Complier_EXP_math</a>).</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">M.Sc., Computer Science and Technology</span>, <span class="where">Nanjing University of Information Science and Technology</span></div>
+    <div class="when">Sep 2024 &ndash; Jun 2027 (expected)</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="what">State Engineering Degree, Computer Science and Information Systems</span>, <span class="where">SUPMTI, Oujda, Morocco</span></div>
+    <div class="when">Sep 2021 &ndash; Jun 2024</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Specialized Technician Diploma, Software Development</span>, <span class="where">ISTA Lazaret, Oujda, Morocco</span></div>
+    <div class="when">Sep 2019 &ndash; Jun 2021</div>
+  </div>
+</div>
+
+<h2>Skills</h2>
+<table>
+  <tr><td class="k">Languages</td><td>Python, C#, Dart, Java, TypeScript, JavaScript, SQL, Bash</td></tr>
+  <tr><td class="k">Backend &amp; web</td><td>ASP.NET Core, Entity Framework Core, Django, Spring Boot, Angular, Ionic, React, REST APIs, JWT</td></tr>
+  <tr><td class="k">Mobile</td><td>Flutter (Riverpod, MVVM), Firebase (Auth, Firestore, Realtime Database), Google Play publishing</td></tr>
+  <tr><td class="k">ML &amp; data</td><td>PyTorch, LightGBM, scikit-learn, pandas, NumPy, pvlib, Jupyter, satellite and NWP (GRIB) data</td></tr>
+  <tr><td class="k">Data &amp; ops</td><td>SQL Server, PostgreSQL, MySQL, SQLite, MongoDB, Docker, Git, GitHub Actions, Linux, IIS</td></tr>
+  <tr><td class="k">Spoken</td><td>Arabic and Tamazight (native), English (fluent), French (professional), Mandarin Chinese (HSK 3)</td></tr>
+</table>
+
+</body>
+</html>
