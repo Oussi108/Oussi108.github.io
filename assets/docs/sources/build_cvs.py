@@ -23,11 +23,10 @@ if CHROME_PATH is None:
 
 # (source html, output pdf, expected page count)
 targets = [
-    ("cv_professional_en.html", "CV_Professional_EN.pdf", 1),
+    ("cv_professional_en.html", "CV_English.pdf", 1),
     ("cv_academic_en.html", "CV_Academic_EN.pdf", 2),
-    ("cv_english.html", "CV_English.pdf", None),
-    ("cv_chinese.html", "CV_Chinese.pdf", None),
-    ("cv_french.html", "CV_French.pdf", None),
+    ("cv_french.html", "CV_French.pdf", 1),
+    ("cv_chinese.html", "CV_Chinese.pdf", 1),
 ]
 
 # Optional: pass source names to build only those, e.g. python build_cvs.py cv_academic_en.html
