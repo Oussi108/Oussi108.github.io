@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 7mm 11mm 7mm 11mm;
+            margin: 7.5mm 12mm 7.5mm 12mm;
         }
         * {
             box-sizing: border-box;
@@ -14,174 +14,116 @@
             padding: 0;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 8.6pt;
-            line-height: 1.30;
-            color: #1e293b;
+            font-family: "Latin Modern Roman", "Computer Modern Roman", "Times New Roman", Times, "Nimbus Roman No9 L", Georgia, serif;
+            font-size: 8.8pt;
+            line-height: 1.28;
+            color: #111111;
             background: #ffffff;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
         a {
-            color: #3730a3;
+            color: #111111;
             text-decoration: none;
         }
         .header {
             text-align: center;
-            border-bottom: 2px solid #312e81;
-            padding-bottom: 4px;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
         .name {
             font-size: 19pt;
-            font-weight: 800;
+            font-weight: bold;
             letter-spacing: 0.5px;
-            color: #0f172a;
+            color: #000000;
             text-transform: uppercase;
+            margin-bottom: 1px;
         }
-        .title-tagline {
+        .headline {
             font-size: 9.6pt;
-            font-weight: 700;
-            color: #3730a3;
+            font-weight: 600;
+            color: #222222;
+            margin-bottom: 2px;
+        }
+        .contact-line {
+            font-size: 8.3pt;
+            color: #333333;
+            line-height: 1.35;
+        }
+        .status-line {
+            font-size: 7.9pt;
+            color: #444444;
             margin-top: 1px;
-            margin-bottom: 3px;
-        }
-        .contact-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 8.1pt;
-            color: #475569;
-        }
-        .contact-bar span {
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
-        }
-        .intl-status-banner {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 3px 8px;
-            margin-top: 4px;
-            font-size: 7.8pt;
-            color: #475569;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
         .section {
-            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-bottom: 3px;
         }
-        .section-title {
-            font-size: 9.4pt;
-            font-weight: 800;
-            color: #0f172a;
+        .section-heading {
+            font-size: 9.6pt;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
-            border-bottom: 1px solid #cbd5e1;
+            letter-spacing: 0.5px;
+            border-bottom: 0.75pt solid #000000;
             padding-bottom: 1px;
-            margin-bottom: 3.5px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            margin-bottom: 3px;
         }
-        .section-title::after {
-            content: "";
-            height: 1px;
-            background: #cbd5e1;
-            flex-grow: 1;
-            margin-left: 8px;
+        .entry {
+            margin-bottom: 3px;
         }
-        .item {
-            margin-bottom: 3.5px;
-        }
-        .item:last-child {
+        .entry:last-child {
             margin-bottom: 0;
         }
-        .item-header {
+        .entry-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
         }
-        .item-title {
-            font-weight: 700;
-            font-size: 8.7pt;
-            color: #0f172a;
+        .entry-title {
+            font-weight: bold;
+            font-size: 8.9pt;
+            color: #000000;
         }
-        .item-subtitle {
-            font-weight: 600;
+        .entry-right {
             font-size: 8.4pt;
-            color: #3730a3;
-        }
-        .item-date {
-            font-size: 8.1pt;
-            font-weight: 600;
-            color: #64748b;
+            color: #111111;
             text-align: right;
             white-space: nowrap;
         }
-        .item-location {
-            font-size: 8pt;
-            color: #64748b;
-            font-style: normal;
+        .entry-subtitle {
+            font-size: 8.6pt;
+            font-style: italic;
+            color: #222222;
         }
         ul.bullets {
-            list-style: none;
-            padding-left: 0;
+            margin-left: 14px;
             margin-top: 1px;
+            list-style-type: disc;
         }
         ul.bullets li {
-            position: relative;
-            padding-left: 10px;
-            font-size: 8.3pt;
-            color: #334155;
-            margin-bottom: 1.5px;
-            line-height: 1.27;
-        }
-        ul.bullets li::before {
-            content: "•";
-            position: absolute;
-            left: 1px;
-            color: #3730a3;
-            font-weight: bold;
-        }
-        ul.bullets li strong {
-            color: #0f172a;
-            font-weight: 700;
+            font-size: 8.4pt;
+            color: #111111;
+            margin-bottom: 1px;
+            line-height: 1.25;
+            padding-left: 1px;
         }
         .skills-table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 1px;
         }
         .skills-table td {
             padding: 1px 0;
             vertical-align: top;
-            font-size: 8.3pt;
-            line-height: 1.27;
+            font-size: 8.4pt;
+            line-height: 1.26;
         }
-        .skill-cat {
+        .skill-header {
             width: 140px;
-            font-weight: 700;
-            color: #0f172a;
+            font-weight: bold;
+            color: #000000;
         }
-        .skill-items {
-            color: #334155;
-        }
-        .tag {
-            display: inline-block;
-            background: #f1f5f9;
-            color: #334155;
-            padding: 0 4px;
-            border-radius: 3px;
-            font-size: 7.6pt;
-            font-weight: 600;
-            margin-right: 2px;
-        }
-        .inline-links {
-            font-size: 7.6pt;
-            margin-left: 4px;
+        .skill-list {
+            color: #222222;
         }
     </style>
 </head>
@@ -189,199 +131,198 @@
 
     <div class="header">
         <div class="name">El-Houcine Oussi</div>
-        <div class="title-tagline">Ingénieur Logiciel • Ingénieur Machine Learning</div>
-        <div class="contact-bar">
-            <span>📧 <a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a></span>
-            <span>📱 +86 177 5100 8739 (Chine) / +212 642 587 839 (Maroc)</span>
-            <span>📍 Nanjing, Chine & Oujda, Maroc</span>
-            <span>🔗 <a href="https://oussi108.github.io" target="_blank">oussi108.github.io</a></span>
-            <span>💻 <a href="https://github.com/Oussi108" target="_blank">github.com/Oussi108</a></span>
+        <div class="headline">Ingénieur Logiciel &bull; Ingénieur Machine Learning</div>
+        <div class="contact-line">
+            Nanjing, Chine & Oujda, Maroc &bull; +86 177 5100 8739 &bull; +212 642 587 839 &bull; <a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a><br>
+            <a href="https://github.com/Oussi108">github.com/Oussi108</a> &bull; <a href="https://oussi108.github.io">oussi108.github.io</a> &bull; <a href="https://linkedin.com/in/el-houcine-oussi-5abb8a1b7">linkedin.com/in/el-houcine-oussi</a>
         </div>
-        <div class="intl-status-banner">
-            <span><strong>Nationalité :</strong> Marocaine</span>
-            <span><strong>Statut :</strong> Étudiant en Master recherche à NUIST (Diplôme prévu : Juin 2027)</span>
-            <span><strong>Disponibilité :</strong> Ouvert à la mobilité internationale & au télétravail</span>
+        <div class="status-line">
+            Nationalité Marocaine &bull; Étudiant Master Recherche à NUIST (Diplôme prévu : Juin 2027) &bull; Mobilité Internationale & Télétravail
+        </div>
+    </div>
+
+    <!-- FORMATION -->
+    <div class="section">
+        <div class="section-heading">Formation Académique</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Université des Sciences de l'Information et des Technologies de Nanjing (NUIST)</span>
+                <span class="entry-right">Nanjing, Chine</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Master Recherche en Informatique (Computer Science & Technology)</span>
+                <span class="entry-right">Sept 2024 &ndash; Juin 2027 (Prévu)</span>
+            </div>
+            <ul class="bullets">
+                <li>Recherche en prévision de production d'énergie solaire, apprentissage profond spatiotemporel et modélisation atmosphérique.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">SUPMTI (École Supérieure de Management, Télécoms & Informatique)</span>
+                <span class="entry-right">Oujda, Maroc</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Diplôme d'Ingénieur d'État en Ingénierie des Systèmes d'Information (Équivalent Master)</span>
+                <span class="entry-right">Sept 2021 &ndash; Juin 2024</span>
+            </div>
+            <ul class="bullets">
+                <li>Spécialisation en Systèmes Distribués, Génie Logiciel, Clean Architecture et Bases de Données.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">ISTA Lazaret (Institut Spécialisé de Technologie Appliquée)</span>
+                <span class="entry-right">Oujda, Maroc</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Diplôme de Technicien Spécialisé en Développement Informatique (TS)</span>
+                <span class="entry-right">Sept 2019 &ndash; Juin 2021</span>
+            </div>
+            <ul class="bullets">
+                <li>Formation en Programmation Orientée Objet (POO), Conception de Bases de Données et Développement Web.</li>
+            </ul>
         </div>
     </div>
 
     <!-- COMPÉTENCES TECHNIQUES -->
     <div class="section">
-        <div class="section-title">Compétences Techniques</div>
+        <div class="section-heading">Compétences Techniques</div>
         <table class="skills-table">
             <tr>
-                <td class="skill-cat">Langages :</td>
-                <td class="skill-items">Python, C# (.NET), Dart, Java, C/C++, TypeScript, JavaScript, SQL, Bash / Shell</td>
+                <td class="skill-header">Langages :</td>
+                <td class="skill-list">Python, C# (.NET), Dart, Java, C/C++, TypeScript, JavaScript, SQL, Bash / Shell</td>
             </tr>
             <tr>
-                <td class="skill-cat">Frameworks & ML :</td>
-                <td class="skill-items">ASP.NET Core 8 / MVC, Flutter, PyTorch, LightGBM, XGBoost, Scikit-learn, Django, Spring Boot, React</td>
+                <td class="skill-header">Frameworks & ML :</td>
+                <td class="skill-list">ASP.NET Core, Flutter, PyTorch, LightGBM, XGBoost, Scikit-learn, Django, Spring Boot, React</td>
             </tr>
             <tr>
-                <td class="skill-cat">Cloud & Bases de données :</td>
-                <td class="skill-items">PostgreSQL, SQL Server, MySQL, SQLite, MongoDB, Firebase (Auth/Firestore), Docker, Git, Linux, IIS</td>
+                <td class="skill-header">Cloud & Bases de données :</td>
+                <td class="skill-list">PostgreSQL, Microsoft SQL Server, MySQL, SQLite, MongoDB, Firebase, Docker, Linux, IIS</td>
             </tr>
             <tr>
-                <td class="skill-cat">Architecture Système :</td>
-                <td class="skill-items">Clean Architecture, APIs RESTful, MVVM (Riverpod), Microservices, Modélisation Spatiotemporelle, CI/CD</td>
+                <td class="skill-header">Architecture & Outils :</td>
+                <td class="skill-list">Clean Architecture, APIs RESTful, MVVM (Riverpod), Microservices, Séries Temporelles, CI/CD, Git</td>
             </tr>
         </table>
     </div>
 
     <!-- EXPÉRIENCE PROFESSIONNELLE & RECHERCHE -->
     <div class="section">
-        <div class="section-title">Expérience Professionnelle & Recherche</div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Laboratoire IA & Énergies Renouvelables de NUIST</span>
-                    <span class="item-subtitle"> — Chercheur & Assistant de Recherche</span>
-                </div>
-                <div class="item-date">Sept 2024 – Présent | Nanjing, Chine</div>
+        <div class="section-heading">Expérience Professionnelle & Recherche</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Laboratoire IA & Énergies Renouvelables de NUIST</span>
+                <span class="entry-right">Nanjing, Chine</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Chercheur & Assistant de Recherche</span>
+                <span class="entry-right">Sept 2024 &ndash; Présent</span>
             </div>
             <ul class="bullets">
-                <li><strong>Machine Learning & Benchmarking :</strong> Conception de pipelines d'évaluation pour 50 centrales solaires australiennes comparant baselines de référence, GBDT et réseaux de neurones profonds.</li>
-                <li><strong>Ingénierie des Données Spatiotemporelles :</strong> Traitement de téraoctets de données météorologiques et satellitaires (canaux géostationnaires Himawari-8/9 et réanalyses ERA5).</li>
-                <li><strong>Reproductibilité Scientifique :</strong> Publication du jeu de données et benchmark open-source sur Zenodo (DOI: 10.5281/zenodo.23590205) avec protocole 100% reproductible.</li>
+                <li>Développement d'une plateforme d'évaluation et de benchmark couvrant 50 parcs solaires australiens, comparant modèles de référence, LightGBM et réseaux de neurones profonds sur des horizons de 15 minutes à J+1.</li>
+                <li>Ingestion et alignement de données spatiotemporelles multi-téraoctets combinant imagerie satellitaire géostationnaire Himawari-8/9 et réanalyses météorologiques ECMWF ERA5.</li>
+                <li>Publication en accès libre du jeu de données et du code d'évaluation sur Zenodo (DOI: 10.5281/zenodo.23590205) avec protocole 100% reproductible à l'octet près.</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Majal Berkane – Smart City</span>
-                    <span class="item-subtitle"> — Stagiaire Développeur Backend & Mobile</span>
-                </div>
-                <div class="item-date">Mars 2024 – Juil 2024 | Berkane, Maroc</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Majal Berkane &ndash; Smart City</span>
+                <span class="entry-right">Berkane, Maroc</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Stagiaire Développeur Backend & Mobile</span>
+                <span class="entry-right">Mars 2024 &ndash; Juil 2024</span>
             </div>
             <ul class="bullets">
-                <li><strong>Architecture Mobile (Flutter) :</strong> Développement d'une application mobile réactive selon les principes MVVM et Riverpod assurant une gestion d'état modulaire et découplée.</li>
-                <li><strong>Systèmes Backend (.NET Core) :</strong> Implémentation d'APIs RESTful performantes avec ASP.NET Core et architecture Clean Architecture (CQRS / Repository).</li>
-                <li><strong>Optimisation Base de Données & IoT :</strong> Indexation SQL Server et mise en cache mémoire des flux de capteurs IoT, réduisant le temps de latence de plus de 35%.</li>
+                <li>Développement d'une application mobile réactive sous Flutter avec Riverpod pour la gestion d'état selon l'architecture MVVM.</li>
+                <li>Conception d'APIs RESTful haute performance en ASP.NET Core respectant les principes de la Clean Architecture et le patron Repository.</li>
+                <li>Optimisation des requêtes SQL Server et de la mise en cache mémoire pour les flux de capteurs IoT, réduisant la latence de 35%.</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Direction Provinciale de l'Équipement, du Transport et de la Logistique</span>
-                    <span class="item-subtitle"> — Stagiaire Ingénieur Web</span>
-                </div>
-                <div class="item-date">Mars 2023 – Juil 2023 | Oujda, Maroc</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Direction Provinciale de l'Équipement, du Transport et de la Logistique</span>
+                <span class="entry-right">Oujda, Maroc</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Stagiaire Ingénieur Web</span>
+                <span class="entry-right">Mars 2023 &ndash; Juil 2023</span>
             </div>
             <ul class="bullets">
-                <li><strong>Développement Web Full-Stack :</strong> Création d'une plateforme web sous Django automatisant les plannings du personnel, du parc matériel et des circuits de validation.</li>
-                <li><strong>Automatisation Analytique :</strong> Sécurisation par contrôle d'accès basé sur les rôles (RBAC) et automatisation des reportings analytiques avec Pandas et NumPy.</li>
-                <li><strong>Déploiement en Production :</strong> Déploiement sur Windows Server avec serveur web IIS, renforcement de la sécurité et sauvegardes automatisées SQL Server.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- FORMATION -->
-    <div class="section">
-        <div class="section-title">Formation Académique</div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Université des Sciences de l'Information et des Technologies de Nanjing (NUIST)</span>
-                    <span class="item-location"> — Nanjing, Chine</span>
-                </div>
-                <div class="item-date">Sept 2024 – Juin 2027 (Prévu)</div>
-            </div>
-            <div class="item-subtitle">Master Recherche en Informatique (Computer Science & Technology)</div>
-            <ul class="bullets">
-                <li><strong>Domaine de recherche :</strong> Prévision photovoltaïque, deep learning spatiotemporel et modélisation atmosphérique.</li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">SUPMTI (École Supérieure de Management, Télécoms & Informatique)</span>
-                    <span class="item-location"> — Oujda, Maroc</span>
-                </div>
-                <div class="item-date">Sept 2021 – Juin 2024</div>
-            </div>
-            <div class="item-subtitle">Diplôme d'Ingénieur d'État en Informatique & Systèmes d'Information (Équivalent Master)</div>
-            <ul class="bullets">
-                <li><strong>Spécialisation :</strong> Systèmes Distribués, Génie Logiciel, Clean Architecture, Intégration Cloud et Bases de Données.</li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">ISTA Lazaret (Institut Spécialisé de Technologie Appliquée)</span>
-                    <span class="item-location"> — Oujda, Maroc</span>
-                </div>
-                <div class="item-date">Sept 2019 – Juin 2021</div>
-            </div>
-            <div class="item-subtitle">Diplôme de Technicien Spécialisé en Développement Informatique (TS)</div>
-            <ul class="bullets">
-                <li><strong>Axes fondamentaux :</strong> Programmation Orientée Objet (POO), Conception SQL Server/MySQL, Développement Web Full-Stack.</li>
+                <li>Développement d'une plateforme web sous Django automatisant la gestion du personnel, du matériel et des circuits de validation logistique.</li>
+                <li>Mise en place de l'authentification par rôles (RBAC) et automatisation des reportings analytiques avec Pandas et NumPy.</li>
+                <li>Déploiement et sécurisation de l'application sur Windows Server avec serveur web IIS et sauvegardes automatisées SQL Server.</li>
             </ul>
         </div>
     </div>
 
     <!-- PROJETS CLÉS -->
     <div class="section">
-        <div class="section-title">Projets d'Ingénierie & Recherche</div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">PV Forecast Benchmark</span>
-                    <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">LightGBM</span><span class="tag">Zenodo</span>
-                    <span class="inline-links">[<a href="https://github.com/Oussi108/pv-forecast-reference-evaluation" target="_blank">Code</a> | <a href="https://doi.org/10.5281/zenodo.23590205" target="_blank">DOI: 10.5281/zenodo.23590205</a>]</span>
-                </div>
-                <div class="item-date">2024 – Présent</div>
+        <div class="section-heading">Projets d'Ingénierie & Recherche</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">PV Forecast Benchmark &ndash; Plateforme de Prévision Solaire</span>
+                <span class="entry-right">2024 &ndash; Présent</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Python, PyTorch, LightGBM, Pandas, Zenodo &bull; <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation">Code</a> &bull; <a href="https://doi.org/10.5281/zenodo.23590205">DOI: 10.5281/zenodo.23590205</a></span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>Framework d'Évaluation Standardisé :</strong> Benchmark multi-horizons évaluant la production solaire de 50 parcs photovoltaïques australiens.</li>
+                <li>Création d'un benchmark standardisé évaluant la production solaire sur 50 centrales pour quantifier les compromis de précision entre approches physiques, statistiques et deep learning.</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Connect Check App</span>
-                    <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Riverpod</span><span class="tag">SQLite</span>
-                    <span class="inline-links">[<a href="https://github.com/Oussi108/Love_Check_App" target="_blank">GitHub</a>]</span>
-                </div>
-                <div class="item-date">2024 – 2025</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Connect Check &ndash; Application Mobile Temps Réel</span>
+                <span class="entry-right">2024 &ndash; 2025</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Flutter, Dart, Firebase, Riverpod, SQLite &bull; <a href="https://github.com/Oussi108/Love_Check_App">GitHub</a></span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>Ingénierie Mobile Réactive :</strong> Application mobile temps réel avec synchronisation Firebase, localisation dynamique via Riverpod et stockage SQLite.</li>
+                <li>Application mobile multiplateforme intégrant la synchronisation en temps réel Firebase, la localisation dynamique multilingue avec Riverpod et le stockage local hors-ligne SQLite.</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Plateforme EcoBeach</span>
-                    <span class="tag">.NET Core 8</span><span class="tag">C#</span><span class="tag">Clean Arch</span><span class="tag">IoT</span>
-                </div>
-                <div class="item-date">2024</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Plateforme EcoBeach &ndash; Surveillance Écologique Côtière</span>
+                <span class="entry-right">2024</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">ASP.NET Core 8, C#, Clean Architecture, IoT, SQL Server</span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>Surveillance Environnementale IoT :</strong> Backend Clean Architecture surveillant la qualité des eaux côtières et les capteurs écologiques en temps réel.</li>
+                <li>Architecture logicielle Clean Architecture pour la surveillance de la qualité des eaux et de l'environnement littoral, intégrant capteurs IoT, alertes en temps réel et tableaux de bord d'analyse.</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">MystoGuess Jeu Mobile</span>
-                    <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Google Play</span>
-                    <span class="inline-links">[<a href="https://github.com/Oussi108/MystoGuess" target="_blank">GitHub</a>]</span>
-                </div>
-                <div class="item-date">2024</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">MystoGuess &ndash; Jeu Mobile (Publié sur Google Play Store)</span>
+                <span class="entry-right">2024</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Flutter, Dart &bull; Publié sur Google Play &bull; <a href="https://github.com/Oussi108/MystoGuess">GitHub</a></span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>Application Publiée sur Store :</strong> Jeu de devinettes sur Google Play Store avec animations réactives, moteur audio et persistance de score hors-ligne.</li>
+                <li>Conception et publication d'un jeu mobile sur Google Play Store avec moteur d'animations réactives, gestion du son et persistance d'état locale.</li>
             </ul>
         </div>
     </div>
 
     <!-- LANGUES -->
     <div class="section">
-        <div class="section-title">Langues</div>
-        <div style="font-size: 8.3pt; color: #334155; line-height: 1.28;">
-            <strong>Français :</strong> Courant / Professionnel &nbsp;|&nbsp;
-            <strong>Anglais :</strong> Courant (Langue de travail et recherche scientifique) &nbsp;|&nbsp;
-            <strong>Chinois (Mandarin) :</strong> Conversationnel (HSK 3) &nbsp;|&nbsp;
-            <strong>Arabe :</strong> Langue maternelle &nbsp;|&nbsp;
+        <div class="section-heading">Langues</div>
+        <div style="font-size: 8.4pt; color: #222222; margin-top: 1px;">
+            <strong>Français :</strong> Courant / Professionnel &bull;
+            <strong>Anglais :</strong> Courant (Langue de travail et recherche scientifique) &bull;
+            <strong>Chinois (Mandarin) :</strong> Conversationnel (HSK 3) &bull;
+            <strong>Arabe :</strong> Langue maternelle &bull;
             <strong>Tamazight :</strong> Langue maternelle
         </div>
     </div>

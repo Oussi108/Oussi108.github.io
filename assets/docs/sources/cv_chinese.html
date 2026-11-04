@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 7mm 11mm 7mm 11mm;
+            margin: 7.5mm 12mm 7.5mm 12mm;
         }
         * {
             box-sizing: border-box;
@@ -14,173 +14,113 @@
             padding: 0;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-            font-size: 8.6pt;
-            line-height: 1.30;
-            color: #1e293b;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "SimSun", sans-serif;
+            font-size: 8.8pt;
+            line-height: 1.28;
+            color: #111111;
             background: #ffffff;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
         a {
-            color: #3730a3;
+            color: #111111;
             text-decoration: none;
         }
         .header {
             text-align: center;
-            border-bottom: 2px solid #312e81;
-            padding-bottom: 4px;
-            margin-bottom: 6px;
-        }
-        .name {
-            font-size: 18pt;
-            font-weight: 800;
-            letter-spacing: 0.8px;
-            color: #0f172a;
-        }
-        .title-tagline {
-            font-size: 9.6pt;
-            font-weight: 700;
-            color: #3730a3;
-            margin-top: 1px;
-            margin-bottom: 3px;
-        }
-        .contact-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 8.1pt;
-            color: #475569;
-        }
-        .contact-bar span {
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
-        }
-        .intl-status-banner {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 3px 8px;
-            margin-top: 4px;
-            font-size: 7.8pt;
-            color: #334155;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .section {
             margin-bottom: 5px;
         }
-        .section-title {
-            font-size: 9.4pt;
-            font-weight: 800;
-            color: #0f172a;
-            letter-spacing: 0.6px;
-            border-bottom: 1px solid #cbd5e1;
+        .name {
+            font-size: 19pt;
+            font-weight: bold;
+            letter-spacing: 0.8px;
+            color: #000000;
+            margin-bottom: 1px;
+        }
+        .headline {
+            font-size: 9.6pt;
+            font-weight: 600;
+            color: #222222;
+            margin-bottom: 2px;
+        }
+        .contact-line {
+            font-size: 8.3pt;
+            color: #333333;
+            line-height: 1.35;
+        }
+        .status-line {
+            font-size: 7.9pt;
+            color: #444444;
+            margin-top: 1px;
+        }
+        .section {
+            margin-top: 5px;
+            margin-bottom: 3px;
+        }
+        .section-heading {
+            font-size: 9.6pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            border-bottom: 0.75pt solid #000000;
             padding-bottom: 1px;
-            margin-bottom: 3.5px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            margin-bottom: 3px;
         }
-        .section-title::after {
-            content: "";
-            height: 1px;
-            background: #cbd5e1;
-            flex-grow: 1;
-            margin-left: 8px;
+        .entry {
+            margin-bottom: 3px;
         }
-        .item {
-            margin-bottom: 3.5px;
-        }
-        .item:last-child {
+        .entry:last-child {
             margin-bottom: 0;
         }
-        .item-header {
+        .entry-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
         }
-        .item-title {
-            font-weight: 700;
-            font-size: 8.7pt;
-            color: #0f172a;
+        .entry-title {
+            font-weight: bold;
+            font-size: 8.9pt;
+            color: #000000;
         }
-        .item-subtitle {
-            font-weight: 600;
+        .entry-right {
             font-size: 8.4pt;
-            color: #3730a3;
-        }
-        .item-date {
-            font-size: 8.1pt;
-            font-weight: 600;
-            color: #64748b;
+            color: #111111;
             text-align: right;
             white-space: nowrap;
         }
-        .item-location {
-            font-size: 8pt;
-            color: #64748b;
+        .entry-subtitle {
+            font-size: 8.6pt;
+            color: #222222;
         }
         ul.bullets {
-            list-style: none;
-            padding-left: 0;
+            margin-left: 14px;
             margin-top: 1px;
+            list-style-type: disc;
         }
         ul.bullets li {
-            position: relative;
-            padding-left: 10px;
-            font-size: 8.3pt;
-            color: #334155;
-            margin-bottom: 1.5px;
-            line-height: 1.28;
-        }
-        ul.bullets li::before {
-            content: "•";
-            position: absolute;
-            left: 1px;
-            color: #3730a3;
-            font-weight: bold;
-        }
-        ul.bullets li strong {
-            color: #0f172a;
-            font-weight: 700;
+            font-size: 8.4pt;
+            color: #111111;
+            margin-bottom: 1px;
+            line-height: 1.25;
+            padding-left: 1px;
         }
         .skills-table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 1px;
         }
         .skills-table td {
             padding: 1px 0;
             vertical-align: top;
-            font-size: 8.3pt;
-            line-height: 1.28;
+            font-size: 8.4pt;
+            line-height: 1.26;
         }
-        .skill-cat {
-            width: 125px;
-            font-weight: 700;
-            color: #0f172a;
+        .skill-header {
+            width: 110px;
+            font-weight: bold;
+            color: #000000;
         }
-        .skill-items {
-            color: #334155;
-        }
-        .tag {
-            display: inline-block;
-            background: #f1f5f9;
-            color: #334155;
-            padding: 0 4px;
-            border-radius: 3px;
-            font-size: 7.6pt;
-            font-weight: 600;
-            margin-right: 2px;
-        }
-        .inline-links {
-            font-size: 7.6pt;
-            margin-left: 4px;
+        .skill-list {
+            color: #222222;
         }
     </style>
 </head>
@@ -188,199 +128,198 @@
 
     <div class="header">
         <div class="name">埃尔-侯赛因·乌西 (El-Houcine Oussi)</div>
-        <div class="title-tagline">软件工程师（全栈 / 后端 / 移动端）• 机器学习工程师</div>
-        <div class="contact-bar">
-            <span>📧 <a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a></span>
-            <span>📱 +86 177 5100 8739 (中国) / +212 642 587 839 (摩洛哥)</span>
-            <span>📍 江苏·南京 / 摩洛哥·乌季达</span>
-            <span>🔗 <a href="https://oussi108.github.io" target="_blank">oussi108.github.io</a></span>
-            <span>💻 <a href="https://github.com/Oussi108" target="_blank">github.com/Oussi108</a></span>
+        <div class="headline">求职意向：软件工程师（全栈 / 后端 / 移动端）&bull; 机器学习算法工程师</div>
+        <div class="contact-line">
+            江苏·南京 / 摩洛哥·乌季达 &bull; +86 177 5100 8739 &bull; +212 642 587 839 &bull; <a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a><br>
+            <a href="https://github.com/Oussi108">github.com/Oussi108</a> &bull; <a href="https://oussi108.github.io">oussi108.github.io</a> &bull; <a href="https://linkedin.com/in/el-houcine-oussi-5abb8a1b7">linkedin.com/in/el-houcine-oussi</a>
         </div>
-        <div class="intl-status-banner">
-            <span><strong>国籍：</strong>摩洛哥</span>
-            <span><strong>在华身份：</strong>全日制在读硕士（持学习居留许可，可依法办理校外实习加注）</span>
-            <span><strong>毕业政策：</strong>2027年应届毕业免2年工作经验直接申办在华工作许可</span>
+        <div class="status-line">
+            摩洛哥籍 &bull; 南京信息工程大学全日制硕士在读（预计2027年6月毕业） &bull; 可依法加注实习 &bull; 毕业依政策可免2年经验申请工作许可
+        </div>
+    </div>
+
+    <!-- 教育背景 -->
+    <div class="section">
+        <div class="section-heading">教育背景</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">南京信息工程大学 (NUIST)</span>
+                <span class="entry-right">中国·南京</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">计算机科学与技术 &bull; 工学硕士在读</span>
+                <span class="entry-right">2024.09 &ndash; 2027.06 (预计)</span>
+            </div>
+            <ul class="bullets">
+                <li>研究方向：太阳能与新能源功率预测、时空序列建模、气象遥感与深度学习。</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">摩洛哥高等管理、电信与计算机工程学院 (SUPMTI)</span>
+                <span class="entry-right">摩洛哥·乌季达</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">计算机与信息系统工程 &bull; 国家工程师学位（硕士同等学力）</span>
+                <span class="entry-right">2021.09 &ndash; 2024.06</span>
+            </div>
+            <ul class="bullets">
+                <li>专业主修：分布式系统架构、企业级软件工程、Clean Architecture、云原生集成与数据库系统。</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">摩洛哥应用技术高等专科学院 (ISTA Lazaret)</span>
+                <span class="entry-right">摩洛哥·乌季达</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">软件开发 &bull; 高级技术员文凭 (TS)</span>
+                <span class="entry-right">2019.09 &ndash; 2021.06</span>
+            </div>
+            <ul class="bullets">
+                <li>专业主修：面向对象程序设计 (OOP)、数据库架构设计 (SQL Server/MySQL)、Web全栈开发基础。</li>
+            </ul>
         </div>
     </div>
 
     <!-- 专业技能 -->
     <div class="section">
-        <div class="section-title">专业技能与技术栈</div>
+        <div class="section-heading">专业技能</div>
         <table class="skills-table">
             <tr>
-                <td class="skill-cat">编程语言：</td>
-                <td class="skill-items">Python, C# (.NET), Dart, Java, C/C++, TypeScript, JavaScript, SQL, Bash / Shell</td>
+                <td class="skill-header">编程语言：</td>
+                <td class="skill-list">Python, C# (.NET), Dart, Java, C/C++, TypeScript, JavaScript, SQL, Bash / Shell</td>
             </tr>
             <tr>
-                <td class="skill-cat">框架与算法：</td>
-                <td class="skill-items">ASP.NET Core 8 / MVC, Flutter, PyTorch, LightGBM, XGBoost, Scikit-learn, Django, Spring Boot, React</td>
+                <td class="skill-header">框架与算法：</td>
+                <td class="skill-list">ASP.NET Core, Flutter, PyTorch, LightGBM, XGBoost, Scikit-learn, Django, Spring Boot, React</td>
             </tr>
             <tr>
-                <td class="skill-cat">数据与云原生：</td>
-                <td class="skill-items">PostgreSQL, SQL Server, MySQL, SQLite, MongoDB, Firebase (Auth/Firestore), Docker, Git, Linux, IIS</td>
+                <td class="skill-header">数据与云原生：</td>
+                <td class="skill-list">PostgreSQL, SQL Server, MySQL, SQLite, MongoDB, Firebase, Docker, Linux, IIS</td>
             </tr>
             <tr>
-                <td class="skill-cat">系统架构理念：</td>
-                <td class="skill-items">Clean Architecture, RESTful API, MVVM (Riverpod), 微服务架构, 时空时间序列建模, CI/CD</td>
+                <td class="skill-header">架构与工程化：</td>
+                <td class="skill-list">Clean Architecture, RESTful API, MVVM (Riverpod), 微服务架构, 时空时间序列建模, CI/CD, Git</td>
             </tr>
         </table>
     </div>
 
     <!-- 工作与科研经历 -->
     <div class="section">
-        <div class="section-title">工作与科研经历</div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">南京信息工程大学 新能源人工智能实验室</span>
-                    <span class="item-subtitle"> — 算法与数据科学科研助理</span>
-                </div>
-                <div class="item-date">2024.09 – 至今 | 中国·南京</div>
+        <div class="section-heading">工作与科研经历</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">南京信息工程大学 新能源人工智能实验室</span>
+                <span class="entry-right">中国·南京</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">算法与数据科学科研助理</span>
+                <span class="entry-right">2024.09 &ndash; 至今</span>
             </div>
             <ul class="bullets">
-                <li><strong>机器学习与基准评测：</strong>主导搭建面向澳大利亚50座商业光伏电站的大规模预测基准体系 (PV Forecast Benchmark)，系统评测持久性基准、LightGBM与神经网络模型。</li>
-                <li><strong>多模态时空数据工程：</strong>深度清洗并特征化TB级多源遥感数据，处理葵花8/9号 (Himawari-8/9) 卫星红外通道云图与ERA5数值天气再分析网格场。</li>
-                <li><strong>科研复现与开源建设：</strong>构建标准化滑动窗口时间序列验证与评测流水线，成果已开源发布于Zenodo平台 (DOI: 10.5281/zenodo.23590205)。</li>
+                <li>主导面向澳大利亚50座商业光伏电站的大规模预测基准评测平台建设，系统评测持久性基准、LightGBM、XGBoost及深度神经网络在15分钟至日前时效下的性能表现。</li>
+                <li>处理TB级多源时空遥感数据，深度清洗并对齐葵花8/9号（Himawari-8/9）卫星红外通道云图与ECMWF ERA5数值天气再分析网格场。</li>
+                <li>在Zenodo平台开源发布标准化基准评测框架与数据集（DOI: 10.5281/zenodo.23590205），提供100%全流程字节级可复现方案。</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Majal Berkane 智慧城市项目</span>
-                    <span class="item-subtitle"> — 后端与移动端开发实习生</span>
-                </div>
-                <div class="item-date">2024.03 – 2024.07 | 摩洛哥·贝尔坎</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Majal Berkane 智慧城市项目</span>
+                <span class="entry-right">摩洛哥·贝尔坎</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">后端与移动端开发实习生</span>
+                <span class="entry-right">2024.03 &ndash; 2024.07</span>
             </div>
             <ul class="bullets">
-                <li><strong>移动端架构设计 (Flutter)：</strong>参与智慧城市便民App研发，基于 Flutter + MVVM + Riverpod 打造解耦响应式跨平台前端。</li>
-                <li><strong>高并发企业后端 (.NET Core)：</strong>遵循 Clean Architecture 设计规范与仓储模式，采用 ASP.NET Core 搭建高可用企业级微服务 RESTful API 后端。</li>
-                <li><strong>物联网与数据库调优：</strong>针对物联网 (IoT) 传感器遥测数据优化SQL Server查询索引与服务端缓存策略，接口数据响应耗时降低超35%。</li>
+                <li>基于 Flutter 研发智慧城市便民跨平台移动端应用，采用 Riverpod 实现 MVVM 架构下的解耦响应式状态管理。</li>
+                <li>遵循 Clean Architecture 设计规范与仓储模式，采用 ASP.NET Core 研发高可用企业级微服务 RESTful API 后端。</li>
+                <li>优化物联网（IoT）传感器数据入库与查询链路，针对 SQL Server 索引与服务端缓存进行调优，高频接口延迟降低超35%。</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">摩洛哥装备、交通、物流与水利局</span>
-                    <span class="item-subtitle"> — Web全栈开发实习生</span>
-                </div>
-                <div class="item-date">2023.03 – 2023.07 | 摩洛哥·乌季达</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">摩洛哥装备、交通、物流与水利局</span>
+                <span class="entry-right">摩洛哥·乌季达</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Web全栈开发实习生</span>
+                <span class="entry-right">2023.03 &ndash; 2023.07</span>
             </div>
             <ul class="bullets">
-                <li><strong>全栈Web自动化平台 (Django)：</strong>基于 Python / Django 架构设计政企内部人事考勤与物流装备数字化调度协同系统，实现办公审批自动化。</li>
-                <li><strong>数据自动化分析：</strong>集成基于角色的权限访问控制 (RBAC)，并利用 Pandas / NumPy 构建核心数据统计分析与报表自动导出引擎。</li>
-                <li><strong>生产环境运维与部署：</strong>在 Windows Server 生产环境配置 IIS 反向代理、安全加固及 SQL Server 数据库容灾自动备份。</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 教育背景 -->
-    <div class="section">
-        <div class="section-title">教育背景</div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">南京信息工程大学 (NUIST)</span>
-                    <span class="item-location"> — 中国 南京</span>
-                </div>
-                <div class="item-date">2024.09 – 2027.06 (预计)</div>
-            </div>
-            <div class="item-subtitle">计算机科学与技术 · 工学硕士在读</div>
-            <ul class="bullets">
-                <li><strong>研究方向：</strong>太阳能功率预测、新能源时空序列建模、气象遥感与深度学习。</li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">摩洛哥高等管理、电信与计算机工程学院 (SUPMTI)</span>
-                    <span class="item-location"> — 摩洛哥 乌季达</span>
-                </div>
-                <div class="item-date">2021.09 – 2024.06</div>
-            </div>
-            <div class="item-subtitle">计算机与信息系统工程 · 国家工程师学位（硕士同等学力）</div>
-            <ul class="bullets">
-                <li><strong>主修领域：</strong>分布式系统架构、企业级软件工程、Clean Architecture、云原生集成与数据库系统。</li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">摩洛哥应用技术高等专科学院 (ISTA Lazaret)</span>
-                    <span class="item-location"> — 摩洛哥 乌季达</span>
-                </div>
-                <div class="item-date">2019.09 – 2021.06</div>
-            </div>
-            <div class="item-subtitle">软件开发 · 高级技术员文凭 (TS)</div>
-            <ul class="bullets">
-                <li><strong>主修领域：</strong>面向对象程序设计 (OOP)、数据库架构设计 (SQL Server/MySQL)、Web全栈开发基础。</li>
+                <li>基于 Python / Django 架构开发政企内部人事与物流装备数字化调度协同系统，实现审批流程自动化与考勤数字化。</li>
+                <li>集成基于角色的权限访问控制（RBAC），利用 Pandas 与 NumPy 构建核心数据统计分析与报表自动化导出引擎。</li>
+                <li>在 Windows Server 生产环境配置 IIS 反向代理、安全加固及 SQL Server 数据库容灾自动备份。</li>
             </ul>
         </div>
     </div>
 
     <!-- 核心项目经历 -->
     <div class="section">
-        <div class="section-title">核心工程与科研项目</div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">PV Forecast Benchmark 太阳能功率预测基准平台</span>
-                    <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">LightGBM</span><span class="tag">Zenodo</span>
-                    <span class="inline-links">[<a href="https://github.com/Oussi108/pv-forecast-reference-evaluation" target="_blank">源码</a> | <a href="https://doi.org/10.5281/zenodo.23590205" target="_blank">DOI: 10.5281/zenodo.23590205</a>]</span>
-                </div>
-                <div class="item-date">2024 – 至今</div>
+        <div class="section-heading">核心工程与科研项目</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">PV Forecast Benchmark 太阳能功率预测基准平台</span>
+                <span class="entry-right">2024 &ndash; 至今</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Python, PyTorch, LightGBM, Pandas, Zenodo &bull; <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation">源码</a> &bull; <a href="https://doi.org/10.5281/zenodo.23590205">DOI: 10.5281/zenodo.23590205</a></span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>标准化基准体系：</strong>针对新能源并网面临的间歇性痛点，设计统一的开源评测标准与数据集，覆盖多气候带50个电站，为工业界与学术界提供基准。</li>
+                <li>针对新能源并网面临的间歇性痛点，设计统一的开源评测标准与数据集，覆盖多气候带50个电站，为工业界与学术界提供高精度预测基准。</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">Connect Check 跨平台实时互动应用</span>
-                    <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Riverpod</span><span class="tag">SQLite</span>
-                    <span class="inline-links">[<a href="https://github.com/Oussi108/Love_Check_App" target="_blank">GitHub</a>]</span>
-                </div>
-                <div class="item-date">2024 – 2025</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Connect Check 跨平台实时互动移动应用</span>
+                <span class="entry-right">2024 &ndash; 2025</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Flutter, Dart, Firebase, Riverpod, SQLite &bull; <a href="https://github.com/Oussi108/Love_Check_App">GitHub</a></span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>响应式移动工程：</strong>基于MVVM架构打造的移动应用，深度集成Firebase实时数据库同步、身份认证与离线SQLite持久化存储，支持多语言动态即时切换。</li>
+                <li>基于MVVM架构打造的移动应用，深度集成Firebase实时数据库同步、身份认证与离线SQLite持久化存储，支持多语言动态即时切换。</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">EcoBeach 智慧海滩与生态水质监测系统</span>
-                    <span class="tag">.NET Core 8</span><span class="tag">C#</span><span class="tag">Clean Arch</span><span class="tag">IoT</span>
-                </div>
-                <div class="item-date">2024</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">EcoBeach 智慧海滩与生态水质监测系统</span>
+                <span class="entry-right">2024</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">ASP.NET Core 8, C#, Clean Architecture, IoT, SQL Server</span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>物联网环境监测系统：</strong>基于 Clean Architecture 架构打造的沿海水质与环境生态监测平台，对接多源物联网传感器，提供实时预警与历史数据深度分析。</li>
+                <li>基于 Clean Architecture 架构打造的沿海水质与环境生态监测平台，对接多源物联网传感器，提供实时预警与历史数据深度分析。</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="item-header">
-                <div>
-                    <span class="item-title">MystoGuess 益智游戏</span>
-                    <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Google Play</span>
-                    <span class="inline-links">[<a href="https://github.com/Oussi108/MystoGuess" target="_blank">GitHub</a>]</span>
-                </div>
-                <div class="item-date">2024</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">MystoGuess 益智游戏（Google Play Store已上架）</span>
+                <span class="entry-right">2024</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Flutter, Dart &bull; 已上架 Google Play &bull; <a href="https://github.com/Oussi108/MystoGuess">GitHub</a></span>
+                <span class="entry-right"></span>
             </div>
             <ul class="bullets">
-                <li><strong>已上架商业应用：</strong>独立全流程开发并成功上架 Google Play 的益智休闲手游，具备流畅的动画渲染引擎、离线游戏机制与轻量级状态持久化。</li>
+                <li>独立全流程开发并成功上架 Google Play 的益智休闲手游，具备流畅的动画渲染引擎、离线游戏机制与轻量级状态持久化。</li>
             </ul>
         </div>
     </div>
 
     <!-- 语言能力 -->
     <div class="section">
-        <div class="section-title">语言能力</div>
-        <div style="font-size: 8.3pt; color: #334155; line-height: 1.28;">
-            <strong>中文（普通话）：</strong>良好（HSK 3级水平，具备高校学术与日常生活沟通能力） &nbsp;|&nbsp;
-            <strong>英语：</strong>流利（熟练作为专业工作与科研学术语言） &nbsp;|&nbsp;
-            <strong>法语：</strong>熟练（专业工作水平） &nbsp;|&nbsp;
-            <strong>阿拉伯语：</strong>母语 &nbsp;|&nbsp;
+        <div class="section-heading">语言能力</div>
+        <div style="font-size: 8.4pt; color: #222222; margin-top: 1px;">
+            <strong>中文（普通话）：</strong>良好（HSK 3级水平，具备高校学术与日常生活沟通能力） &bull;
+            <strong>英语：</strong>流利（熟练作为专业工作与科研学术语言） &bull;
+            <strong>法语：</strong>熟练（专业工作水平） &bull;
+            <strong>阿拉伯语：</strong>母语 &bull;
             <strong>柏柏尔语 (Tamazight)：</strong>母语
         </div>
     </div>
