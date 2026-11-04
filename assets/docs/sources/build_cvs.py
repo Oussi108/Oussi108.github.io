@@ -1,11 +1,11 @@
-﻿import subprocess
+import subprocess
 import os
 import shutil
 import pypdf
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DOCS_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
-PUBLIC_DOCS_DIR = os.path.abspath(os.path.join(DOCS_DIR, "..", "public", "assets", "docs"))
+PUBLIC_DOCS_DIR = os.path.abspath(os.path.join(DOCS_DIR, "..", "..", "public", "assets", "docs"))
 CHROME_PATH = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
 targets = [
