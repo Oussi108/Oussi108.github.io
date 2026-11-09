@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-task" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg-task)"/>
+  
+  <rect x="50" y="40" width="500" height="190" rx="10" fill="rgba(99, 102, 241, 0.1)" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="75" y="65" fill="#818cf8" font-family="sans-serif" font-weight="bold" font-size="13">ASP.NET CORE WEB API</text>
+  
+  <rect x="80" y="80" width="440" height="130" rx="8" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="1.5"/>
+  <text x="105" y="105" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="12">APPLICATION &amp; DOMAIN LAYER (DDD)</text>
+
+  <rect x="110" y="120" width="380" height="75" rx="6" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  
+  <rect x="130" y="140" width="95" height="32" rx="6" fill="#1e293b" stroke="#fbbf24"/>
+  <text x="177" y="160" fill="#fbbf24" font-family="monospace" font-weight="bold" font-size="12" text-anchor="middle">JWT AUTH</text>
+
+  <rect x="240" y="140" width="110" height="32" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="295" y="160" fill="#38bdf8" font-family="monospace" font-weight="bold" font-size="11" text-anchor="middle">SQL SERVER EF</text>
+
+  <rect x="365" y="140" width="105" height="32" rx="6" fill="#1e293b" stroke="#34d399"/>
+  <text x="417" y="160" fill="#34d399" font-family="monospace" font-weight="bold" font-size="11" text-anchor="middle">SWAGGER UI</text>
+
+  <text x="300" y="265" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Clean Architecture Microservice with JWT Authentication</text>
+</svg>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El-Houcine Oussi - Resume</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 5.5mm 11mm 5.5mm 11mm;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Latin Modern Roman", "Computer Modern Roman", "Times New Roman", Times, "Nimbus Roman No9 L", Georgia, serif;
+            font-size: 8.5pt;
+            line-height: 1.22;
+            color: #111111;
+            background: #ffffff;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        a {
+            color: #111111;
+            text-decoration: none;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .name {
+            font-size: 19pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: #000000;
+            text-transform: uppercase;
+            margin-bottom: 1px;
+        }
+        .headline {
+            font-size: 9.6pt;
+            font-weight: 600;
+            color: #222222;
+            margin-bottom: 2px;
+        }
+        .contact-line {
+            font-size: 8.3pt;
+            color: #333333;
+            line-height: 1.35;
+        }
+        .status-line {
+            font-size: 7.9pt;
+            color: #444444;
+            margin-top: 1px;
+        }
+        .section {
+            margin-top: 5px;
+            margin-bottom: 3px;
+        }
+        .section-heading {
+            font-size: 9.6pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 0.75pt solid #000000;
+            padding-bottom: 1px;
+            margin-bottom: 3px;
+        }
+        .entry {
+            margin-bottom: 3px;
+        }
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+        .entry-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .entry-title {
+            font-weight: bold;
+            font-size: 8.9pt;
+            color: #000000;
+        }
+        .entry-right {
+            font-size: 8.4pt;
+            color: #111111;
+            text-align: right;
+            white-space: nowrap;
+        }
+        .entry-subtitle {
+            font-size: 8.6pt;
+            font-style: italic;
+            color: #222222;
+        }
+        ul.bullets {
+            margin-left: 14px;
+            margin-top: 1px;
+            list-style-type: disc;
+        }
+        ul.bullets li {
+            font-size: 8.4pt;
+            color: #111111;
+            margin-bottom: 1px;
+            line-height: 1.25;
+            padding-left: 1px;
+        }
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1px;
+        }
+        .skills-table td {
+            padding: 1px 0;
+            vertical-align: top;
+            font-size: 8.4pt;
+            line-height: 1.26;
+        }
+        .skill-header {
+            width: 135px;
+            font-weight: bold;
+            color: #000000;
+        }
+        .skill-list {
+            color: #222222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="name">El-Houcine Oussi</div>
+        <div class="headline">Software Engineer &bull; Machine Learning Engineer</div>
+        <div class="contact-line">
+            Nanjing, China & Oujda, Morocco &bull; +86 177 5100 8739 &bull; +212 642 587 839 &bull; <a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a><br>
+            <a href="https://github.com/Oussi108">github.com/Oussi108</a> &bull; <a href="https://oussi108.github.io">oussi108.github.io</a> &bull; <a href="https://linkedin.com/in/el-houcine-oussi-5abb8a1b7">linkedin.com/in/el-houcine-oussi</a>
+        </div>
+        <div class="status-line">
+            Moroccan Citizen &bull; M.Sc. in Computer Science at NUIST (Expected June 2027) &bull; Open to Global Relocation & Remote Roles
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-heading">Education</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Nanjing University of Information Science and Technology (NUIST)</span>
+                <span class="entry-right">Nanjing, China</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Master of Science in Computer Science and Technology</span>
+                <span class="entry-right">Sept 2024 &ndash; June 2027 (Expected)</span>
+            </div>
+            <ul class="bullets">
+                <li>Research in solar power forecasting, spatio-temporal deep learning, and atmospheric numerical data modeling.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">SUPMTI (Higher School of Management, Telecom & Computer Science)</span>
+                <span class="entry-right">Oujda, Morocco</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">State Engineering Degree in Computer Science & Information Systems</span>
+                <span class="entry-right">Sept 2021 &ndash; June 2024</span>
+            </div>
+            <ul class="bullets">
+                <li>Specialization in Distributed Systems, Software Engineering, Clean Architecture, and Database Systems.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">ISTA Lazaret (Specialized Institute of Applied Technology)</span>
+                <span class="entry-right">Oujda, Morocco</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Specialized Technician Diploma in Software Development (TS)</span>
+                <span class="entry-right">Sept 2019 &ndash; June 2021</span>
+            </div>
+            <ul class="bullets">
+                <li>Core curriculum in Object-Oriented Programming (OOP), Relational Databases (SQL Server/MySQL), and Web Development.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+        <div class="section-heading">Technical Skills</div>
+        <table class="skills-table">
+            <tr>
+                <td class="skill-header">Languages:</td>
+                <td class="skill-list">Python, C# (.NET), Dart, Java, C/C++, TypeScript, JavaScript, SQL, Bash</td>
+            </tr>
+            <tr>
+                <td class="skill-header">Frameworks & ML:</td>
+                <td class="skill-list">ASP.NET Core, Flutter, PyTorch, LightGBM, XGBoost, Scikit-learn, Django, Spring Boot, React</td>
+            </tr>
+            <tr>
+                <td class="skill-header">Cloud & Databases:</td>
+                <td class="skill-list">PostgreSQL, Microsoft SQL Server, MySQL, SQLite, MongoDB, Firebase, Docker, Linux, IIS</td>
+            </tr>
+            <tr>
+                <td class="skill-header">Architecture & Tools:</td>
+                <td class="skill-list">Clean Architecture, RESTful APIs, MVVM (Riverpod), Microservices, Spatio-Temporal Time Series, CI/CD, Git</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- WORK & RESEARCH EXPERIENCE -->
+    <div class="section">
+        <div class="section-heading">Work & Research Experience</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">NUIST Renewable Energy AI Lab</span>
+                <span class="entry-right">Nanjing, China</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Graduate AI & Data Science Researcher</span>
+                <span class="entry-right">Sept 2024 &ndash; Present</span>
+            </div>
+            <ul class="bullets">
+                <li>Architected an end-to-end benchmarking pipeline across 50 commercial Australian solar farms, evaluating persistence baselines, LightGBM, and neural architectures across 15-minute to day-ahead lead times.</li>
+                <li>Ingested and aligned multi-terabyte spatio-temporal datasets comprising Himawari-8/9 geostationary satellite channels and ECMWF ERA5 numerical weather fields.</li>
+                <li>Authored and released the open-source benchmark dataset and evaluation harness on Zenodo (DOI: 10.5281/zenodo.23590205) with 100% byte-reproducible execution recipes.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Majal Berkane &ndash; Smart City</span>
+                <span class="entry-right">Berkane, Morocco</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Backend & Mobile Development Intern</span>
+                <span class="entry-right">Mar 2024 &ndash; July 2024</span>
+            </div>
+            <ul class="bullets">
+                <li>Developed a cross-platform mobile application in Flutter using Riverpod for MVVM reactive state management.</li>
+                <li>Engineered high-throughput RESTful Web APIs in ASP.NET Core following Clean Architecture and repository patterns.</li>
+                <li>Optimized SQL Server query plans and in-memory caching for live IoT sensor feeds, reducing telemetry retrieval latency by 35%.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Direction Provinciale de l'Équipement, du Transport et de la Logistique</span>
+                <span class="entry-right">Oujda, Morocco</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Web Engineering Intern</span>
+                <span class="entry-right">Mar 2023 &ndash; July 2023</span>
+            </div>
+            <ul class="bullets">
+                <li>Built an internal administrative platform in Django automating personnel tracking, heavy equipment dispatch, and logistics approval workflows.</li>
+                <li>Implemented role-based access control (RBAC) and automated data reporting pipelines using Pandas and NumPy.</li>
+                <li>Configured and deployed production application on Windows Server with IIS reverse proxy and automated SQL Server database backups.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SELECTED PROJECTS -->
+    <div class="section">
+        <div class="section-heading">Selected Projects</div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">BriefCensus &ndash; Rooftop PV Fleet Monitor Selection & Estimation</span>
+                <span class="entry-right">2026</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Python, Greedy Sensor Selection, Zenodo &bull; <a href="https://github.com/Oussi108/briefcensus">Code</a> &bull; <a href="https://doi.org/10.5281/zenodo.23950665">DOI: 10.5281/zenodo.23950665</a></span>
+                <span class="entry-right"></span>
+            </div>
+            <ul class="bullets">
+                <li>Engineered a sensor selection framework on UK and Ausgrid fleets retaining ~80% of full-year metering value from a 4-week campaign, verified with pre-registered protocols.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">PV Forecast Benchmark &ndash; Solar Power Forecasting Platform</span>
+                <span class="entry-right">2024 &ndash; Present</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Python, PyTorch, LightGBM, Pandas, Zenodo &bull; <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation">Code</a> &bull; <a href="https://doi.org/10.5281/zenodo.23590205">DOI: 10.5281/zenodo.23590205</a></span>
+                <span class="entry-right"></span>
+            </div>
+            <ul class="bullets">
+                <li>Built a standardized benchmarking framework assessing forecast models across 50 solar generation sites to resolve accuracy tradeoffs between physical, machine learning, and deep learning models.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">Connect Check &ndash; Real-Time Interactive Mobile Application</span>
+                <span class="entry-right">2024 &ndash; 2025</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Flutter, Dart, Firebase, Riverpod, SQLite &bull; <a href="https://github.com/Oussi108/Love_Check_App">GitHub</a></span>
+                <span class="entry-right"></span>
+            </div>
+            <ul class="bullets">
+                <li>Engineered a real-time cross-platform mobile application featuring live cloud synchronization with Firebase, dynamic multi-language localization via Riverpod, and offline caching with SQLite.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">EcoBeach &ndash; Coastal Environmental Monitoring Platform</span>
+                <span class="entry-right">2024</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">ASP.NET Core 8, C#, Clean Architecture, IoT, SQL Server</span>
+                <span class="entry-right"></span>
+            </div>
+            <ul class="bullets">
+                <li>Designed a Clean Architecture enterprise backend for coastal water quality and ecological monitoring, integrating IoT sensors, alert thresholds, and analytical reporting.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-row">
+                <span class="entry-title">MystoGuess &ndash; Mobile Puzzle Game</span>
+                <span class="entry-right">2024</span>
+            </div>
+            <div class="entry-row">
+                <span class="entry-subtitle">Flutter, Dart &bull; <a href="https://github.com/Oussi108/MystoGuess">GitHub</a></span>
+                <span class="entry-right"></span>
+            </div>
+            <ul class="bullets">
+                <li>Cross-platform mobile puzzle game built with Flutter featuring dynamic animations, audio engine, and offline state persistence.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="section">
+        <div class="section-heading">Languages</div>
+        <div style="font-size: 8.4pt; color: #222222; margin-top: 1px;">
+            <strong>English:</strong> Fluent (Professional working & scientific research) &bull;
+            <strong>French:</strong> Proficient (Professional working proficiency) &bull;
+            <strong>Chinese (Mandarin):</strong> Conversational (HSK 3) &bull;
+            <strong>Arabic:</strong> Native &bull;
+            <strong>Tamazight:</strong> Native
+        </div>
+    </div>
+
+</body>
+</html>
