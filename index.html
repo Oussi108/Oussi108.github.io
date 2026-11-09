@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of El-Houcine Oussi, M.Sc. in Computer Science at NUIST & Information Systems Engineer from SUPMTI. Specializing in Solar Power & Renewable Energy Forecasting, Distributed Systems, Flutter, and .NET.">
+    <meta name="author" content="El-Houcine Oussi">
+    <title>El-Houcine OUSSI | Solar Forecasting Researcher & Software Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Meyawo Core Styles -->
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+
+    <style>
+        :root {
+            --primary: #695aa6;
+            --primary-dark: #514488;
+            --primary-light: #f3f0fc;
+            --accent-solar: #f59e0b;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ----------------------------------------------------
+           1. MODERN FIXED NAVBAR
+        ---------------------------------------------------- */
+        .custom-navbar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            z-index: 1050 !important;
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px) !important;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05) !important;
+            padding: 10px 0 !important;
+            min-height: 64px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .custom-navbar .container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            min-height: auto !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .custom-navbar .logo {
+            font-size: 24px !important;
+            font-weight: 800 !important;
+            color: var(--primary) !important;
+            letter-spacing: -0.5px !important;
+            text-decoration: none !important;
+        }
+
+        .custom-navbar .nav {
+            display: flex !important;
+            align-items: center !important;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .custom-navbar .nav .item {
+            margin: 0 4px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        .custom-navbar .nav .item .link {
+            color: #475569 !important;
+            font-weight: 600 !important;
+            font-size: 14.5px !important;
+            padding: 8px 14px !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .custom-navbar .nav .item .link:hover,
+        .custom-navbar .nav .item .link.active {
+            color: var(--primary) !important;
+            background-color: var(--primary-light) !important;
+        }
+
+        .custom-navbar .hamburger {
+            display: none !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .custom-navbar .hamburger {
+                display: block !important;
+                margin-left: auto !important;
+                padding: 10px !important;
+            }
+            .custom-navbar .hamburger .hamburger-inner,
+            .custom-navbar .hamburger .hamburger-inner::before,
+            .custom-navbar .hamburger .hamburger-inner::after {
+                background: #334155 !important;
+            }
+            .custom-navbar .nav {
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                width: 100% !important;
+                background: #ffffff !important;
+                flex-direction: column !important;
+                padding: 15px 20px !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+                border-bottom: 1px solid #e2e8f0 !important;
+                display: none !important;
+            }
+            .custom-navbar .nav.show {
+                display: flex !important;
+            }
+            .custom-navbar .nav .item {
+                width: 100% !important;
+                margin: 4px 0 !important;
+            }
+            .custom-navbar .nav .item .link {
+                display: block !important;
+                padding: 10px 14px !important;
+            }
+        }
+
+        /* ----------------------------------------------------
+           2. HERO HEADER
+        ---------------------------------------------------- */
+        .header {
+            position: relative !important;
+            height: auto !important;
+            min-height: 85vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 130px 0 70px 0 !important;
+            background: linear-gradient(135deg, #f8fafc 0%, #ede9fe 50%, #fef3c7 100%) !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+
+        .header .overlay {
+            display: none !important;
+        }
+
+        .header-content {
+            position: relative !important;
+            z-index: 2 !important;
+            max-width: 900px !important;
+            margin: 0 auto !important;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        .header-title {
+            margin-bottom: 12px !important;
+        }
+
+        .header-title .up {
+            display: block !important;
+            font-size: 22px !important;
+            font-weight: 700 !important;
+            color: var(--primary) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+        }
+
+        .header-title .down {
+            display: block !important;
+            font-size: clamp(32px, 5vw, 56px) !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            letter-spacing: -1px !important;
+            line-height: 1.15 !important;
+        }
+
+        .header-subtitle {
+            font-size: clamp(16px, 2.5vw, 22px) !important;
+            font-weight: 600 !important;
+            color: #475569 !important;
+            margin-top: 10px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .status-pill {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            background: #eff6ff !important;
+            border: 1px solid #bfdbfe !important;
+            color: #1d4ed8 !important;
+            padding: 10px 22px !important;
+            border-radius: 50px !important;
+            font-size: 14.5px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1) !important;
+            margin-bottom: 25px !important;
+            line-height: 1.4 !important;
+            text-align: left !important;
+        }
+
+        .hero-btn-group {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 12px !important;
+        }
+
+        .hero-btn-group .btn {
+            padding: 12px 26px !important;
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            border-radius: 50px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            transition: all 0.25s ease !important;
+        }
+
+        .btn-primary {
+            background-color: var(--primary) !important;
+            border-color: var(--primary) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 14px rgba(105, 90, 166, 0.35) !important;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark) !important;
+            border-color: var(--primary-dark) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(105, 90, 166, 0.45) !important;
+        }
+
+        .btn-outline-primary {
+            color: var(--primary) !important;
+            border-color: var(--primary) !important;
+            background: #ffffff !important;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary) !important;
+            color: #ffffff !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* ----------------------------------------------------
+           3. INTRO METRICS & BANNER SECTION
+        ---------------------------------------------------- */
+        .intro-strip-section {
+            padding: 40px 0 20px 0 !important;
+            background: #ffffff !important;
+        }
+
+        .research-banner-box {
+            background: linear-gradient(135deg, rgba(105, 90, 166, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%) !important;
+            border: 1px solid rgba(105, 90, 166, 0.18) !important;
+            border-radius: 14px !important;
+            padding: 14px !important;
+            margin-bottom: 30px !important;
+            box-shadow: 0 4px 18px rgba(105, 90, 166, 0.05) !important;
+        }
+
+        .research-banner-box img {
+            width: 100% !important;
+            height: auto !important;
+            border-radius: 8px !important;
+            display: block !important;
+        }
+
+        .stat-box {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            padding: 22px 15px !important;
+            text-align: center !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+            transition: transform 0.2s ease, border-color 0.2s ease !important;
+            height: 100% !important;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-3px) !important;
+            border-color: var(--primary) !important;
+        }
+
+        .stat-num {
+            font-size: 34px !important;
+            font-weight: 800 !important;
+            color: var(--primary) !important;
+            line-height: 1 !important;
+            margin-bottom: 6px !important;
+        }
+
+        .stat-lbl {
+            font-size: 13px !important;
+            color: var(--text-muted) !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        /* ----------------------------------------------------
+           4. ABOUT ME SECTION
+        ---------------------------------------------------- */
+        #about {
+            padding: 70px 0 !important;
+            background: #ffffff !important;
+        }
+
+        .about-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 40px !important;
+            text-align: left !important;
+        }
+
+        .about-img-col {
+            flex: 0 0 300px !important;
+            max-width: 320px !important;
+            text-align: center !important;
+        }
+
+        .about-img-col img {
+            width: 100% !important;
+            max-width: 280px !important;
+            height: auto !important;
+            border-radius: 20px !important;
+            box-shadow: 0 12px 35px rgba(105, 90, 166, 0.18) !important;
+            border: 4px solid #ffffff !important;
+        }
+
+        .about-text-col {
+            flex: 1 1 500px !important;
+            min-width: 300px !important;
+        }
+
+        .about-text-col p {
+            color: #475569 !important;
+            font-size: 15.5px !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ----------------------------------------------------
+           5. SHARED SECTION STYLING
+        ---------------------------------------------------- */
+        .section {
+            padding: 80px 0 !important;
+            position: relative !important;
+            clear: both !important;
+        }
+
+        .section-subtitle {
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            color: var(--primary) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            margin-bottom: 6px !important;
+        }
+
+        .section-title {
+            font-size: clamp(26px, 3.5vw, 36px) !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            letter-spacing: -0.5px !important;
+            margin-bottom: 45px !important;
+        }
+
+        /* ----------------------------------------------------
+           6. RESEARCH PAPER CARDS
+        ---------------------------------------------------- */
+        .paper-card {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-left: 5px solid var(--primary) !important;
+            border-radius: 12px !important;
+            padding: 26px !important;
+            margin-bottom: 24px !important;
+            text-align: left !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+            transition: all 0.25s ease !important;
+        }
+
+        .paper-card:hover {
+            border-color: var(--primary) !important;
+            box-shadow: 0 10px 28px rgba(105, 90, 166, 0.12) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        .paper-title {
+            font-size: 19px !important;
+            font-weight: 700 !important;
+            color: #0f172a !important;
+            margin-bottom: 8px !important;
+            line-height: 1.4 !important;
+        }
+
+        .paper-authors {
+            font-size: 14px !important;
+            color: #64748b !important;
+            margin-bottom: 12px !important;
+        }
+
+        .paper-meta {
+            font-size: 13.5px !important;
+            color: #475569 !important;
+            background: #f8fafc !important;
+            padding: 12px 16px !important;
+            border-radius: 8px !important;
+            border: 1px solid #e2e8f0 !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 16px !important;
+            align-items: center !important;
+        }
+
+        /* ----------------------------------------------------
+           7. FEATURE CARDS (Education & Experience Timeline)
+        ---------------------------------------------------- */
+        .feature-card {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            padding: 26px !important;
+            margin-bottom: 24px !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+            text-align: left !important;
+            transition: all 0.25s ease !important;
+            height: auto !important;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary) !important;
+            box-shadow: 0 10px 25px rgba(105, 90, 166, 0.1) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* ----------------------------------------------------
+           8. PROJECT CARDS (Clean Grid)
+        ---------------------------------------------------- */
+        #portfolio {
+            background-color: #f8fafc !important;
+            position: relative !important;
+            z-index: 5 !important;
+        }
+
+        .filter-btn-group {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 10px !important;
+            margin-bottom: 40px !important;
+        }
+
+        .filter-btn-group .btn {
+            border-radius: 50px !important;
+            padding: 9px 22px !important;
+            font-size: 14.5px !important;
+            font-weight: 600 !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #475569 !important;
+            background: #ffffff !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .filter-btn-group .btn.active,
+        .filter-btn-group .btn:hover {
+            background: var(--primary) !important;
+            color: #ffffff !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 4px 14px rgba(105, 90, 166, 0.3) !important;
+        }
+
+        .project-item {
+            margin-bottom: 30px !important;
+            display: flex !important;
+        }
+
+        .project-card {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 14px !important;
+            overflow: hidden !important;
+            height: 100% !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 14px 30px rgba(105, 90, 166, 0.15) !important;
+            border-color: var(--primary) !important;
+        }
+
+        .project-img-frame {
+            height: 210px !important;
+            background: linear-gradient(135deg, #f8fafc 0%, #ede9fe 100%) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 14px 14px 0 0 !important;
+            overflow: hidden !important;
+            position: relative !important;
+            padding: 14px !important;
+            border-bottom: 1px solid #eaedf1 !important;
+        }
+
+        .project-img-frame img.mobile-shot {
+            max-height: 180px !important;
+            width: auto !important;
+            max-width: 85% !important;
+            object-fit: contain !important;
+            border-radius: 8px !important;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14) !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .project-card:hover .project-img-frame img.mobile-shot {
+            transform: scale(1.05) !important;
+        }
+
+        .project-img-frame.banner-shot {
+            padding: 0 !important;
+            background: #0f172a !important;
+        }
+
+        .project-img-frame.banner-shot img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border-radius: 14px 14px 0 0 !important;
+            box-shadow: none !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .project-card:hover .project-img-frame.banner-shot img {
+            transform: scale(1.03) !important;
+        }
+
+        .project-card-body {
+            padding: 24px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            flex-grow: 1 !important;
+            text-align: left !important;
+            background: #ffffff !important;
+        }
+
+        .badge-pill-custom {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            padding: 5px 12px !important;
+            border-radius: 50px !important;
+            display: inline-block !important;
+            margin: 2px !important;
+        }
+
+        .badge-academic {
+            background-color: #f3e8ff !important;
+            color: #695aa6 !important;
+            border: 1px solid #d8b4fe !important;
+        }
+
+        .badge-solar {
+            background-color: #fffbeb !important;
+            color: #b45309 !important;
+            border: 1px solid #fde68a !important;
+        }
+
+        .badge-industry {
+            background-color: #ecfdf5 !important;
+            color: #047857 !important;
+            border: 1px solid #a7f3d0 !important;
+        }
+
+        .project-tag {
+            font-size: 11.5px !important;
+            padding: 4px 9px !important;
+            background-color: #f1f5f9 !important;
+            color: #334155 !important;
+            border-radius: 6px !important;
+            margin: 2px !important;
+            display: inline-block !important;
+            font-weight: 600 !important;
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        .project-bullet {
+            font-size: 14px !important;
+            color: #475569 !important;
+            margin-bottom: 6px !important;
+            position: relative !important;
+            padding-left: 20px !important;
+            list-style: none !important;
+            line-height: 1.5 !important;
+        }
+
+        .project-bullet::before {
+            content: "▹" !important;
+            position: absolute !important;
+            left: 0 !important;
+            color: var(--primary) !important;
+            font-weight: bold !important;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">SystemX</a>         
+            <ul class="nav">
+                <li class="item"><a class="link" href="#home">Home</a></li>
+                <li class="item"><a class="link" href="#about">About</a></li>
+                <li class="item"><a class="link" href="#research">Research</a></li>
+                <li class="item"><a class="link" href="#education">Education</a></li>
+                <li class="item"><a class="link" href="#experience">Experience</a></li>
+                <li class="item"><a class="link" href="#portfolio">Projects</a></li>
+                <li class="item"><a class="link" href="#skills">Skills</a></li>
+                <li class="item"><a class="link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- Page Header (Classic Meyawo Hero) -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container text-center">
+            
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am OUSSI El-Houcine</span>
+            </h1>
+            <p class="header-subtitle">Solar Power Forecasting Researcher • Software Engineer</p>            
+            
+            <div>
+                <span class="status-pill">
+                    <i class="fas fa-briefcase"></i> Open to Software Engineering, Machine Learning & Applied Research Roles
+                </span>
+            </div>
+
+            <div class="hero-btn-group mt-4">
+                <a href="#research" class="btn btn-primary btn-rounded me-2" style="padding: 10px 24px; font-size: 15px;">
+                    <i class="fas fa-sun mr-1"></i> View Research
+                </a>
+                <a href="#portfolio" class="btn btn-outline-primary btn-rounded me-2" style="padding: 10px 24px; font-size: 15px;">
+                    <i class="fas fa-code mr-1"></i> Software Projects
+                </a>
+                <div class="dropdown d-inline-block">
+                    <button class="btn btn-outline-primary btn-rounded dropdown-toggle" type="button" id="cvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 10px 24px; font-size: 15px;">
+                        <i class="fas fa-file-pdf mr-1"></i> Download CV / 简历
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvDropdown" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.12); border: 1px solid #e2e8f0; min-width: 210px; padding: 6px 0;">
+                        <a class="dropdown-item py-2" href="assets/docs/CV_English.pdf" download style="font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-pdf text-primary mr-2"></i> English CV (PDF)
+                        </a>
+                        <a class="dropdown-item py-2" href="assets/docs/CV_Academic_EN.pdf" download style="font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-pdf text-primary mr-2"></i> Academic CV, English (PDF)
+                        </a>
+                        <a class="dropdown-item py-2" href="assets/docs/CV_Chinese.pdf" download style="font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-pdf text-danger mr-2"></i> 中文个人简历 (PDF)
+                        </a>
+                        <a class="dropdown-item py-2" href="assets/docs/CV_French.pdf" download style="font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-pdf text-info mr-2"></i> CV en Français (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>              
+    </header><!-- End of Page Header -->
+
+    <!-- Research Banner Bar -->
+    <div class="container mt-4">
+        <div class="research-banner-box">
+            <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/imgs/banner-dark.svg">
+                <img src="assets/imgs/banner-light.svg" alt="El Houcine Oussi - machine learning for solar power forecasting">
+            </picture>
+        </div>
+    </div>
+
+    <!-- Quick Stats Metric Strip -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">4+</div>
+                    <div class="stat-lbl">Research Studies</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">50+</div>
+                    <div class="stat-lbl">Solar Farms Analyzed</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">29</div>
+                    <div class="stat-lbl">GitHub Repositories</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <div class="stat-num">5</div>
+                    <div class="stat-lbl">Spoken Languages</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="row align-items-center justify-content-center text-left" style="gap: 20px 0;">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="assets/imgs/my-image.png" alt="El-Houcine Oussi Profile Photo" 
+                         style="width: 100%; max-width: 320px; border-radius: 20px; box-shadow: 0 12px 35px rgba(105, 90, 166, 0.18); border: 4px solid #ffffff;">
+                </div>
+                <div class="col-lg-8">
+                    
+                    <p class="section-subtitle">Who Am I?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I am an M.Sc. student in Computer Science at <strong>Nanjing University of Information Science and Technology (NUIST)</strong>, China, and an engineer with a State Engineering Degree in <strong>Information Systems Engineering</strong> from SUPMTI (Morocco).
+                        <br><br>
+                        My current research focuses on practical forecasting questions: <em>Which learned solar power forecasts actually outperform smart reference benchmarks across lead times, and when does higher forecast accuracy translate into real operational decisions and economic savings?</em>
+                        <br><br>
+                        With a strong background as a software engineer (C#/.NET, Java, Flutter, Django, and Distributed Systems), I apply engineering best practices—such as pre-registered evaluation protocols, byte-identical reproducibility, checksum manifests, and pytest verification suites—to scientific machine learning. I am currently working on research publications in solar forecasting and battery optimization.
+                    </p>
+    
+                    <div class="row text-left mt-3 mb-3">
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Current Focus:</strong> 4–6 h satellite & weather-forecast model for 50 Australian solar farms</span>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Availability:</strong> Open to Software Engineering, ML & Applied Technical Roles</span>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Languages:</strong> English, French, Arabic, Mandarin Chinese (HSK 3), Tamazight</span>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <span class="project-bullet"><strong>Location:</strong> Nanjing, China / Oujda, Morocco (Open to global relocation)</span>
+                        </div>
+                    </div>
+
+                    <!-- CV Buttons -->
+                    <div class="mt-4 d-flex flex-wrap align-items-center">
+                        <a href="assets/docs/CV_English.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
+                            <i class="ti-download"></i> Download CV (English)
+                        </a>
+                        <a href="assets/docs/CV_Academic_EN.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
+                            <i class="ti-download"></i> Academic CV (English)
+                        </a>
+                        <a href="assets/docs/CV_Chinese.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
+                            <i class="ti-download"></i> 下载简历 (中文版)
+                        </a>
+                        <a href="assets/docs/CV_French.pdf" download class="btn-rounded btn btn-outline-primary me-2 mb-2">
+                            <i class="ti-download"></i> Télécharger CV (Français)
+                        </a>
+                        <a href="https://doi.org/10.5281/zenodo.23590205" target="_blank" class="btn-rounded btn btn-outline-primary mb-2">
+                            <i class="fas fa-external-link-alt"></i> Zenodo Research Archive
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End of About Section -->
+
+    <!-- Recent 2026 Research Section -->
+    <section class="section" id="research" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">Academic Inquiries (2026)</p>
+            <h6 class="section-title mb-5">Solar Forecasting Research (Working on Papers)</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Research Study 1 -->
+                    <div class="paper-card">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-pill-custom badge-solar">Working on Paper</span>
+                            <span class="badge-pill-custom badge-academic">2026 Ongoing Study</span>
+                        </div>
+                        <h4 class="paper-title">
+                            Reference specification, model updating and calibration population in hourly photovoltaic power forecasting
+                        </h4>
+                        <div class="paper-authors">
+                            <strong>El Houcine Oussi</strong> and Ling Tan — <em>Nanjing University of Information Science and Technology (NUIST)</em>
+                        </div>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
+                            Investigates how the performance advantage of learned models (LightGBM, GRU neural networks, and compact Transformers) shifts across lead times of 2, 4, 6, and 12 hours under reference specification choices, retraining schedules, and prediction interval calibration. Evaluated on three testbeds: Alice Springs (DKASC), Hong Kong (HKUST), and Colorado (NREL PVDAQ 9068) under a pre-registered protocol. Currently working on the publication.
+                        </p>
+                        <div class="paper-meta">
+                            <span><i class="fas fa-code-branch text-primary"></i> Models: LightGBM, GRU, Transformers</span>
+                            <span><i class="fas fa-database text-warning"></i> Datasets: DKASC, HKUST, NREL PVDAQ</span>
+                            <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation" target="_blank" style="color: #695aa6; font-weight: 700; margin-left: auto;">
+                                <i class="fab fa-github"></i> View GitHub Code & Benchmark
+                            </a>
+                            <a href="https://doi.org/10.5281/zenodo.23590205" target="_blank" style="color: #0284c7; font-weight: 700;">
+                                <i class="fas fa-link"></i> Zenodo DOI
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Research Study 2 -->
+                    <div class="paper-card">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-pill-custom badge-solar">Working on Paper</span>
+                            <span class="badge-pill-custom badge-academic">Operational Battery Scheduling</span>
+                        </div>
+                        <h4 class="paper-title">
+                            Operational Value of Probabilistic Solar Forecasts in Behind-the-Meter Battery Scheduling
+                        </h4>
+                        <div class="paper-authors">
+                            <strong>El Houcine Oussi</strong> and Collaborators — <em>Nanjing University of Information Science and Technology</em>
+                        </div>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 12px;">
+                            Examines when probabilistic day-ahead solar forecasts provide measurable economic value in behind-the-meter home-battery scheduling. Benchmarked against 91,290 simulated scenarios across 40 real Ausgrid residential households. Demonstrated that scheduling systems leveraging full forecast distributions consistently reduce electricity costs across all 40 households. Currently working on the publication.
+                        </p>
+                        <div class="paper-meta">
+                            <span><i class="fas fa-bolt text-warning"></i> Horizon: Day-Ahead</span>
+                            <span><i class="fas fa-chart-line text-success"></i> Sample: 91,290 Scenarios (40 Households)</span>
+                            <span class="text-success font-weight-bold"><i class="fas fa-check-circle"></i> Operational Cost Reduction Confirmed</span>
+                        </div>
+                    </div>
+
+                    <!-- Research Studies Matrix Table -->
+                    <div class="feature-card mt-4 mb-4">
+                        <h5 style="font-size: 18px; font-weight: 700; color: #343a40; margin-bottom: 15px;">
+                            <i class="fas fa-table mr-2 text-primary"></i> Active Research Studies & Lead Time Horizons
+                        </h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover mb-0" style="font-size: 14px;">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Study Focus</th>
+                                        <th>Lead Time</th>
+                                        <th>Key Data Sources</th>
+                                        <th>Current Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Sky-Image Nowcasting:</strong> Ground sky camera value over PV history</td>
+                                        <td>5–30 min</td>
+                                        <td>Stanford SKIPP'D Dataset</td>
+                                        <td><span class="badge-pill-custom badge-academic">Experiments Complete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Solar Farms up to 6 h ahead:</strong> Satellite imagery + weather forecasts</td>
+                                        <td>0.5–6 h</td>
+                                        <td>50 Australian Solar Farms (AEMO) · 94 UK Farms</td>
+                                        <td><span class="badge-pill-custom badge-solar">Final Held-Out Test</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Reference Specification & Updates:</strong> Retraining impact on measured skill</td>
+                                        <td>2–12 h</td>
+                                        <td>DKASC Alice Springs · 31 HKUST Rooftops · NREL</td>
+                                        <td><span class="badge-pill-custom badge-industry">Working on Paper</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Forecast Quality to Value:</strong> Probabilistic battery optimization</td>
+                                        <td>Day-ahead</td>
+                                        <td>91,290 Scenarios · 40 Ausgrid Households</td>
+                                        <td><span class="badge-pill-custom badge-industry">Working on Paper</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- End of Research Section -->
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container text-center">
+            <p class="section-subtitle">Academic Qualifications</p>
+            <h6 class="section-title mb-6">Education & Degrees</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Degree 1: NUIST -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Master of Science (M.Sc.) in Computer Science
+                            </h5>
+                            <span class="badge-pill-custom badge-solar">Current M.Sc. Student • Nanjing, China</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="fas fa-university"></i> Nanjing University of Information Science and Technology (NUIST)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Focusing on statistical machine learning, deep learning architectures (Transformers, GRU), numerical weather prediction (ERA5 GRIB), satellite telemetry (Himawari / Meteosat), and renewable energy forecasting methodologies.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet"><strong>Research Focus:</strong> Probabilistic photovoltaic power forecasting, model retraining drift, and reference verification.</li>
+                            <li class="project-bullet"><strong>Scientific Rigor:</strong> Pre-registered evaluation protocols, paired bootstrap confidence intervals, and Holm family-wise correction.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Degree 2: SUPMTI -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Engineering Degree in Information Systems (Diplôme d'Ingénieur)
+                            </h5>
+                            <span class="badge-pill-custom badge-academic">2021 — 2024 • Oujda, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-bookmark-alt"></i> SUPMTI (École Supérieure Privée de Gestion, Télécommunications et Informatique)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Comprehensive 3-year graduate engineering curriculum focusing on modern software engineering paradigms, distributed architectures, database theory, and enterprise system integration.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet"><strong>Distributed Systems:</strong> Fault tolerance, consensus protocols, scalable microservices, and containerization with Docker.</li>
+                            <li class="project-bullet"><strong>Software Architecture:</strong> Clean Architecture, Domain-Driven Design (DDD), and enterprise application design.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Degree 3: ISTA Lazaret -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Specialized Technician in Computer Development (TS)
+                            </h5>
+                            <span class="badge-pill-custom badge-academic">2019 — 2021 • Oujda, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-desktop"></i> ISTA Lazaret (Institut Spécialisé de Technologie Appliquée)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Intensive technical program focused on Object-Oriented Programming (Java, C# .NET, C++), relational database design (SQL Server, MySQL), algorithms, and software analysis (UML, MERISE).
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- End of Education Section -->
+
+    <!-- Experience Section -->
+    <section class="section" id="experience" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">Work History</p>
+            <h6 class="section-title mb-6">Professional Experience</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Job 1 -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Graduate Forecasting Researcher
+                            </h5>
+                            <span class="badge-pill-custom badge-solar">2024 — Present • Nanjing, China</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="fas fa-flask"></i> Nanjing University of Information Science and Technology (NUIST)
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Designed, evaluated, and published high-performance machine learning benchmarks for multi-horizon solar energy forecasting.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet">Engineered reproducible pipelines with PyTorch, LightGBM, pvlib, and NumPy.</li>
+                            <li class="project-bullet">Processed high-resolution satellite imagery (Himawari, Meteosat) and numerical weather predictions (ERA5).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Backend & Mobile Engineering Intern
+                            </h5>
+                            <span class="badge-pill-custom badge-industry">2024 • Berkane, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-location-pin"></i> Majal Berkane — Smart City Initiative
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Contributed to municipal smart city digital transformation, building citizen-facing mobile applications and connecting them with enterprise backends.
+                        </p>
+                        <ul style="padding-left: 0; margin-bottom: 0;">
+                            <li class="project-bullet">Architected mobile UI in Flutter with Riverpod for reactive MVVM state handling.</li>
+                            <li class="project-bullet">Integrated with high-throughput .NET Core RESTful APIs under Clean Architecture principles.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Web Engineering & Systems Intern
+                            </h5>
+                            <span class="badge-pill-custom badge-industry">2023 • Oujda, Morocco</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-home"></i> Direction Provinciale de l'Équipement, du Transport, de la Logistique et de l'Eau
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Engineered an internal web portal with Python and Django automating departmental personnel management, logistics, and data routines using Pandas and NumPy, deployed on Windows Server & IIS.
+                        </p>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="feature-card mb-4 text-left">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h5 style="font-size: 20px; font-weight: 700; color: #343a40; margin-bottom: 0;">
+                                Lead Developer & Creator
+                            </h5>
+                            <span class="badge-pill-custom badge-industry">2022 — Present • SystemX</span>
+                        </div>
+                        <h6 style="color: #695aa6; font-weight: 600; margin-bottom: 12px;">
+                            <i class="ti-crown"></i> SystemX Software Initiatives
+                        </h6>
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 10px;">
+                            Published commercial mobile game <em>MystoGuess</em> on Google Play Store and shipped full-stack real-time platform <em>Connect Check App</em> on Firebase.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- End of Experience Section -->
+
+    <!-- Projects Section (Categorized Grid with Dedicated Visual Frames) -->
+    <section class="section" id="portfolio" style="background-color: #f8fafc; position: relative; z-index: 5;">
+        <div class="container text-center">
+            <p class="section-subtitle">What I've Built & Published</p>
+            <h6 class="section-title mb-4">Engineering & Research Projects</h6>
+
+            <!-- Interactive Filters -->
+            <div class="filter-btn-group">
+                <button class="btn btn-outline-primary active filter-btn" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="research">☀️ Solar & ML (2026)</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="mobile">📱 Mobile Apps</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="web">💻 Full-Stack & Web</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="systems">🔬 Compilers & Systems</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="row">
+
+                <!-- Project 1: PV Forecast Evaluation (Custom SVG Preview) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="research">
+                    <div class="project-card">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/pv-forecast-preview.svg" alt="PV Forecast Benchmark">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-solar">Oct 2026</span>
+                                <span class="badge-pill-custom badge-academic">Zenodo DOI</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">PV Forecast Benchmark</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Complete reproducible evaluation codebase and data pipeline for hourly PV power forecasting with LightGBM, GRU, and Transformers.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Pre-registered evaluation protocol on NREL PVDAQ 9068</li>
+                                <li class="project-bullet">Tests across Alice Springs, Hong Kong, & Colorado</li>
+                                <li class="project-bullet">Byte-identical script verification with SHA-256 manifests</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">LightGBM</span>
+                                <span class="project-tag">pvlib</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/pv-forecast-reference-evaluation" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                                <a href="https://doi.org/10.5281/zenodo.23590205" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fas fa-certificate"></i> Zenodo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Connect Check App (Refined Mobile Frame) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
+                    <div class="project-card">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/lovecheck.png" class="mobile-shot" alt="Connect Check App">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Production App</span>
+                                <span class="badge-pill-custom badge-academic">Firebase</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Connect Check App</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Synchronized real-time interactive game where users connect, synchronize responses with live matchmaking and cloud messaging.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Real-time room synchronization via Firebase Realtime DB</li>
+                                <li class="project-bullet">MVVM state management using Riverpod with i18n</li>
+                                <li class="project-bullet">Offline SQLite database caching</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Firebase</span>
+                                <span class="project-tag">Riverpod</span>
+                                <span class="project-tag">SQLite</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://lovecheckapp.web.app/" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="ti-world"></i> View Live Web
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: MystoGuess (Refined Mobile Frame) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile">
+                    <div class="project-card">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/mystroguess.png" class="mobile-shot" alt="MystoGuess">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Google Play</span>
+                                <span class="badge-pill-custom badge-academic">Mobile</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">MystoGuess</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Published mobile game with category challenges, emojis, solo adventures, and turn-based multiplayer.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Live on the Google Play Store under SystemX</li>
+                                <li class="project-bullet">Sub-second query speed via SQLite & JSON dictionaries</li>
+                                <li class="project-bullet">Clean Architecture separating Domain & Presentation</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Google Play</span>
+                                <span class="project-tag">SQLite</span>
+                                <span class="project-tag">Clean Arch</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://play.google.com/store/apps/details?id=com.systemx.mystoguess" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-google-play"></i> View Play Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: EcoBeach Mobile & Backend -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web research">
+                    <div class="project-card">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/Ecobeach.png" class="mobile-shot" alt="EcoBeach Mobile Project">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-solar">IoT & Systems</span>
+                                <span class="badge-pill-custom badge-industry">.NET Core</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">EcoBeach Platform</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Environmental IoT coastal monitoring platform tracking cleanliness indicators, sensor telemetry, and water metrics.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">REST APIs developed with .NET Core & C#</li>
+                                <li class="project-bullet">Time-series and relational database modeling</li>
+                                <li class="project-bullet">Mobile monitoring client in Flutter for operators</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">.NET Core</span>
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">IoT Data</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="assets/docs/ecobeach.pdf" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="ti-file"></i> View Report (PDF)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Math Expression Compiler (Custom SVG Preview) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="systems">
+                    <div class="project-card">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/compiler-preview.svg" alt="Math Expression Compiler">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-academic">Compilers & AST</span>
+                                <span class="badge-pill-custom badge-industry">C#</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Expression Compiler</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Mathematical expression compiler featuring token scanning, recursive-descent parsing, and abstract syntax tree (AST) evaluation.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Lexical tokenizer converting math text into language tokens</li>
+                                <li class="project-bullet">Parser enforcing operator precedence & associativity</li>
+                                <li class="project-bullet">AST construction and post-order interpreter engine</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">Compilers</span>
+                                <span class="project-tag">AST</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/Complier_EXP_math" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: TaskWithAuthDotNet (Custom SVG Preview) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
+                    <div class="project-card">
+                        <div class="project-img-frame banner-shot">
+                            <img src="assets/imgs/taskdotnet-preview.svg" alt="TaskWithAuthDotNet Project">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Clean Architecture</span>
+                                <span class="badge-pill-custom badge-academic">ASP.NET Core</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Task With Auth .NET</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Enterprise task management RESTful API microservice with role authorization, JWT tokens, and SQL Server migrations.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Domain-Driven Design (DDD) with decoupled layers</li>
+                                <li class="project-bullet">Stateless JWT authentication with refresh token flow</li>
+                                <li class="project-bullet">Entity Framework Core with SQL Server migrations</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">ASP.NET Core</span>
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">JWT</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/taskwithauthdotnet" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: MapWithAuth (Refined Mobile Frame) -->
+                <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile web">
+                    <div class="project-card">
+                        <div class="project-img-frame">
+                            <img src="assets/imgs/mapapp.png" class="mobile-shot" alt="MapWithAuth Project">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="badge-pill-custom badge-industry">Hybrid Mobile</span>
+                                <span class="badge-pill-custom badge-academic">Ionic</span>
+                            </div>
+                            <h5 class="card-title" style="font-size: 19px; font-weight: 700;">Map With Auth</h5>
+                            <p class="card-text" style="font-size: 14px; color: #6c757d;">
+                                Cross-platform mobile and web application combining Angular, Ionic, and Capacitor for live user positioning and spatial pins.
+                            </p>
+                            <ul style="padding-left: 0; margin-bottom: 15px;">
+                                <li class="project-bullet">Capacitor native geolocation & GPS sensor integration</li>
+                                <li class="project-bullet">Authenticated coordinate bookmarks & route pins</li>
+                                <li class="project-bullet">Cross-platform build ready for Android and Web</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="project-tag">Ionic</span>
+                                <span class="project-tag">Angular</span>
+                                <span class="project-tag">Capacitor</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Oussi108/mapwithauth" class="btn btn-outline-primary btn-sm btn-rounded" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- End row -->
+        </div>
+    </section><!-- End of Projects Section -->
+
+    <!-- Call to Action Banner -->
+    <section class="section-sm bg-primary">
+        <div class="container text-center text-sm-left">
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Looking for an Experienced Software Engineer or ML Specialist?</h6>
+                    <p class="m-0 text-light">Available for high-impact software engineering, full-stack systems, and applied machine learning roles.</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <a href="#contact" class="btn btn-lg my-font btn-light rounded" style="color: #695aa6; font-weight: 700;">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End of Call to Action Banner -->
+
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills" style="background-color: #ffffff; padding: 60px 0;">
+        <div class="container text-center">
+            <p class="section-subtitle" style="font-size: 18px; color: #6c757d;">Technical Arsenal</p>
+            <h6 class="section-title mb-6" style="font-size: 32px; font-weight: bold; color: #343a40;">Skills & Tooling</h6>
+
+            <div class="row">
+                <!-- Machine Learning & Forecasting -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #f59e0b; margin-bottom: 15px;"><i class="fas fa-sun"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Solar ML & Data Science</h5>
+                        <p style="font-size: 14px; color: #6c757d;">PyTorch, LightGBM, pvlib, pandas, NumPy, Jupyter, Scikit-learn, ERA5 NWP, Satellite Imagery.</p>
+                    </div>
+                </div>
+
+                <!-- Flutter & Mobile -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #695aa6; margin-bottom: 15px;"><i class="ti-mobile"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Mobile Engineering</h5>
+                        <p style="font-size: 14px; color: #6c757d;">Flutter, Dart, Riverpod MVVM, Android Native (Java), SQLite, Ionic & Capacitor, Play Store Publishing.</p>
+                    </div>
+                </div>
+
+                <!-- Backend & Cloud -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #0284c7; margin-bottom: 15px;"><i class="fas fa-server"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Backend & Cloud</h5>
+                        <p style="font-size: 14px; color: #6c757d;">ASP.NET Core, C#, Django, Spring Boot, Firebase (Auth/Firestore), RESTful APIs, Clean Architecture.</p>
+                    </div>
+                </div>
+
+                <!-- Distributed Systems & DevOps -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #10b981; margin-bottom: 15px;"><i class="fas fa-network-wired"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Distributed Systems & DevOps</h5>
+                        <p style="font-size: 14px; color: #6c757d;">Docker, Docker Compose, Git, GitHub Actions, Azure DevOps, Linux/Bash, Microservices, CI/CD.</p>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #8b5cf6; margin-bottom: 15px;"><i class="fas fa-database"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Databases & Storage</h5>
+                        <p style="font-size: 14px; color: #6c757d;">SQL Server, PostgreSQL, MySQL, SQLite, MongoDB, Cloud Firestore, Entity Framework Core.</p>
+                    </div>
+                </div>
+
+                <!-- Languages & Communication -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center" style="background:#f8f9fa;">
+                        <div style="font-size: 38px; color: #ec4899; margin-bottom: 15px;"><i class="fas fa-language"></i></div>
+                        <h5 style="font-weight: 700; color: #343a40;">Spoken Languages</h5>
+                        <p style="font-size: 14px; color: #6c757d;">English (Fluent), French (Good), Arabic (Native), Mandarin Chinese (HSK 3), Tamazight (Native).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End of Skills Section -->
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <p class="section-subtitle">Let's Connect</p>
+            <h6 class="section-title mb-5">Contact & Channels</h6>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card p-4 shadow-sm" style="border-radius: 12px; border: 1px solid #dee2e6; background: #fff;">
+                        <p style="font-size: 16px; color: #6c757d; margin-bottom: 15px;">
+                            Reach out for software engineering roles, technical projects, or research collaboration:
+                        </p>
+                        
+                        <div class="mb-3">
+                            <a href="mailto:oussi108@gmail.com" class="btn btn-outline-primary btn-rounded me-2 mb-2" style="font-size: 15px; padding: 10px 22px;">
+                                <i class="fas fa-envelope mr-1"></i> oussi108@gmail.com
+                            </a>
+                            <a href="mailto:oussi.elhoucine0@gmail.com" class="btn btn-outline-primary btn-rounded mb-2" style="font-size: 15px; padding: 10px 22px;">
+                                <i class="fas fa-envelope mr-1"></i> oussi.elhoucine0@gmail.com
+                            </a>
+                        </div>
+                        
+                        <p style="font-size: 16px; margin-bottom: 5px;">
+                            Phone / WhatsApp: 
+                            <a href="tel:+212642587839" style="font-weight: 700; color: #695aa6;">+212 642587839</a>
+                        </p>
+                        <p style="font-size: 14px; color: #888;">
+                            Based in Nanjing, China / Oujda, Morocco (Open to global relocation)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End of Contact Section -->
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">
+                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">SystemX</a> • El-Houcine Oussi
+            </p>
+    
+            <!-- Social Links -->
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.linkedin.com/in/el-houcine-oussi-5abb8a1b7" class="link" target="_blank" title="LinkedIn"><i class="ti-linkedin"></i></a>
+                <a href="https://github.com/Oussi108" class="link" target="_blank" title="GitHub"><i class="ti-github"></i></a>
+                <a href="https://doi.org/10.5281/zenodo.23590205" class="link" target="_blank" title="Zenodo DOI"><i class="fas fa-link"></i></a>
+                <a href="https://www.facebook.com/houssin.oussi" class="link" target="_blank" title="Facebook"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/oussi108" class="link" target="_blank" title="Instagram"><i class="ti-instagram"></i></a>
+                <a href="tel:+212642587839" class="link" title="Phone"><i class="ti-mobile"></i></a>
+            </div>
+        </footer>
+    </div><!-- End of Page Footer -->
+
+    <!-- Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/js/meyawo.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.filter-btn').on('click', function() {
+            $('.filter-btn').removeClass('active');
+            $(this).addClass('active');
+            var filter = $(this).attr('data-filter');
+            if (filter === 'all') {
+                $('.project-item').show();
+            } else {
+                $('.project-item').hide();
+                $('.project-item[data-category*="' + filter + '"]').show();
+            }
+        });
+    </script>
+
+</body>
+</html>

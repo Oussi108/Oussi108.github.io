@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>El-Houcine Oussi - 个人简历</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 13mm 9mm 13mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, Carlito, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Zen Hei", "Noto Sans CJK SC", sans-serif;
+    font-size: 9.8pt; line-height: 1.34; color: #1a1a1a; background: #fff;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { margin-bottom: 7px; }
+  h1 { font-size: 19pt; font-weight: 700; color: #111; }
+  .role { font-size: 11pt; color: #1f3a5f; margin-top: 1px; }
+  .contact { font-size: 9.2pt; color: #333; margin-top: 4px; }
+  .contact span + span::before { content: "|"; color: #999; margin: 0 6px; }
+  h2 {
+    font-size: 11pt; font-weight: 700; letter-spacing: 1px;
+    color: #1f3a5f; border-bottom: 1px solid #1f3a5f; padding-bottom: 1px; margin: 9px 0 4px;
+  }
+  .summary { font-size: 9.8pt; }
+  .entry { margin-bottom: 5px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .what { font-weight: 700; }
+  .where { color: #333; }
+  .when { white-space: nowrap; font-size: 9.4pt; color: #333; }
+  ul { margin: 1px 0 0 15px; }
+  li { margin-bottom: 1px; font-size: 9.7pt; }
+  .stack { color: #444; font-size: 9.2pt; }
+  table { border-collapse: collapse; width: 100%; }
+  td { vertical-align: top; padding: 1px 0; font-size: 9.7pt; }
+  td.k { width: 100px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>埃尔-侯赛因·乌西 (El-Houcine Oussi)</h1>
+  <div class="role">软件工程师 &middot; 机器学习</div>
+  <div class="contact">
+    <span><a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a></span>
+    <span>+86 177 5100 8739（中国）/ +212 642 587 839（摩洛哥）</span>
+    <span>江苏南京</span>
+  </div>
+  <div class="contact">
+    <span><a href="https://oussi108.github.io">oussi108.github.io</a></span>
+    <span><a href="https://github.com/Oussi108">github.com/Oussi108</a></span>
+    <span><a href="https://www.linkedin.com/in/el-houcine-oussi-5abb8a1b7">linkedin.com/in/el-houcine-oussi-5abb8a1b7</a></span>
+  </div>
+</header>
+
+<h2>个人简介</h2>
+<p class="summary">
+  信息系统工程专业国家工程师学位，曾在两段实习中开发 Flutter、ASP.NET Core 和 Django 应用。
+  现为南京信息工程大学计算机科学与技术专业硕士研究生，使用 Python（LightGBM、PyTorch）构建并评估光伏发电功率预测模型。
+  求职方向：软件工程师或机器学习工程师。
+</p>
+
+<h2>科研与工作经历</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">硕士研究生，光伏功率预测研究</span>，<span class="where">南京信息工程大学</span></div>
+    <div class="when">2024.09 &ndash; 至今 &middot; 南京</div>
+  </div>
+  <ul>
+    <li>使用 pandas、NumPy、pvlib、LightGBM 和 PyTorch 搭建数据处理流程和光伏（PV）功率预测模型，预测时效从数分钟到日前。</li>
+    <li>在澳大利亚、香港和美国的光伏系统上，比较 LightGBM、GRU 和小型 Transformer 在 2&ndash;12 小时预测时效下的表现。美国站点的评估方案在生成任何预测之前已经固定，并记录了文件哈希值。</li>
+    <li>以 MIT 许可证公开代码和汇总结果（<a href="https://github.com/Oussi108/pv-forecast-reference-evaluation">GitHub</a>，DOI <a href="https://doi.org/10.5281/zenodo.23590205">10.5281/zenodo.23590205</a>）。校验脚本按 SHA-256 清单逐一核对文件；重新运行后，随代码发布的全部表格均完全一致。</li>
+    <li>处理葵花（Himawari）/ Meteosat 卫星图像和数值天气预报数据（GRIB、ERA5），作为澳大利亚 50 座光伏电站研究的模型输入。</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">后端与移动端开发实习生</span>，<span class="where">Majal Berkane 智慧城市项目</span></div>
+    <div class="when">2024.03 &ndash; 2024.07 &middot; 摩洛哥贝尔坎</div>
+  </div>
+  <ul>
+    <li>使用 Flutter 开发移动应用，采用 MVVM 架构和 Riverpod 状态管理。</li>
+    <li>按照 Clean Architecture 和仓储模式（Repository），使用 ASP.NET Core 编写 REST API。</li>
+    <li>优化数据库查询，并为传感器数据接口增加服务端缓存。</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Web 开发实习生</span>，<span class="where">摩洛哥乌季达省装备、交通与物流局</span></div>
+    <div class="when">2023.03 &ndash; 2023.07 &middot; 摩洛哥乌季达</div>
+  </div>
+  <ul>
+    <li>使用 Django 开发内部应用，用于人员档案、设备调度和行政后勤管理。</li>
+    <li>实现基于角色的访问控制（RBAC），并使用 pandas 和 NumPy 生成报表。</li>
+    <li>部署于 Windows Server 和 IIS，并配置 SQL Server 定时备份。</li>
+  </ul>
+</div>
+
+<h2>项目经历</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Connect Check</span> <span class="stack">&middot; Flutter, Firebase Realtime Database, Riverpod, SQLite</span></div>
+    <div class="when">2024 &ndash; 2025</div>
+  </div>
+  <ul>
+    <li>用户加入共享房间后，各自的回答通过 Firebase Realtime Database 实时同步；支持多语言界面和 SQLite 离线缓存。网页版：<a href="https://lovecheckapp.web.app/">lovecheckapp.web.app</a></li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">MystoGuess</span> <span class="stack">&middot; Flutter, Dart, SQLite</span></div>
+    <div class="when">2025</div>
+  </div>
+  <ul>
+    <li>猜词游戏，包含分类挑战、单人模式和回合制多人模式，以 SystemX 开发者名义发布于 Google Play。词库以 SQLite 和 JSON 格式存储在本地。</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">EcoBeach</span> <span class="stack">&middot; Flutter, ASP.NET Core, C#</span></div>
+    <div class="when">2024</div>
+  </div>
+  <ul>
+    <li>海滩服务预订移动应用及后端：注册与登录、预付费钱包、服务预订和带二维码的发票。设计报告见 <a href="https://oussi108.github.io">oussi108.github.io</a>。</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">任务管理 API 与表达式编译器</span> <span class="stack">&middot; C#, ASP.NET Core, EF Core, SQL Server</span></div>
+    <div class="when">2023 &ndash; 2024</div>
+  </div>
+  <ul>
+    <li>带 JWT 认证、刷新令牌和 EF Core 迁移的任务管理 REST API（<a href="https://github.com/Oussi108/taskwithauthdotnet">taskwithauthdotnet</a>）；包含词法分析、递归下降语法分析和抽象语法树求值的数学表达式编译器（<a href="https://github.com/Oussi108/Complier_EXP_math">Complier_EXP_math</a>）。</li>
+  </ul>
+</div>
+
+<h2>教育背景</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">南京信息工程大学</span>，<span class="where">计算机科学与技术，工学硕士（在读）</span></div>
+    <div class="when">2024.09 &ndash; 2027.06（预计）</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="what">SUPMTI（摩洛哥乌季达）</span>，<span class="where">计算机与信息系统工程，国家工程师学位</span></div>
+    <div class="when">2021.09 &ndash; 2024.06</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="what">ISTA Lazaret（摩洛哥乌季达）</span>，<span class="where">软件开发，高级技术员文凭</span></div>
+    <div class="when">2019.09 &ndash; 2021.06</div>
+  </div>
+</div>
+
+<h2>专业技能</h2>
+<table>
+  <tr><td class="k">编程语言</td><td>Python, C#, Dart, Java, TypeScript, JavaScript, SQL, Bash</td></tr>
+  <tr><td class="k">后端与 Web</td><td>ASP.NET Core, Entity Framework Core, Django, Spring Boot, Angular, Ionic, React, REST API, JWT</td></tr>
+  <tr><td class="k">移动端</td><td>Flutter（Riverpod, MVVM）, Firebase（Auth, Firestore, Realtime Database）, Google Play 发布</td></tr>
+  <tr><td class="k">机器学习与数据</td><td>PyTorch, LightGBM, scikit-learn, pandas, NumPy, pvlib, Jupyter, 卫星与数值天气预报（GRIB）数据</td></tr>
+  <tr><td class="k">数据库与工具</td><td>SQL Server, PostgreSQL, MySQL, SQLite, MongoDB, Docker, Git, GitHub Actions, Linux, IIS</td></tr>
+  <tr><td class="k">语言能力</td><td>阿拉伯语、柏柏尔语（Tamazight）为母语；英语流利；法语可用于工作；汉语 HSK 3 级</td></tr>
+</table>
+
+</body>
+</html>

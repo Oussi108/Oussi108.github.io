@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>El-Houcine Oussi - Academic CV</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm 16mm 14mm 16mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Cambria, Caladea, "Liberation Serif", Georgia, serif;
+    font-size: 10.3pt; line-height: 1.34; color: #1a1a1a; background: #fff;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; margin-bottom: 8px; }
+  h1 { font-size: 19pt; font-weight: 700; letter-spacing: 0.4px; }
+  .role { font-size: 10.6pt; font-style: italic; margin-top: 2px; }
+  .contact { font-size: 9.4pt; margin-top: 4px; color: #333; }
+  .contact span + span::before { content: "\00B7"; margin: 0 7px; color: #888; }
+  h2 {
+    font-size: 10.8pt; font-weight: 700; font-variant: small-caps; letter-spacing: 0.8px;
+    border-bottom: 0.8px solid #444; padding-bottom: 1px; margin: 11px 0 5px;
+    page-break-after: avoid; break-after: avoid;
+  }
+  p { margin-bottom: 3px; }
+  .entry { margin-bottom: 6px; page-break-inside: avoid; break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .what { font-weight: 700; }
+  .when { white-space: nowrap; font-size: 9.8pt; }
+  .sub { font-style: italic; }
+  ul { margin: 2px 0 0 16px; }
+  li { margin-bottom: 1.5px; }
+  ol.pubs { margin-left: 18px; }
+  ol.pubs li { margin-bottom: 4px; }
+  .status { font-style: italic; color: #333; }
+  table { border-collapse: collapse; width: 100%; }
+  td { vertical-align: top; padding: 1.5px 0; }
+  td.k { width: 142px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>El-Houcine Oussi</h1>
+  <div class="role">M.Sc. student in Computer Science, Nanjing University of Information Science and Technology</div>
+  <div class="contact">
+    <span><a href="mailto:oussi.elhoucine0@gmail.com">oussi.elhoucine0@gmail.com</a></span>
+    <span>+86 177 5100 8739</span>
+    <span>Nanjing, China</span>
+  </div>
+  <div class="contact">
+    <span><a href="https://oussi108.github.io">oussi108.github.io</a></span>
+    <span><a href="https://github.com/Oussi108">github.com/Oussi108</a></span>
+    <span><a href="https://www.linkedin.com/in/el-houcine-oussi-5abb8a1b7">linkedin.com/in/el-houcine-oussi-5abb8a1b7</a></span>
+  </div>
+</header>
+
+<h2>Research Interests</h2>
+<p>
+  Solar power forecasting from minutes to a day ahead; forecast verification and the choice of reference
+  forecasts; probabilistic forecasts and their value in operational decisions such as battery scheduling;
+  satellite imagery and numerical weather prediction as forecast inputs.
+</p>
+
+<h2>Education</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">M.Sc., Computer Science and Technology</span></div>
+    <div class="when">Sep 2024 &ndash; Jun 2027 (expected)</div>
+  </div>
+  <div class="sub">Nanjing University of Information Science and Technology (NUIST), Nanjing, China</div>
+  <ul>
+    <li>Research: photovoltaic (PV) power forecasting, model updating, and the calibration of prediction intervals.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">State Engineering Degree, Computer Science and Information Systems</span></div>
+    <div class="when">Sep 2021 &ndash; Jun 2024</div>
+  </div>
+  <div class="sub">SUPMTI, Oujda, Morocco</div>
+  <ul>
+    <li>Coursework included distributed systems, software architecture, database systems and cloud integration.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Specialized Technician Diploma, Software Development</span></div>
+    <div class="when">Sep 2019 &ndash; Jun 2021</div>
+  </div>
+  <div class="sub">ISTA Lazaret, Oujda, Morocco</div>
+  <ul>
+    <li>Object-oriented programming (Java, C#, C++), relational database design, algorithms, UML and MERISE.</li>
+  </ul>
+</div>
+
+<h2>Manuscripts in Preparation</h2>
+<ol class="pubs">
+  <li>Reference specification, model updating and calibration population in hourly photovoltaic power
+    forecasting. <span class="status">In preparation.</span>
+    Code and results: <a href="https://doi.org/10.5281/zenodo.23590205">doi:10.5281/zenodo.23590205</a></li>
+  <li>When do probabilistic solar forecasts earn their keep? Forecast quality, distributional validity and
+    operational value in behind-the-meter battery scheduling. <span class="status">In preparation.</span></li>
+</ol>
+
+<h2>Software and Data</h2>
+<div class="entry">
+  <div class="row">
+    <div><span class="what">pv-forecast-reference-evaluation</span> (v1.1.0, MIT licence)</div>
+    <div class="when">2026</div>
+  </div>
+  <ul>
+    <li>Code and aggregate results for manuscript 1, archived on Zenodo (<a href="https://doi.org/10.5281/zenodo.23590205">10.5281/zenodo.23590205</a>) and on GitHub (<a href="https://github.com/Oussi108/pv-forecast-reference-evaluation">github.com/Oussi108/pv-forecast-reference-evaluation</a>).</li>
+    <li>Includes a SHA-256 manifest, byte-identical copies of the scripts as run, and an offline check script. Re-running the release reproduced every released table exactly and the figures pixel for pixel.</li>
+  </ul>
+</div>
+
+<h2>Research Experience</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Graduate Researcher</span>, NUIST, Nanjing</div>
+    <div class="when">Sep 2024 &ndash; present</div>
+  </div>
+  <ul>
+    <li><b>Reference forecasts and model updating (2&ndash;12 h).</b> Compared LightGBM, a GRU and a compact Transformer
+      on DKASC Array 1B (Alice Springs), 31 HKUST rooftop systems (Hong Kong) and NREL PVDAQ system 9068 (Colorado).
+      At the Hong Kong testbed, a correctly specified smart-persistence reference had half the mean absolute error
+      of the common &ldquo;any-daylight&rdquo; version (0.115 vs. 0.231), which changes how much skill a learned model appears to have.</li>
+    <li><b>Value of probabilistic forecasts (day-ahead).</b> Studied when probabilistic forecasts lower costs in
+      home-battery scheduling, using 91,290 simulated scenarios built from 40 Ausgrid households. A scheduler using
+      the full forecast distribution lowered cost for all 40 households.</li>
+    <li><b>Satellite and weather-forecast inputs (0.5&ndash;6 h).</b> Forecasts for 50 Australian solar farms (AEMO data)
+      and 94 UK virtual farms from Himawari / Meteosat imagery and issued weather forecasts. Final held-out test in progress.</li>
+    <li><b>Sky-image nowcasting (5&ndash;30 min).</b> Tested whether ground sky images improve on a LightGBM model
+      that uses PV history alone, on Stanford SKIPP&rsquo;D. Experiments complete: sky images gave no established gain, reported as a negative result.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Methods</span></div>
+    <div class="when"></div>
+  </div>
+  <ul>
+    <li>Analysis plans fixed before the final test (with recorded file hashes for the PVDAQ 9068 protocol); held-out test sets scored once.</li>
+    <li>Paired bootstrap confidence intervals with calendar blocks; Holm correction across lead times.</li>
+    <li>Checksum manifests, pinned package versions and byte-identical as-run scripts for reproducibility.</li>
+  </ul>
+</div>
+
+<h2>Engineering Experience</h2>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Backend &amp; Mobile Developer Intern</span>, Majal Berkane (Smart City), Berkane, Morocco</div>
+    <div class="when">Mar 2024 &ndash; Jul 2024</div>
+  </div>
+  <ul>
+    <li>Built a Flutter app (MVVM, Riverpod) and REST APIs in ASP.NET Core following Clean Architecture.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Web Development Intern</span>, Provincial Directorate of Equipment, Transport and Logistics, Oujda</div>
+    <div class="when">Mar 2023 &ndash; Jul 2023</div>
+  </div>
+  <ul>
+    <li>Built and deployed an internal Django application for staff records, equipment scheduling and reporting.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <div><span class="what">Independent developer</span> (SystemX)</div>
+    <div class="when">2022 &ndash; present</div>
+  </div>
+  <ul>
+    <li>Published MystoGuess, a Flutter guessing game, on Google Play; built Connect Check, a real-time Flutter and Firebase app.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<table>
+  <tr><td class="k">Research computing</td><td>Python, PyTorch, LightGBM, scikit-learn, pandas, NumPy, pvlib, matplotlib, Jupyter, Google Colab</td></tr>
+  <tr><td class="k">Data</td><td>Himawari and Meteosat SEVIRI imagery, numerical weather prediction (GRIB), ERA5, PV plant measurements</td></tr>
+  <tr><td class="k">Software</td><td>C#, ASP.NET Core, Java, Dart / Flutter, Django, SQL, Git, Docker, Linux</td></tr>
+  <tr><td class="k">Languages</td><td>Arabic and Tamazight (native), English (fluent), French (professional), Mandarin Chinese (HSK 3)</td></tr>
+</table>
+
+<h2>References</h2>
+<p>Available on request.</p>
+
+</body>
+</html>
